@@ -1,0 +1,22 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/.vs/SwebWMS/v16
+/packages
+/SMOWMS.CommLib/bin/Debug/SMOWMS.CommLib.dll
+/SMOSEC.Application/bin/Debug
+/SMOSEC.Application/obj/Debug
+/SMOWMS.CommLib/bin/Debug
+/SMOWMS.CommLib/obj/Debug
+/SMOWMS.Domain/bin/Debug
+/SMOWMS.Domain/obj/Debug
+/SMOWMS.DTOs/bin/Debug
+/SMOWMS.DTOs/obj/Debug
+/SMOWMS.Infrastructure/bin/Debug
+/SMOWMS.Infrastructure/obj/Debug
+/SMOWMS.Repository/bin/Debug
+/SMOWMS.Repository/obj/Debug
+/SwebWMS.UI/bin/Debug/DeveloperTrace
+/SwebWMS.UI/bin/Debug
+/SwebWMS.UI/obj/Debug

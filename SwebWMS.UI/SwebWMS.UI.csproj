@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{688CEF7F-FD37-4582-926B-83308DFDEC3F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SwebWMS.UI</RootNamespace>
+    <AssemblyName>SwebWMS.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.0\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Swebui.Core" />
+    <Reference Include="Swebui.Controls" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analyze\Assets\FrmAssCusAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Assets\FrmAssCusAnalysis.Designer.cs">
+      <DependentUpon>FrmAssCusAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Assets\FrmAssPOAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Assets\FrmAssPOAnalysis.Designer.cs">
+      <DependentUpon>FrmAssPOAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Assets\FrmAssQuantAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Assets\FrmAssQuantAnalysis.Designer.cs">
+      <DependentUpon>FrmAssQuantAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Assets\FrmAssSOAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Assets\FrmAssSOAnalysis.Designer.cs">
+      <DependentUpon>FrmAssSOAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Assets\FrmAssVenAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Assets\FrmAssVenAnalysis.Designer.cs">
+      <DependentUpon>FrmAssVenAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Assets\FrmImminentExpiryAss.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Assets\FrmImminentExpiryAss.Designer.cs">
+      <DependentUpon>FrmImminentExpiryAss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Consumable\FrmCustomerAnalyze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Consumable\FrmCustomerAnalyze.Designer.cs">
+      <DependentUpon>FrmCustomerAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Consumable\FrmPurchaseAnalyze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Consumable\FrmPurchaseAnalyze.Designer.cs">
+      <DependentUpon>FrmPurchaseAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Consumable\FrmQuantAnalyze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Consumable\FrmQuantAnalyze.Designer.cs">
+      <DependentUpon>FrmQuantAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Consumable\FrmSafeQuantAnalyze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Consumable\FrmSafeQuantAnalyze.Designer.cs">
+      <DependentUpon>FrmSafeQuantAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Consumable\FrmSaleAnalyze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Consumable\FrmSaleAnalyze.Designer.cs">
+      <DependentUpon>FrmSaleAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Consumable\FrmVendorAnalyze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Consumable\FrmVendorAnalyze.Designer.cs">
+      <DependentUpon>FrmVendorAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssetsSalesOrderCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssetsSalesOrderCreate.Designer.cs">
+      <DependentUpon>FrmAssetsSalesOrderCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssetsSalesOrderDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssetsSalesOrderDetail.Designer.cs">
+      <DependentUpon>FrmAssetsSalesOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssetsSalesOrderList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssetsSalesOrderList.Designer.cs">
+      <DependentUpon>FrmAssetsSalesOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssIn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssIn.Designer.cs">
+      <DependentUpon>FrmAssIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssPurchaseOrderCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssPurchaseOrderCreate.Designer.cs">
+      <DependentUpon>FrmAssPurchaseOrderCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssPurchaseOrderDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssPurchaseOrderDetail.Designer.cs">
+      <DependentUpon>FrmAssPurchaseOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssPurchaseOrderList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssPurchaseOrderList.Designer.cs">
+      <DependentUpon>FrmAssPurchaseOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutofacConfig.cs" />
+    <Compile Include="AutomapperConfig.cs" />
+    <Compile Include="ConsumablesManager\FrmConPurchaseOrderCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConPurchaseOrderCreate.Designer.cs">
+      <DependentUpon>FrmConPurchaseOrderCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConPurchaseOrderDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConPurchaseOrderDetail.Designer.cs">
+      <DependentUpon>FrmConPurchaseOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConPurchaseOrderList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConPurchaseOrderList.Designer.cs">
+      <DependentUpon>FrmConPurchaseOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConSaleOrderCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConSaleOrderCreate.Designer.cs">
+      <DependentUpon>FrmConSaleOrderCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConSaleOrderDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConSaleOrderDetail.Designer.cs">
+      <DependentUpon>FrmConSaleOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConSaleOrderList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConSaleOrderList.Designer.cs">
+      <DependentUpon>FrmConSaleOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrmLogon.Designer.cs">
+      <DependentUpon>FrmLogon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrmRegister.Designer.cs">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\AssetSaleOrderDetialLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\AssetSaleOrderDetialLayout.Designer.cs">
+      <DependentUpon>AssetSaleOrderDetialLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\AssetSaleOrderLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\AssetSaleOrderLayout.Designer.cs">
+      <DependentUpon>AssetSaleOrderLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\AssetsTypeCreateDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\AssetsTypeCreateDialog.Designer.cs">
+      <DependentUpon>AssetsTypeCreateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ConSOAndPOChooseLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\ConSOAndPOChooseLayout.Designer.cs">
+      <DependentUpon>ConSOAndPOChooseLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ConSOAndPODetailLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\ConSOAndPODetailLayout.Designer.cs">
+      <DependentUpon>ConSOAndPODetailLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\ImageButton.Designer.cs">
+      <DependentUpon>ImageButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\SNRowLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\SNRowLayout.Designer.cs">
+      <DependentUpon>SNRowLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\WarehouseCreateDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\WarehouseCreateDialog.Designer.cs">
+      <DependentUpon>WarehouseCreateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\WHLCreateDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\WHLCreateDialog.Designer.cs">
+      <DependentUpon>WHLCreateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\WHLLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\WHLLayout.Designer.cs">
+      <DependentUpon>WHLLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\WHTypeCreateDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\WHTypeCreateDialog.Designer.cs">
+      <DependentUpon>WHTypeCreateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmAssets.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmAssets.Designer.cs">
+      <DependentUpon>FrmAssets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmAssetsCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmAssetsCreate.Designer.cs">
+      <DependentUpon>FrmAssetsCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmAssetsType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmAssetsType.Designer.cs">
+      <DependentUpon>FrmAssetsType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmAssTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmAssTemplate.Designer.cs">
+      <DependentUpon>FrmAssTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmAssTemplateCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmAssTemplateCreate.Designer.cs">
+      <DependentUpon>FrmAssTemplateCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmAssTemplateDetial.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmAssTemplateDetial.Designer.cs">
+      <DependentUpon>FrmAssTemplateDetial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmCustomer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmCustomer.Designer.cs">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmCustomerCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmCustomerCreate.Designer.cs">
+      <DependentUpon>FrmCustomerCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmCustomerDetial.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmCustomerDetial.Designer.cs">
+      <DependentUpon>FrmCustomerDetial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmSupplier.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmSupplier.Designer.cs">
+      <DependentUpon>FrmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmWarehouse.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmWarehouse.Designer.cs">
+      <DependentUpon>FrmWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FrmMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menu\FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SwebGlobal.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserInfo\FrmUserInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInfo\FrmUserInfo.Designer.cs">
+      <DependentUpon>FrmUserInfo.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Analyze\Assets\FrmAssCusAnalysis.resx">
+      <DependentUpon>FrmAssCusAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Assets\FrmAssPOAnalysis.resx">
+      <DependentUpon>FrmAssPOAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Assets\FrmAssQuantAnalysis.resx">
+      <DependentUpon>FrmAssQuantAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Assets\FrmAssSOAnalysis.resx">
+      <DependentUpon>FrmAssSOAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Assets\FrmAssVenAnalysis.resx">
+      <DependentUpon>FrmAssVenAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Assets\FrmImminentExpiryAss.resx">
+      <DependentUpon>FrmImminentExpiryAss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Consumable\FrmCustomerAnalyze.resx">
+      <DependentUpon>FrmCustomerAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Consumable\FrmPurchaseAnalyze.resx">
+      <DependentUpon>FrmPurchaseAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Consumable\FrmQuantAnalyze.resx">
+      <DependentUpon>FrmQuantAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Consumable\FrmSafeQuantAnalyze.resx">
+      <DependentUpon>FrmSafeQuantAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Consumable\FrmSaleAnalyze.resx">
+      <DependentUpon>FrmSaleAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Consumable\FrmVendorAnalyze.resx">
+      <DependentUpon>FrmVendorAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssetsSalesOrderCreate.resx">
+      <DependentUpon>FrmAssetsSalesOrderCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssetsSalesOrderDetail.resx">
+      <DependentUpon>FrmAssetsSalesOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssetsSalesOrderList.resx">
+      <DependentUpon>FrmAssetsSalesOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssIn.resx">
+      <DependentUpon>FrmAssIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssPurchaseOrderCreate.resx">
+      <DependentUpon>FrmAssPurchaseOrderCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssPurchaseOrderDetail.resx">
+      <DependentUpon>FrmAssPurchaseOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssPurchaseOrderList.resx">
+      <DependentUpon>FrmAssPurchaseOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\FrmConPurchaseOrderCreate.resx">
+      <DependentUpon>FrmConPurchaseOrderCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\FrmConPurchaseOrderDetail.resx">
+      <DependentUpon>FrmConPurchaseOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\FrmConPurchaseOrderList.resx">
+      <DependentUpon>FrmConPurchaseOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\FrmConSaleOrderCreate.resx">
+      <DependentUpon>FrmConSaleOrderCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\FrmConSaleOrderDetail.resx">
+      <DependentUpon>FrmConSaleOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\FrmConSaleOrderList.resx">
+      <DependentUpon>FrmConSaleOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogon.resx">
+      <DependentUpon>FrmLogon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegister.resx">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\AssetSaleOrderDetialLayout.resx">
+      <DependentUpon>AssetSaleOrderDetialLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\AssetSaleOrderLayout.resx">
+      <DependentUpon>AssetSaleOrderLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\AssetsTypeCreateDialog.resx">
+      <DependentUpon>AssetsTypeCreateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\ConSOAndPOChooseLayout.resx">
+      <DependentUpon>ConSOAndPOChooseLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\ConSOAndPODetailLayout.resx">
+      <DependentUpon>ConSOAndPODetailLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\ImageButton.resx">
+      <DependentUpon>ImageButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\SNRowLayout.resx">
+      <DependentUpon>SNRowLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\WarehouseCreateDialog.resx">
+      <DependentUpon>WarehouseCreateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\WHLCreateDialog.resx">
+      <DependentUpon>WHLCreateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\WHLLayout.resx">
+      <DependentUpon>WHLLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\WHTypeCreateDialog.resx">
+      <DependentUpon>WHTypeCreateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmAssets.resx">
+      <DependentUpon>FrmAssets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmAssetsCreate.resx">
+      <DependentUpon>FrmAssetsCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmAssetsType.resx">
+      <DependentUpon>FrmAssetsType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmAssTemplate.resx">
+      <DependentUpon>FrmAssTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmAssTemplateCreate.resx">
+      <DependentUpon>FrmAssTemplateCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmAssTemplateDetial.resx">
+      <DependentUpon>FrmAssTemplateDetial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmCustomer.resx">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmCustomerCreate.resx">
+      <DependentUpon>FrmCustomerCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmCustomerDetial.resx">
+      <DependentUpon>FrmCustomerDetial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmSupplier.resx">
+      <DependentUpon>FrmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmWarehouse.resx">
+      <DependentUpon>FrmWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\FrmUserInfo.resx">
+      <DependentUpon>FrmUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SMOSEC.Application\SMOWMS.Application.csproj">
+      <Project>{b4ed4ba2-0f97-4e61-a8cd-9f8fe47e7bab}</Project>
+      <Name>SMOWMS.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOWMS.CommLib\SMOWMS.CommLib.csproj">
+      <Project>{f67cf087-2032-479e-9b7e-d6ed0cb3904e}</Project>
+      <Name>SMOWMS.CommLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOWMS.Domain\SMOWMS.Domain.csproj">
+      <Project>{75adb9c8-d14e-415a-93c9-113e5795f63a}</Project>
+      <Name>SMOWMS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOWMS.DTOs\SMOWMS.DTOs.csproj">
+      <Project>{b9b23883-06c5-4581-b315-4f2f649d55c5}</Project>
+      <Name>SMOWMS.DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOWMS.Infrastructure\SMOWMS.Infrastructure.csproj">
+      <Project>{c2679305-61a8-45c5-bcd5-482a734c71a2}</Project>
+      <Name>SMOWMS.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOWMS.Repository\SMOWMS.Repository.csproj">
+      <Project>{a228840d-7e0b-49f0-987a-cf43e932ba50}</Project>
+      <Name>SMOWMS.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
