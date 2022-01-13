@@ -41,8 +41,6 @@ AutomapperConfig.Init();
     /// <param name="e"></param>
     public static void OnSessionStart(object sender, SwebSessionEventArgs e)
     {
-        e.Client.ClientDevTrace = true;
-        e.Client.ClientTrace = true;
     }
 
     /// <summary>
@@ -61,7 +59,7 @@ AutomapperConfig.Init();
     /// <param name="e"></param>
     public static void OnSessionConnect(object sender, SwebSessionEventArgs e)
     {
-
+        e.Client.ReStart();
     }
 }
 

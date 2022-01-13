@@ -24,7 +24,7 @@ namespace SwebWMS.UI.UserInfo
         private coreUser UserData;
         public Boolean isDemo;       //是否是演示账号
                                      //   private EditUserInfoLayout Dialog = new EditUserInfoLayout();     //修改信息
-        private int Sex=0;
+        private int Sex = 0;
         #endregion
         private void editBtn_Click(object sender, EventArgs e)
         {
@@ -34,6 +34,8 @@ namespace SwebWMS.UI.UserInfo
             editBtn.Visible = false;
             saveBtn.Visible = true;
             cancelBtn.Visible = true;
+            btnSex.Disabled = false;
+            dpkBirthday.Enable = true;
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
@@ -45,13 +47,13 @@ namespace SwebWMS.UI.UserInfo
                 UserData.USER_EMAIL = btnEmail.Text.Trim();
                 UserData.USER_BIRTHDAY = dpkBirthday.Value;
                 UserData.USER_ADDRESS = txtAddress.Text.Trim();
-                ReturnInfo resultInfo =  autofacConfig.coreUserService.UpdateUser(UserData);
+                ReturnInfo resultInfo = autofacConfig.coreUserService.UpdateUser(UserData);
                 if (resultInfo.IsSuccess)
                     cancelBtn_Click(null, null);
                 else
                     Toast(resultInfo.ErrorInfo);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Toast(ex.Message);
             }
@@ -86,30 +88,30 @@ namespace SwebWMS.UI.UserInfo
                 if (UserData.USER_SEX != null)
                 {
                     if (Convert.ToInt32(UserData.USER_SEX) == 0)
-                        btnSex.Text = "男";
+                        btnSex.DefaultValue = new string[] { "0" };
                     else
-                        btnSex.Text = "女";
+                        btnSex.DefaultValue = new string[] { "1" };
                 }
                 if (UserData.USER_IMAGEID == null)
                 {
                     if (Convert.ToInt32(UserData.USER_SEX) == 0)
-                        userImg .ResourceID= userImg1.ResourceID = "male.png";
+                        userImg.ResourceID = userImg1.ResourceID = "male.png";
                     else
-                        userImg.ResourceID=userImg1.ResourceID = "female.png";
+                        userImg.ResourceID = userImg1.ResourceID = "female.png";
                 }
                 else
                 {
                     userImg1.ResourceID = UserData.USER_IMAGEID;
                 }
                 if (UserData.USER_ADDRESS != null) txtAddress.Text = UserData.USER_ADDRESS;
-           //     lblID.Text = UserID;
+                //     lblID.Text = UserID;
                 if (UserData.USER_NAME != null)
                 {
-                   btnName.Text= btnName1.Text = UserData.USER_NAME;
+                    btnName.Text = btnName1.Text = UserData.USER_NAME;
                 }
                 else
                 {
-                   btnName.Text= btnName1.Text = UserID;
+                    btnName.Text = btnName1.Text = UserID;
                 }
                 if (UserData.USER_PHONE != null) labTel.Text = UserData.USER_PHONE;
                 if (UserData.USER_EMAIL != null) btnEmail.Text = UserData.USER_EMAIL;
@@ -130,10 +132,9 @@ namespace SwebWMS.UI.UserInfo
 
         }
 
-        private void btnSex_ValueChanged(object sender, EventArgs e)
+        private void btnSex_Press(object sender, TreeSelectPressEventArgs args)
         {
-            if (btnSex.SelectKey != null)
-                Sex = Convert.ToInt32(btnSex.SelectKey);
+            Sex = Convert.ToInt32(args.TreeID);
         }
     }
 }

@@ -21,6 +21,7 @@ namespace SwebWMS.UI
         {
             Swebui.Controls.TreeSelectNode treeSelectNode1 = new Swebui.Controls.TreeSelectNode();
             Swebui.Controls.TreeSelectNode treeSelectNode2 = new Swebui.Controls.TreeSelectNode();
+            Swebui.Controls.TreeSelectNode treeSelectNode3 = new Swebui.Controls.TreeSelectNode();
             this.panel1 = new Swebui.Controls.Panel();
             this.panel4 = new Swebui.Controls.Panel();
             this.label4 = new Swebui.Controls.Label();
@@ -289,16 +290,20 @@ namespace SwebWMS.UI
             // 
             this.comboBox1.Border = new Swebui.Controls.Border(1F);
             this.comboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.comboBox1.DefaultValue = new string[0];
             this.comboBox1.Flex = 1;
             this.comboBox1.ListBackgroundColor = System.Drawing.Color.White;
             this.comboBox1.Name = "comboBox1";
             treeSelectNode1.Text = "管理员";
             treeSelectNode1.TreeID = "ADMIN";
-            treeSelectNode2.Text = "用户";
-            treeSelectNode2.TreeID = "SMOWMSUser";
+            treeSelectNode2.Text = "WMS管理员";
+            treeSelectNode2.TreeID = "SMOWMSADMIN";
+            treeSelectNode3.Text = "用户";
+            treeSelectNode3.TreeID = "SMOWMSUser";
             this.comboBox1.Nodes.AddRange(new Swebui.Controls.TreeSelectNode[] {
             treeSelectNode1,
-            treeSelectNode2});
+            treeSelectNode2,
+            treeSelectNode3});
             this.comboBox1.Size = new System.Drawing.Size(100, 35);
             this.comboBox1.Press += new Swebui.Controls.TreeSelect.TreeSelectOnPressEventHandler(this.comboBox1_Press);
             // 

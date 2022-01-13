@@ -33,14 +33,25 @@ namespace SwebWMS.UI
             MenuItem menuItem3 = new MenuItem("Assets", "资产管理");
             MenuItem menuItem4 = new MenuItem("AssTemplate", "资产模板");
             MenuItem menuItem30 = new MenuItem("AssIn", "资产调入");
-            menuItem2.Items.AddRange(new MenuItem[] { menuItem3, menuItem4,menuItem30});
+            MenuItem menuItem31 = new MenuItem("AssOut", "资产出库");
+            MenuItem menuItem32 = new MenuItem("AssTransfer","资产调拨");
+            MenuItem menuItem33 = new MenuItem("AssInventory", "资产盘点");
+            menuItem2.Items.AddRange(new MenuItem[] { menuItem3, menuItem4, menuItem30, menuItem31,menuItem32,menuItem33 });
+
+            MenuItem menuItem34 = new MenuItem("consumales", "耗材");
+            MenuItem menuItem35 = new MenuItem("Consumables", "耗材管理");
+            MenuItem menuItem36 = new MenuItem("ConIn", "耗材入库");
+            MenuItem menuItem37= new MenuItem("ConOut", "耗材出库");
+            MenuItem menuItem38 = new MenuItem("ConTransfer", "耗材调拨");
+            MenuItem menuItem39 = new MenuItem("ConInventory", "耗材盘点");
+            menuItem34.Items.AddRange(new MenuItem[] { menuItem35, menuItem36, menuItem37, menuItem38, menuItem39 });
 
             MenuItem menuItem11 = new MenuItem("Orders", "订单");
             MenuItem menuItem12 = new MenuItem("AssetsSaleOrder", "资产销售");
             MenuItem menuItem13 = new MenuItem("AssetsPurchaseOrder", "资产采购");
             MenuItem menuItem14 = new MenuItem("ConSaleOrder", "耗材销售");
             MenuItem menuItem15 = new MenuItem("ConPurchaseOrder", "耗材采购");
-            menuItem11.Items.AddRange(new MenuItem[] { menuItem12, menuItem13,menuItem14,menuItem15});
+            menuItem11.Items.AddRange(new MenuItem[] { menuItem12, menuItem13, menuItem14, menuItem15 });
 
             MenuItem menuItem6 = new MenuItem("masterData", "主数据");
             MenuItem menuItem7 = new MenuItem("AssetsType", "资产分类");
@@ -49,14 +60,14 @@ namespace SwebWMS.UI
             MenuItem menuItem10 = new MenuItem("Suppliers", "供应商管理");
             menuItem6.Items.AddRange(new MenuItem[] { menuItem7, menuItem8, menuItem9, menuItem10 });
 
-            MenuItem menuItem16 = new MenuItem("Analyze","资产分析统计");
+            MenuItem menuItem16 = new MenuItem("Analyze", "资产分析统计");
             MenuItem menuItem17 = new MenuItem("AssQuantAnalysis", "资产库存分析");
-            MenuItem menuItem18 = new MenuItem("ImminentExpiryAss","资产有效期分析");
+            MenuItem menuItem18 = new MenuItem("ImminentExpiryAss", "资产有效期分析");
             MenuItem menuItem19 = new MenuItem("AssPOAnalysis", "资产采购报表");
             MenuItem menuItem20 = new MenuItem("AssVenAnalysis", "供应商统计");
             MenuItem menuItem21 = new MenuItem("AssSOAnalysis", "资产销售单报表");
             MenuItem menuItem22 = new MenuItem("AssCusAnalysis", "客户统计");
-            menuItem16.Items.AddRange(new MenuItem[] { menuItem17,menuItem18,menuItem19,menuItem20,menuItem21,menuItem22 });
+            menuItem16.Items.AddRange(new MenuItem[] { menuItem17, menuItem18, menuItem19, menuItem20, menuItem21, menuItem22 });
 
             MenuItem menuItem23 = new MenuItem("Analyze1", "耗材分析统计");
             MenuItem menuItem25 = new MenuItem("QuantAnalyze", "耗材库存分析");
@@ -66,12 +77,12 @@ namespace SwebWMS.UI
             MenuItem menuItem29 = new MenuItem("SaleAnalyze", "销售报表分析");
             MenuItem menuItem24 = new MenuItem("CustomerAnalyze", "客户统计");
 
-            menuItem23.Items.AddRange(new MenuItem[] { menuItem25,menuItem26,menuItem27,menuItem28,menuItem29,menuItem24 });
+            menuItem23.Items.AddRange(new MenuItem[] { menuItem25, menuItem26, menuItem27, menuItem28, menuItem29, menuItem24 });
             MenuItem menuItem5 = new MenuItem("Setting", "设置");
-          
-            menuView1.Items.AddRange(new MenuItem[] { menuItem, menuItem11, menuItem2,menuItem6 ,menuItem16,menuItem23,menuItem5 });
 
-          //  menuView1.DefaultSelectedItem(menuView1.Items[0]);
+            menuView1.Items.AddRange(new MenuItem[] { menuItem, menuItem2, menuItem11,menuItem6, menuItem16, menuItem23, menuItem5 });
+
+            //  menuView1.DefaultSelectedItem(menuView1.Items[0]);
             MenuValueChanged(menuView1.Items[0]);
         }
         private void menuView1_MenuItemClick(object sender, MenuViewItemClickEventArgs e)
@@ -98,6 +109,31 @@ namespace SwebWMS.UI
                     FrmAssIn frmAssIn = new FrmAssIn();
                     AddTabPage(menuItem, frmAssIn);
                     break;
+                case "AssOut":
+                    FrmAssOut frmAssOut = new FrmAssOut();
+                    AddTabPage(menuItem, frmAssOut);
+                    break;
+                case "AssTransfer":
+                    FrmAssTransfer frmAssTransfer = new FrmAssTransfer();
+                    AddTabPage(menuItem, frmAssTransfer);
+                    break;
+                case "AssInventory":
+                    FrmAssInventory frmAssInventory = new FrmAssInventory();
+                    AddTabPage(menuItem, frmAssInventory);
+                    break;
+                case "Consumables":
+                    FrmConsumables frmConsumables = new FrmConsumables();
+                    AddTabPage(menuItem, frmConsumables);
+                    break;
+                case "ConIn":
+                    break;
+                case "ConOut":
+                    break;
+                case "ConTransfer":
+                    break;
+                case "ConInventory":
+                    break;
+
                 case "Setting":
                     FrmUserInfo frmUserInfo = new FrmUserInfo();
                     AddTabPage(menuItem, frmUserInfo);
@@ -142,7 +178,7 @@ namespace SwebWMS.UI
                     break;
                 case "ImminentExpiryAss":
                     FrmImminentExpiryAss frmImminentExpiryAss = new FrmImminentExpiryAss();
-                    AddTabPage(menuItem,frmImminentExpiryAss);
+                    AddTabPage(menuItem, frmImminentExpiryAss);
                     break;
                 case "AssPOAnalysis":
                     FrmAssPOAnalysis frmAssPOAnalysis = new FrmAssPOAnalysis();

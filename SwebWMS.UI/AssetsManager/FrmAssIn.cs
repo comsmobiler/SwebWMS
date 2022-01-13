@@ -76,13 +76,12 @@ namespace SwebWMS.UI.AssetsManager
                     if (POID != barCode)
                     {
                         POID = barCode;
-                        ClearInfo();
                     }
                     GetTemplateNodes();
                 }
                 else
                 {
-                    throw new Exception("请扫描正确的采购单编号！");
+                    throw new Exception("请选择正确的采购单编号！");
                 }
             }
             catch (Exception ex)
@@ -105,7 +104,7 @@ namespace SwebWMS.UI.AssetsManager
         private void GetTotal()
         {
             //得到需要输入的SN数量
-            if (btnTemplate.Tag != null && string.IsNullOrEmpty(POID)==false)
+            if (btnTemplate.Tag != null && string.IsNullOrEmpty(POID) == false)
             {
                 var porow = _autofacConfig.AssPurchaseOrderService.GetPORows(POID);
                 if (porow == null) throw new ArgumentNullException("porow");
@@ -222,7 +221,7 @@ namespace SwebWMS.UI.AssetsManager
                         txtPOID.DefaultValue = new string[] { };
                         btnTemplate.Nodes.Clear();
                         txtPOID.Tag = null;
-                       
+                        lblQuant.Text = "";
                     }
                     else
                     {
@@ -235,7 +234,7 @@ namespace SwebWMS.UI.AssetsManager
                 }
                 else
                 {
-                    Toast(rInfo.ErrorInfo);
+                    throw new Exception(rInfo.ErrorInfo);
                 }
                 #endregion
             }
@@ -244,44 +243,24 @@ namespace SwebWMS.UI.AssetsManager
                 Toast(ex.Message);
             }
         }
-
+        /// <summary>
+        /// 添加入库行项
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void addBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 if (string.IsNullOrEmpty(txtSN.Text))
                     throw new Exception("请输入SN号");
-                string barCode = txtSN.Text;
-                if (snPanel.Controls.Count == 0)
+                string[] sns = txtSN.Text.Split(',');
+                for (int i = 0; i < sns.Length; i++)
                 {
-                    bool isExists = _autofacConfig.SettingService.SNIsExists(barCode);
-                    if (!isExists)
+                    string barCode =sns[i];
+                    if (snPanel.Controls.Count == 0)
                     {
-                        AddSnToPanel(barCode);
-                    }
-                    else
-                    {
-                        throw new Exception("该序列号已经存在！");
-                    }
-                }
-                else
-                {
-                    bool isExists = false;
-                    foreach (SNRowLayout sNRow in snPanel.Controls)
-                    {
-                        if (sNRow.SN == txtSN.Text)
-                        {
-                            isExists = true;
-                            break;
-                        }
-                    }
-                    if (isExists)
-                    {
-                        throw new Exception("该序列号已经存在！");
-                    }
-                    else
-                    {
-                        isExists = _autofacConfig.SettingService.SNIsExists(barCode);
+                        bool isExists = _autofacConfig.SettingService.SNIsExists(barCode);
                         if (!isExists)
                         {
                             AddSnToPanel(barCode);
@@ -291,6 +270,35 @@ namespace SwebWMS.UI.AssetsManager
                             throw new Exception("该序列号已经存在！");
                         }
                     }
+                    else
+                    {
+                        bool isExists = false;
+                        foreach (SNRowLayout sNRow in snPanel.Controls)
+                        {
+                            if (sNRow.SN == txtSN.Text)
+                            {
+                                isExists = true;
+                                break;
+                            }
+                        }
+                        if (isExists)
+                        {
+                            throw new Exception("该序列号已经存在！");
+                        }
+                        else
+                        {
+                            isExists = _autofacConfig.SettingService.SNIsExists(barCode);
+                            if (!isExists)
+                            {
+                                AddSnToPanel(barCode);
+                            }
+                            else
+                            {
+                                throw new Exception("该序列号已经存在！");
+                            }
+                        }
+                    }
+
                 }
 
             }

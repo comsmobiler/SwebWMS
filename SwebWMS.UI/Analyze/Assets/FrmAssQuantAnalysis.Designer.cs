@@ -19,15 +19,17 @@ namespace SwebWMS.UI.Analyze
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Swebui.Controls.GridViewColumn gridViewColumn5 = new Swebui.Controls.GridViewColumn();
-            Swebui.Controls.GridViewColumn gridViewColumn6 = new Swebui.Controls.GridViewColumn();
-            Swebui.Controls.GridViewColumn gridViewColumn7 = new Swebui.Controls.GridViewColumn();
-            Swebui.Controls.GridViewColumn gridViewColumn8 = new Swebui.Controls.GridViewColumn();
+            Swebui.Controls.GridViewColumn gridViewColumn1 = new Swebui.Controls.GridViewColumn();
+            Swebui.Controls.GridViewColumn gridViewColumn2 = new Swebui.Controls.GridViewColumn();
+            Swebui.Controls.GridViewColumn gridViewColumn3 = new Swebui.Controls.GridViewColumn();
+            Swebui.Controls.GridViewColumn gridViewColumn4 = new Swebui.Controls.GridViewColumn();
             this.panel1 = new Swebui.Controls.Panel();
             this.label1 = new Swebui.Controls.Label();
             this.panel2 = new Swebui.Controls.Panel();
             this.label2 = new Swebui.Controls.Label();
             this.btnWare = new Swebui.Controls.TreeSelect();
+            this.label3 = new Swebui.Controls.Label();
+            this.btnType = new Swebui.Controls.TreeSelect();
             this.panel3 = new Swebui.Controls.Panel();
             this.panel4 = new Swebui.Controls.Panel();
             this.label4 = new Swebui.Controls.Label();
@@ -35,8 +37,6 @@ namespace SwebWMS.UI.Analyze
             this.panel5 = new Swebui.Controls.Panel();
             this.label5 = new Swebui.Controls.Label();
             this.gridView1 = new Swebui.Controls.GridView();
-            this.label3 = new Swebui.Controls.Label();
-            this.btnType = new Swebui.Controls.TreeSelect();
             // 
             // panel1
             // 
@@ -86,11 +86,34 @@ namespace SwebWMS.UI.Analyze
             // 
             this.btnWare.Border = new Swebui.Controls.Border(1F);
             this.btnWare.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.btnWare.DefaultValue = new string[0];
+            this.btnWare.DropDownHeight = 280;
             this.btnWare.ListBackgroundColor = System.Drawing.Color.White;
             this.btnWare.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
             this.btnWare.Name = "btnWare";
             this.btnWare.Size = new System.Drawing.Size(250, 35);
             this.btnWare.Press += new Swebui.Controls.TreeSelect.TreeSelectOnPressEventHandler(this.btnWare_Press);
+            // 
+            // label3
+            // 
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 35);
+            this.label3.Text = "类型";
+            this.label3.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
+            // 
+            // btnType
+            // 
+            this.btnType.Border = new Swebui.Controls.Border(1F);
+            this.btnType.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.btnType.DefaultValue = new string[0];
+            this.btnType.DropDownHeight = 280;
+            this.btnType.ListBackgroundColor = System.Drawing.Color.White;
+            this.btnType.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
+            this.btnType.Name = "btnType";
+            this.btnType.Size = new System.Drawing.Size(250, 35);
+            this.btnType.Press += new Swebui.Controls.TreeSelect.TreeSelectOnPressEventHandler(this.btnType_Press);
             // 
             // panel3
             // 
@@ -149,44 +172,25 @@ namespace SwebWMS.UI.Analyze
             // gridView1
             // 
             this.gridView1.AllowPaging = true;
-            gridViewColumn5.DisplayMember = "WARENAME";
-            gridViewColumn5.HeaderText = "仓库名称";
-            gridViewColumn6.DisplayMember = "TYPENAME";
-            gridViewColumn6.HeaderText = "资产条码";
-            gridViewColumn7.DisplayMember = "NAME";
-            gridViewColumn7.HeaderText = "名称";
-            gridViewColumn8.DisplayMember = "QUANT";
-            gridViewColumn8.HeaderText = "数量";
+            gridViewColumn1.DisplayMember = "WARENAME";
+            gridViewColumn1.HeaderText = "仓库名称";
+            gridViewColumn2.DisplayMember = "TYPENAME";
+            gridViewColumn2.HeaderText = "资产条码";
+            gridViewColumn3.DisplayMember = "NAME";
+            gridViewColumn3.HeaderText = "名称";
+            gridViewColumn4.DisplayMember = "QUANT";
+            gridViewColumn4.HeaderText = "数量";
             this.gridView1.Columns.AddRange(new Swebui.Controls.GridViewColumn[] {
-            gridViewColumn5,
-            gridViewColumn6,
-            gridViewColumn7,
-            gridViewColumn8});
+            gridViewColumn1,
+            gridViewColumn2,
+            gridViewColumn3,
+            gridViewColumn4});
             this.gridView1.DataSource = null;
             this.gridView1.Flex = 1;
             this.gridView1.Margin = new Swebui.Controls.Margin(0F, 10F, 0F, 0F);
             this.gridView1.Name = "gridView1";
             this.gridView1.RowWidth = 0;
             this.gridView1.Size = new System.Drawing.Size(0, 30);
-            // 
-            // label3
-            // 
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 35);
-            this.label3.Text = "类型";
-            this.label3.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
-            // 
-            // btnType
-            // 
-            this.btnType.Border = new Swebui.Controls.Border(1F);
-            this.btnType.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.btnType.ListBackgroundColor = System.Drawing.Color.White;
-            this.btnType.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
-            this.btnType.Name = "btnType";
-            this.btnType.Size = new System.Drawing.Size(250, 35);
-            this.btnType.Press += new Swebui.Controls.TreeSelect.TreeSelectOnPressEventHandler(this.btnType_Press);
             // 
             // FrmAssQuantAnalysis
             // 

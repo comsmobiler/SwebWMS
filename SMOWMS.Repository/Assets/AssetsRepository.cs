@@ -114,6 +114,30 @@ namespace SMOWMS.Repository.Assets
             }
             return result;
         }
+        /// <summary>
+        /// 根据SN或者名称和类别、仓库模糊查询资产
+        /// </summary>
+        /// <param name="SNOrName">SN或者名称</param>
+        /// <param name="types">类别</param>
+        /// <param name="wareid">仓库编号</param>
+        /// <returns></returns>
+        public IQueryable<SMOWMS.Domain.Entity.Assets> QueryAssets(string SNOrName, List<String> types,string wareid)
+        {
+            var result = _entities;
+            if (types.Count > 0)
+            {
+                result = result.Where(a => types.Contains(a.TYPEID));
+            }
+            if (!string.IsNullOrEmpty(SNOrName))
+            {
+                result = result.Where(a => a.SN.Contains(SNOrName) || a.NAME.Contains(SNOrName));
+            }
+            if(string.IsNullOrEmpty(wareid)==false)
+            {
+                result = result.Where(a => a.WAREID == wareid);
+            }
+            return result;
+        }
 
         /// <summary>
         /// 根据序列号得到资产

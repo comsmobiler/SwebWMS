@@ -59,7 +59,14 @@ namespace SMOWMS.Domain.IRepository
         /// <param name="types">类型</param>
         /// <returns></returns>
         IQueryable<Assets> QueryAssets(string SNOrName, List<String> types);
-
+        /// <summary>
+        /// 根据SN或者名称和类别、仓库模糊查询资产
+        /// </summary>
+        /// <param name="SNOrName">SN或者名称</param>
+        /// <param name="types">类别</param>
+        /// <param name="wareid">仓库编号</param>
+        /// <returns></returns>
+        IQueryable<Assets> QueryAssets(string SNOrName, List<String> types,string wareid);
         /// <summary>
         /// 根据SN得到资产信息
         /// </summary>

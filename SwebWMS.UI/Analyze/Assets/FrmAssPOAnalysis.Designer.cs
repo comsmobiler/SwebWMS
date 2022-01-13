@@ -108,6 +108,8 @@ namespace SwebWMS.UI.Analyze
             // 
             this.btnTime.Border = new Swebui.Controls.Border(1F);
             this.btnTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.btnTime.DefaultValue = new string[0];
+            this.btnTime.DropDownHeight = 280;
             this.btnTime.ListBackgroundColor = System.Drawing.Color.White;
             this.btnTime.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
             this.btnTime.Name = "btnTime";

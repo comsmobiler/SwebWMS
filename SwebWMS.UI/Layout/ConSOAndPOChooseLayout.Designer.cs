@@ -30,6 +30,8 @@ namespace SwebWMS.UI.Layout
             // 
             this.treeSelect1.Border = new Swebui.Controls.Border(1F);
             this.treeSelect1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.treeSelect1.DefaultValue = new string[0];
+            this.treeSelect1.DropDownHeight = 280;
             this.treeSelect1.Flex = 1;
             this.treeSelect1.ListBackgroundColor = System.Drawing.Color.White;
             this.treeSelect1.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);

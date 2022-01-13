@@ -301,6 +301,7 @@ namespace SwebWMS.UI.MasterData
             this.btnType.Border = new Swebui.Controls.Border(1F);
             this.btnType.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnType.DefaultValue = new string[0];
+            this.btnType.DropDownHeight = 280;
             this.btnType.Flex = 1;
             this.btnType.ListBackgroundColor = System.Drawing.Color.White;
             this.btnType.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);

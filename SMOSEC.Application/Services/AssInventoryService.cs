@@ -233,10 +233,10 @@ namespace SMOWMS.Application.Services
 
             foreach (DataRow row in tempTable.Rows)
             {
-                if (int.Parse(row["RESULT"].ToString()) != (int)ResultStatus.存在)
-                {
+                //if (int.Parse(row["RESULT"].ToString()) != (int)ResultStatus.存在)
+                //{
                     row["RESULTNAME"] = Enum.GetName(typeof(ResultStatus), int.Parse(row["RESULT"].ToString()));
-                }
+                //}
 
             }
             return tempTable;

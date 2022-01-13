@@ -29,6 +29,8 @@ namespace SwebWMS.UI.Analyze
             this.dpStart = new Swebui.Controls.ChooseDatePicker();
             this.label3 = new Swebui.Controls.Label();
             this.btnTime = new Swebui.Controls.TreeSelect();
+            this.label6 = new Swebui.Controls.Label();
+            this.btnVendor = new Swebui.Controls.TreeSelect();
             this.panel3 = new Swebui.Controls.Panel();
             this.panel4 = new Swebui.Controls.Panel();
             this.label4 = new Swebui.Controls.Label();
@@ -36,8 +38,6 @@ namespace SwebWMS.UI.Analyze
             this.panel5 = new Swebui.Controls.Panel();
             this.label5 = new Swebui.Controls.Label();
             this.gridView1 = new Swebui.Controls.GridView();
-            this.label6 = new Swebui.Controls.Label();
-            this.btnVendor = new Swebui.Controls.TreeSelect();
             // 
             // panel1
             // 
@@ -112,11 +112,34 @@ namespace SwebWMS.UI.Analyze
             // 
             this.btnTime.Border = new Swebui.Controls.Border(1F);
             this.btnTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.btnTime.DefaultValue = new string[0];
+            this.btnTime.DropDownHeight = 280;
             this.btnTime.ListBackgroundColor = System.Drawing.Color.White;
             this.btnTime.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
             this.btnTime.Name = "btnTime";
             this.btnTime.Size = new System.Drawing.Size(250, 35);
             this.btnTime.Press += new Swebui.Controls.TreeSelect.TreeSelectOnPressEventHandler(this.btnTime_Press);
+            // 
+            // label6
+            // 
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 35);
+            this.label6.Text = "供应商";
+            this.label6.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
+            // 
+            // btnVendor
+            // 
+            this.btnVendor.Border = new Swebui.Controls.Border(1F);
+            this.btnVendor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.btnVendor.DefaultValue = new string[0];
+            this.btnVendor.DropDownHeight = 280;
+            this.btnVendor.ListBackgroundColor = System.Drawing.Color.White;
+            this.btnVendor.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
+            this.btnVendor.Name = "btnVendor";
+            this.btnVendor.Size = new System.Drawing.Size(250, 35);
+            this.btnVendor.Press += new Swebui.Controls.TreeSelect.TreeSelectOnPressEventHandler(this.btnVendor_Press);
             // 
             // panel3
             // 
@@ -191,25 +214,6 @@ namespace SwebWMS.UI.Analyze
             this.gridView1.Name = "gridView1";
             this.gridView1.RowWidth = 0;
             this.gridView1.Size = new System.Drawing.Size(0, 30);
-            // 
-            // label6
-            // 
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 35);
-            this.label6.Text = "供应商";
-            this.label6.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
-            // 
-            // btnVendor
-            // 
-            this.btnVendor.Border = new Swebui.Controls.Border(1F);
-            this.btnVendor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.btnVendor.ListBackgroundColor = System.Drawing.Color.White;
-            this.btnVendor.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
-            this.btnVendor.Name = "btnVendor";
-            this.btnVendor.Size = new System.Drawing.Size(250, 35);
-            this.btnVendor.Press += new Swebui.Controls.TreeSelect.TreeSelectOnPressEventHandler(this.btnVendor_Press);
             // 
             // FrmAssVenAnalysis
             // 

@@ -160,6 +160,30 @@
     <Compile Include="AssetsManager\FrmAssIn.Designer.cs">
       <DependentUpon>FrmAssIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssetsManager\FrmAssInventory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssInventory.Designer.cs">
+      <DependentUpon>FrmAssInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssInventoryCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssInventoryCreate.Designer.cs">
+      <DependentUpon>FrmAssInventoryCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssInventoryResult.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssInventoryResult.Designer.cs">
+      <DependentUpon>FrmAssInventoryResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssOut.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssOut.Designer.cs">
+      <DependentUpon>FrmAssOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="AssetsManager\FrmAssPurchaseOrderCreate.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -177,6 +201,30 @@
     </Compile>
     <Compile Include="AssetsManager\FrmAssPurchaseOrderList.Designer.cs">
       <DependentUpon>FrmAssPurchaseOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssTransfer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssTransfer.Designer.cs">
+      <DependentUpon>FrmAssTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssTransferCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssTransferCreate.Designer.cs">
+      <DependentUpon>FrmAssTransferCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssTransferDeal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssTransferDeal.Designer.cs">
+      <DependentUpon>FrmAssTransferDeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssTransferDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\FrmAssTransferDetail.Designer.cs">
+      <DependentUpon>FrmAssTransferDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="AutofacConfig.cs" />
     <Compile Include="AutomapperConfig.cs" />
@@ -228,6 +276,12 @@
     <Compile Include="FrmRegister.Designer.cs">
       <DependentUpon>FrmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Layout\AIResultLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\AIResultLayout.Designer.cs">
+      <DependentUpon>AIResultLayout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Layout\AssetSaleOrderDetialLayout.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -263,6 +317,24 @@
     </Compile>
     <Compile Include="Layout\ImageButton.Designer.cs">
       <DependentUpon>ImageButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\OrderCheckSNLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\OrderCheckSNLayout.Designer.cs">
+      <DependentUpon>OrderCheckSNLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\OrderCreateSNLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\OrderCreateSNLayout.Designer.cs">
+      <DependentUpon>OrderCreateSNLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\OrderDetailSNLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\OrderDetailSNLayout.Designer.cs">
+      <DependentUpon>OrderDetailSNLayout.cs</DependentUpon>
     </Compile>
     <Compile Include="Layout\SNRowLayout.cs">
       <SubType>Component</SubType>
@@ -300,17 +372,23 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MasterData\FrmAssetDetial.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmAssetDetial.Designer.cs">
+      <DependentUpon>FrmAssetDetial.cs</DependentUpon>
+    </Compile>
     <Compile Include="MasterData\FrmAssets.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="MasterData\FrmAssets.Designer.cs">
       <DependentUpon>FrmAssets.cs</DependentUpon>
     </Compile>
-    <Compile Include="MasterData\FrmAssetsCreate.cs">
+    <Compile Include="MasterData\FrmAssetsEdit.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="MasterData\FrmAssetsCreate.Designer.cs">
-      <DependentUpon>FrmAssetsCreate.cs</DependentUpon>
+    <Compile Include="MasterData\FrmAssetsEdit.Designer.cs">
+      <DependentUpon>FrmAssetsEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="MasterData\FrmAssetsType.cs">
       <SubType>Component</SubType>
@@ -336,6 +414,12 @@
     <Compile Include="MasterData\FrmAssTemplateDetial.Designer.cs">
       <DependentUpon>FrmAssTemplateDetial.cs</DependentUpon>
     </Compile>
+    <Compile Include="MasterData\FrmConsumables.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmConsumables.Designer.cs">
+      <DependentUpon>FrmConsumables.cs</DependentUpon>
+    </Compile>
     <Compile Include="MasterData\FrmCustomer.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -353,6 +437,12 @@
     </Compile>
     <Compile Include="MasterData\FrmCustomerDetial.Designer.cs">
       <DependentUpon>FrmCustomerDetial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmPrShow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmPrShow.Designer.cs">
+      <DependentUpon>FrmPrShow.cs</DependentUpon>
     </Compile>
     <Compile Include="MasterData\FrmSupplier.cs">
       <SubType>Component</SubType>
@@ -435,6 +525,18 @@
     <EmbeddedResource Include="AssetsManager\FrmAssIn.resx">
       <DependentUpon>FrmAssIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssInventory.resx">
+      <DependentUpon>FrmAssInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssInventoryCreate.resx">
+      <DependentUpon>FrmAssInventoryCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssInventoryResult.resx">
+      <DependentUpon>FrmAssInventoryResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssOut.resx">
+      <DependentUpon>FrmAssOut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AssetsManager\FrmAssPurchaseOrderCreate.resx">
       <DependentUpon>FrmAssPurchaseOrderCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -443,6 +545,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AssetsManager\FrmAssPurchaseOrderList.resx">
       <DependentUpon>FrmAssPurchaseOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssTransfer.resx">
+      <DependentUpon>FrmAssTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssTransferCreate.resx">
+      <DependentUpon>FrmAssTransferCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssTransferDeal.resx">
+      <DependentUpon>FrmAssTransferDeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\FrmAssTransferDetail.resx">
+      <DependentUpon>FrmAssTransferDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsumablesManager\FrmConPurchaseOrderCreate.resx">
       <DependentUpon>FrmConPurchaseOrderCreate.cs</DependentUpon>
@@ -468,6 +582,9 @@
     <EmbeddedResource Include="FrmRegister.resx">
       <DependentUpon>FrmRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Layout\AIResultLayout.resx">
+      <DependentUpon>AIResultLayout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Layout\AssetSaleOrderDetialLayout.resx">
       <DependentUpon>AssetSaleOrderDetialLayout.cs</DependentUpon>
     </EmbeddedResource>
@@ -485,6 +602,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\ImageButton.resx">
       <DependentUpon>ImageButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\OrderCheckSNLayout.resx">
+      <DependentUpon>OrderCheckSNLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\OrderCreateSNLayout.resx">
+      <DependentUpon>OrderCreateSNLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\OrderDetailSNLayout.resx">
+      <DependentUpon>OrderDetailSNLayout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\SNRowLayout.resx">
       <DependentUpon>SNRowLayout.cs</DependentUpon>
@@ -504,11 +630,14 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmAssetDetial.resx">
+      <DependentUpon>FrmAssetDetial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MasterData\FrmAssets.resx">
       <DependentUpon>FrmAssets.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MasterData\FrmAssetsCreate.resx">
-      <DependentUpon>FrmAssetsCreate.cs</DependentUpon>
+    <EmbeddedResource Include="MasterData\FrmAssetsEdit.resx">
+      <DependentUpon>FrmAssetsEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MasterData\FrmAssetsType.resx">
       <DependentUpon>FrmAssetsType.cs</DependentUpon>
@@ -522,6 +651,9 @@
     <EmbeddedResource Include="MasterData\FrmAssTemplateDetial.resx">
       <DependentUpon>FrmAssTemplateDetial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmConsumables.resx">
+      <DependentUpon>FrmConsumables.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MasterData\FrmCustomer.resx">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -530,6 +662,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MasterData\FrmCustomerDetial.resx">
       <DependentUpon>FrmCustomerDetial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmPrShow.resx">
+      <DependentUpon>FrmPrShow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MasterData\FrmSupplier.resx">
       <DependentUpon>FrmSupplier.cs</DependentUpon>

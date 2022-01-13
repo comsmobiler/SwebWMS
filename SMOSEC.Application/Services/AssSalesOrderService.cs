@@ -138,7 +138,32 @@ namespace SMOWMS.Application.Services
             }
             return temTable;
         }
+        /// <summary>
+        /// 得到用户的未完成销售单列表
+        /// </summary>
+        /// <param name="UserId">用户编号</param>
+        /// <returns></returns>
+        public List<AssSOListOutputDto> GetIncompleteOrders(string UserId)
+        {
+            var area = _assSalesOrderRepository.GetAll();
 
+            if (!string.IsNullOrEmpty(UserId))
+            {
+                area = area.Where(a => a.SALESPERSON == UserId);
+            }
+            var list = from assSalesOrder in area
+                       join user in SMOWMSDbContext.coreUsers on assSalesOrder.SALESPERSON equals user.USER_ID
+                       where assSalesOrder.STATUS!=2
+                       orderby assSalesOrder.CREATEDATE descending
+                       select new AssSOListOutputDto()
+                       {
+                           SOID = assSalesOrder.SOID,
+                           NAME = assSalesOrder.NAME,
+                       };
+            var temTable = list.ToList();
+            return temTable;
+        }
+ 
         /// <summary>
         /// 得到销售单行项
         /// </summary>

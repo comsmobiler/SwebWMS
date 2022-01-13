@@ -66,7 +66,7 @@ namespace SwebWMS.UI.AssetsManager
             this.label1.FontSize = 24F;
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 26);
-            this.label1.Text = "资产销售订单列表";
+            this.label1.Text = "资产调入";
             // 
             // panel2
             // 
@@ -89,7 +89,7 @@ namespace SwebWMS.UI.AssetsManager
             this.saveBtn.Border = new Swebui.Controls.Border(1F);
             this.saveBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.saveBtn.ForeColor = System.Drawing.Color.DimGray;
-            this.saveBtn.IconName = "fa fa-upload";
+            this.saveBtn.IconName = "fa fa-download";
             this.saveBtn.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.NumberOfLines = 0;
@@ -169,6 +169,7 @@ namespace SwebWMS.UI.AssetsManager
             this.txtPOID.Border = new Swebui.Controls.Border(1F);
             this.txtPOID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtPOID.DefaultValue = new string[0];
+            this.txtPOID.DropDownHeight = 280;
             this.txtPOID.Flex = 1;
             this.txtPOID.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.txtPOID.Name = "txtPOID";
@@ -180,6 +181,7 @@ namespace SwebWMS.UI.AssetsManager
             this.btnTemplate.Border = new Swebui.Controls.Border(1F);
             this.btnTemplate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnTemplate.DefaultValue = new string[0];
+            this.btnTemplate.DropDownHeight = 280;
             this.btnTemplate.Flex = 1;
             this.btnTemplate.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.btnTemplate.Name = "btnTemplate";
@@ -212,7 +214,7 @@ namespace SwebWMS.UI.AssetsManager
             this.label5.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 30);
-            this.label5.Text = "资产SN号";
+            this.label5.Text = "资产SN号（批量输入请用\",\"分隔，例如112,113）";
             this.label5.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // label6
@@ -264,6 +266,7 @@ namespace SwebWMS.UI.AssetsManager
             this.txtSN.Flex = 1;
             this.txtSN.Name = "txtSN";
             this.txtSN.Size = new System.Drawing.Size(100, 35);
+            this.txtSN.SubmitEditing += new System.EventHandler(this.addBtn_Click);
             // 
             // addBtn
             // 

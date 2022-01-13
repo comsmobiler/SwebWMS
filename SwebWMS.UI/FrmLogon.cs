@@ -28,26 +28,12 @@ namespace SwebWMS.UI
                     throw new Exception("请输入手机号码");
                 if (PassWord.Length < 0)
                     throw new Exception("请输入密码");
-                //LoadClientData(MobileServer.ServerID + "user", userID);
-                //if (checkRemb.Checked == true)
-                //{
-                //    //记住密码
-                //    LoadClientData(MobileServer.ServerID + "pwd", PassWord);
-                //}
-                //else
-                //{
-                //    //删除客户端数据
-                //    RemoveClientData(Client + "pwd", (object s, ClientDataResultHandlerArgs args) => txtPassWord.Text = "");
-                //}
                 ReturnInfo result = autofacConfig.coreUserService.Login(userID, PassWord);
-
                 if (result.IsSuccess)
                 {
                     String Role = autofacConfig.coreUserService.GetUserByID(userID).USER_ROLE;
                     Client.Session["UserID"] = userID;
                     Client.Session["Role"] = Role;
-                    //frmMenu frmMenu = new frmMenu();
-                    // this.Form.Show(frmMenu);
                     this.Show(new MainForm());
                 }
                 else
@@ -65,7 +51,11 @@ namespace SwebWMS.UI
         {
 
         }
-
+        /// <summary>
+        /// 跳转注册页
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             this.Form.Show(new FrmRegister());

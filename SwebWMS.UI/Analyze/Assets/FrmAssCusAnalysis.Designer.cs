@@ -19,9 +19,9 @@ namespace SwebWMS.UI.Analyze
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Swebui.Controls.GridViewColumn gridViewColumn4 = new Swebui.Controls.GridViewColumn();
-            Swebui.Controls.GridViewColumn gridViewColumn5 = new Swebui.Controls.GridViewColumn();
-            Swebui.Controls.GridViewColumn gridViewColumn6 = new Swebui.Controls.GridViewColumn();
+            Swebui.Controls.GridViewColumn gridViewColumn1 = new Swebui.Controls.GridViewColumn();
+            Swebui.Controls.GridViewColumn gridViewColumn2 = new Swebui.Controls.GridViewColumn();
+            Swebui.Controls.GridViewColumn gridViewColumn3 = new Swebui.Controls.GridViewColumn();
             this.panel1 = new Swebui.Controls.Panel();
             this.label1 = new Swebui.Controls.Label();
             this.panel2 = new Swebui.Controls.Panel();
@@ -112,6 +112,8 @@ namespace SwebWMS.UI.Analyze
             // 
             this.btnTime.Border = new Swebui.Controls.Border(1F);
             this.btnTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.btnTime.DefaultValue = new string[0];
+            this.btnTime.DropDownHeight = 280;
             this.btnTime.ListBackgroundColor = System.Drawing.Color.White;
             this.btnTime.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
             this.btnTime.Name = "btnTime";
@@ -131,6 +133,8 @@ namespace SwebWMS.UI.Analyze
             // 
             this.btnCus.Border = new Swebui.Controls.Border(1F);
             this.btnCus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.btnCus.DefaultValue = new string[0];
+            this.btnCus.DropDownHeight = 280;
             this.btnCus.ListBackgroundColor = System.Drawing.Color.White;
             this.btnCus.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
             this.btnCus.Name = "btnCus";
@@ -194,16 +198,16 @@ namespace SwebWMS.UI.Analyze
             // gridView1
             // 
             this.gridView1.AllowPaging = true;
-            gridViewColumn4.DisplayMember = "TEMPLATEID";
-            gridViewColumn4.HeaderText = "模板编号";
-            gridViewColumn5.DisplayMember = "NAME";
-            gridViewColumn5.HeaderText = "模板名称";
-            gridViewColumn6.DisplayMember = "QUANTPURCHAED";
-            gridViewColumn6.HeaderText = "数量";
+            gridViewColumn1.DisplayMember = "TEMPLATEID";
+            gridViewColumn1.HeaderText = "模板编号";
+            gridViewColumn2.DisplayMember = "NAME";
+            gridViewColumn2.HeaderText = "模板名称";
+            gridViewColumn3.DisplayMember = "QUANTPURCHAED";
+            gridViewColumn3.HeaderText = "数量";
             this.gridView1.Columns.AddRange(new Swebui.Controls.GridViewColumn[] {
-            gridViewColumn4,
-            gridViewColumn5,
-            gridViewColumn6});
+            gridViewColumn1,
+            gridViewColumn2,
+            gridViewColumn3});
             this.gridView1.DataSource = null;
             this.gridView1.Flex = 1;
             this.gridView1.Margin = new Swebui.Controls.Margin(0F, 10F, 0F, 0F);

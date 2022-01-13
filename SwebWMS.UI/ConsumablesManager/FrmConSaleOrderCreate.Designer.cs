@@ -219,6 +219,8 @@ namespace SwebWMS.UI.ConsumablesManager
             // 
             this.btnCustomer.Border = new Swebui.Controls.Border(1F);
             this.btnCustomer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnCustomer.DefaultValue = new string[0];
+            this.btnCustomer.DropDownHeight = 280;
             this.btnCustomer.Flex = 1;
             this.btnCustomer.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.btnCustomer.Name = "btnCustomer";
@@ -274,6 +276,8 @@ namespace SwebWMS.UI.ConsumablesManager
             // 
             this.btnDealMan.Border = new Swebui.Controls.Border(1F);
             this.btnDealMan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnDealMan.DefaultValue = new string[0];
+            this.btnDealMan.DropDownHeight = 280;
             this.btnDealMan.Flex = 1;
             this.btnDealMan.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.btnDealMan.Name = "btnDealMan";

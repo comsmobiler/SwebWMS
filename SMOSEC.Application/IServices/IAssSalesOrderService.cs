@@ -25,6 +25,12 @@ namespace SMOWMS.Application.IServices
         DataTable GetOrders(string UserId);
 
         /// <summary>
+        /// 得到用户的未完成销售单列表
+        /// </summary>
+        /// <param name="UserId">用户编号</param>
+        /// <returns></returns>
+        List<AssSOListOutputDto> GetIncompleteOrders(string UserId);
+        /// <summary>
         /// 得到销售单行项
         /// </summary>
         /// <param name="SOID">销售单编号</param>

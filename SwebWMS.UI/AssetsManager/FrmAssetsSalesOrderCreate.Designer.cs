@@ -221,6 +221,7 @@ namespace SwebWMS.UI.AssetsManager
             this.btnDealMan.Border = new Swebui.Controls.Border(1F);
             this.btnDealMan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnDealMan.DefaultValue = new string[0];
+            this.btnDealMan.DropDownHeight = 280;
             this.btnDealMan.Flex = 1;
             this.btnDealMan.ListBackgroundColor = System.Drawing.Color.White;
             this.btnDealMan.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
@@ -278,6 +279,7 @@ namespace SwebWMS.UI.AssetsManager
             this.btnCus.Border = new Swebui.Controls.Border(1F);
             this.btnCus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnCus.DefaultValue = new string[0];
+            this.btnCus.DropDownHeight = 280;
             this.btnCus.Flex = 1;
             this.btnCus.ListBackgroundColor = System.Drawing.Color.White;
             this.btnCus.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);

@@ -19,8 +19,8 @@ namespace SwebWMS.UI.UserInfo
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Swebui.Controls.ComboBoxItem comboBoxItem3 = new Swebui.Controls.ComboBoxItem();
-            Swebui.Controls.ComboBoxItem comboBoxItem4 = new Swebui.Controls.ComboBoxItem();
+            Swebui.Controls.TreeSelectNode treeSelectNode1 = new Swebui.Controls.TreeSelectNode();
+            Swebui.Controls.TreeSelectNode treeSelectNode2 = new Swebui.Controls.TreeSelectNode();
             this.panel1 = new Swebui.Controls.Panel();
             this.userImg1 = new Swebui.Controls.Image();
             this.btnName1 = new Swebui.Controls.Label();
@@ -41,11 +41,12 @@ namespace SwebWMS.UI.UserInfo
             this.panel8 = new Swebui.Controls.Panel();
             this.userImg = new Swebui.Controls.Image();
             this.button1 = new Swebui.Controls.Button();
+            this.psdChange = new Swebui.Controls.Button();
             this.panel5 = new Swebui.Controls.Panel();
             this.lab = new Swebui.Controls.Label();
             this.label7 = new Swebui.Controls.Label();
             this.panel7 = new Swebui.Controls.Panel();
-            this.btnSex = new Swebui.Controls.ComboBox();
+            this.btnSex = new Swebui.Controls.TreeSelect();
             this.btnName = new Swebui.Controls.TextBox();
             this.panel9 = new Swebui.Controls.Panel();
             this.label9 = new Swebui.Controls.Label();
@@ -59,7 +60,6 @@ namespace SwebWMS.UI.UserInfo
             this.panel12 = new Swebui.Controls.Panel();
             this.txtAddress = new Swebui.Controls.TextBox();
             this.label6 = new Swebui.Controls.Label();
-            this.psdChange = new Swebui.Controls.Button();
             // 
             // panel1
             // 
@@ -292,6 +292,20 @@ namespace SwebWMS.UI.UserInfo
             this.button1.Text = "更换头像";
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // psdChange
+            // 
+            this.psdChange.BackColor = System.Drawing.Color.Transparent;
+            this.psdChange.Border = new Swebui.Controls.Border(1F);
+            this.psdChange.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.psdChange.Flex = 1;
+            this.psdChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.psdChange.Margin = new Swebui.Controls.Margin(10F, 15F, 20F, 10F);
+            this.psdChange.Name = "psdChange";
+            this.psdChange.NumberOfLines = 0;
+            this.psdChange.Size = new System.Drawing.Size(0, 30);
+            this.psdChange.Text = "修改登录密码";
+            this.psdChange.Click += new System.EventHandler(this.psdChange_Click);
+            // 
             // panel5
             // 
             this.panel5.Controls.AddRange(new Swebui.Controls.SwebControl[] {
@@ -336,22 +350,20 @@ namespace SwebWMS.UI.UserInfo
             // 
             this.btnSex.Border = new Swebui.Controls.Border(1F);
             this.btnSex.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnSex.DefaultValue = new string[0];
+            this.btnSex.Disabled = true;
             this.btnSex.Flex = 1;
-            this.btnSex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            comboBoxItem3.Id = "0";
-            comboBoxItem3.Text = "男";
-            comboBoxItem4.Id = "1";
-            comboBoxItem4.Text = "女";
-            this.btnSex.Items.AddRange(new Swebui.Controls.ComboBoxItem[] {
-            comboBoxItem3,
-            comboBoxItem4});
             this.btnSex.Margin = new Swebui.Controls.Margin(20F, 0F, 10F, 0F);
             this.btnSex.Name = "btnSex";
-            this.btnSex.Placeholder = "";
-            this.btnSex.PopupHeight = 0;
+            treeSelectNode1.Text = "男";
+            treeSelectNode1.TreeID = "0";
+            treeSelectNode2.Text = "女";
+            treeSelectNode2.TreeID = "1";
+            this.btnSex.Nodes.AddRange(new Swebui.Controls.TreeSelectNode[] {
+            treeSelectNode1,
+            treeSelectNode2});
             this.btnSex.Size = new System.Drawing.Size(0, 35);
-            this.btnSex.Text = "";
-            this.btnSex.ValueChanged += new System.EventHandler(this.btnSex_ValueChanged);
+            this.btnSex.Press += new Swebui.Controls.TreeSelect.TreeSelectOnPressEventHandler(this.btnSex_Press);
             // 
             // btnName
             // 
@@ -408,11 +420,11 @@ namespace SwebWMS.UI.UserInfo
             // 
             this.dpkBirthday.Border = new Swebui.Controls.Border(1F);
             this.dpkBirthday.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.dpkBirthday.Enable = false;
             this.dpkBirthday.Flex = 1;
             this.dpkBirthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.dpkBirthday.Margin = new Swebui.Controls.Margin(20F, 0F, 10F, 0F);
             this.dpkBirthday.MaxDate = new System.DateTime(9997, 12, 31, 23, 59, 59, 999);
-            this.dpkBirthday.MinDate = new System.DateTime(((long)(0)));
             this.dpkBirthday.Name = "dpkBirthday";
             this.dpkBirthday.Size = new System.Drawing.Size(0, 35);
             this.dpkBirthday.Value = new System.DateTime(2021, 11, 2, 15, 1, 50, 0);
@@ -482,20 +494,6 @@ namespace SwebWMS.UI.UserInfo
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 0);
             // 
-            // psdChange
-            // 
-            this.psdChange.BackColor = System.Drawing.Color.Transparent;
-            this.psdChange.Border = new Swebui.Controls.Border(1F);
-            this.psdChange.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.psdChange.Flex = 1;
-            this.psdChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.psdChange.Margin = new Swebui.Controls.Margin(10F, 15F, 20F, 10F);
-            this.psdChange.Name = "psdChange";
-            this.psdChange.NumberOfLines = 0;
-            this.psdChange.Size = new System.Drawing.Size(0, 30);
-            this.psdChange.Text = "修改登录密码";
-            this.psdChange.Click += new System.EventHandler(this.psdChange_Click);
-            // 
             // FrmUserInfo
             // 
             this.BackColor = System.Drawing.Color.White;
@@ -525,7 +523,7 @@ namespace SwebWMS.UI.UserInfo
         private Label lab;
         private Label label7;
         private Panel panel7;
-        private ComboBox btnSex;
+        private TreeSelect btnSex;
         private TextBox btnName;
         private Panel panel9;
         private Panel panel10;

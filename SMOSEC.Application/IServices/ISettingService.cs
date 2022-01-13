@@ -53,9 +53,17 @@ namespace SMOWMS.Application.IServices
         /// 根据SN或者名称查询资产
         /// </summary>
         /// <param name="SNOrName">SN或者名称</param>
-        /// <param name="Type">一级资产编号</param>
+        /// <param name="Type">一级类别</param>
         /// <returns></returns>
         DataTable QueryAssets(string SNOrName,string Type);
+        /// <summary>
+        /// 根据SN或者名称和类别、仓库查询资产
+        /// </summary>
+        /// <param name="SNOrName">SN或者名称</param>
+        /// <param name="Type">一级类别编号</param>
+        /// <param name="WareID">仓库编号</param>
+        /// <returns></returns>
+        DataTable QueryAssets(string SNOrName, string Type,string WareID);
 
         /// <summary>
         /// 根据SN得到资产信息

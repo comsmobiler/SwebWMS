@@ -80,10 +80,10 @@ namespace SMOWMS.Application.Services
             var dto = from assetse in SMOWMSDbContext.Assetss
                       from user in SMOWMSDbContext.coreUsers
                       join type in SMOWMSDbContext.AssetsTypes on assetse.TYPEID equals type.TYPEID
-                from location in SMOWMSDbContext.WHStorageLocations
-                from storageType in SMOWMSDbContext.WHStorageTypes
-                from wareHouse in SMOWMSDbContext.WareHouses
-                      where assetse.ASSID == ID && user.USER_ID == location.MANAGER&& wareHouse.WAREID == assetse.WAREID && storageType.WAREID == assetse.WAREID && storageType.STID == assetse.STID && location.WAREID == assetse.WAREID && location.STID == assetse.STID && location.SLID == assetse.SLID
+                      from location in SMOWMSDbContext.WHStorageLocations
+                      from storageType in SMOWMSDbContext.WHStorageTypes
+                      from wareHouse in SMOWMSDbContext.WareHouses
+                      where assetse.ASSID == ID && user.USER_ID == location.MANAGER && wareHouse.WAREID == assetse.WAREID && storageType.WAREID == assetse.WAREID && storageType.STID == assetse.STID && location.WAREID == assetse.WAREID && location.STID == assetse.STID && location.SLID == assetse.SLID
                       select new AssetsOutputDto
                       {
                           AssId = assetse.ASSID,
@@ -116,10 +116,10 @@ namespace SMOWMS.Application.Services
         /// <returns></returns>
         public DataTable GetAllAss(string wareId)
         {
-            var list = _AssetsRepository.GetAll().Where(a=>a.ISINWAREHOUSE==1);
+            var list = _AssetsRepository.GetAll().Where(a => a.ISINWAREHOUSE == 1);
             if (!String.IsNullOrEmpty(wareId))
             {
-                list = list.Where(a=>a.WAREID==wareId);
+                list = list.Where(a => a.WAREID == wareId);
             }
             list = list.OrderByDescending(a => a.CREATEDATE);
             var result = from assetse in list
@@ -127,12 +127,12 @@ namespace SMOWMS.Application.Services
                          from storageType in SMOWMSDbContext.WHStorageTypes
                          from wareHouse in SMOWMSDbContext.WareHouses
                          join type in SMOWMSDbContext.AssetsTypes on assetse.TYPEID equals type.TYPEID
-                         where wareHouse.WAREID==assetse.WAREID&&storageType.WAREID==assetse.WAREID&&storageType.STID==assetse.STID&&location.WAREID==assetse.WAREID&&location.STID==assetse.STID&&location.SLID==assetse.SLID
+                         where wareHouse.WAREID == assetse.WAREID && storageType.WAREID == assetse.WAREID && storageType.STID == assetse.STID && location.WAREID == assetse.WAREID && location.STID == assetse.STID && location.SLID == assetse.SLID
                          select new
                          {
                              ASSID = assetse.ASSID,
                              Image = assetse.IMAGE,
-                             SLName =wareHouse.NAME+"/"+storageType.NAME+"/"+ location.NAME,
+                             SLName = wareHouse.NAME + "/" + storageType.NAME + "/" + location.NAME,
                              Name = assetse.NAME,
                              Price = assetse.PRICE,
                              SN = assetse.SN,
@@ -169,11 +169,23 @@ namespace SMOWMS.Application.Services
                                  SN = assetse.SN
                              };
                 DataTable tempTable = LINQToDataTable.ToDataTable(result);
+                DataTable resultDt = tempTable.Clone();
+                resultDt.Columns["HandleDate"].DataType = typeof(string);
+
                 foreach (DataRow row in tempTable.Rows)
                 {
-                    row["ProcessModeName"] = Enum.GetName(typeof(PROCESSMODE), int.Parse(row["ProcessMode"].ToString()));
+                    DataRow newrow = resultDt.NewRow();
+                    newrow["PrId"] = row["PrId"];
+                    newrow["AssId"] = row["AssId"];
+                    newrow["SN"] = row["SN"];
+                    newrow["HandleMan"] = row["HandleMan"];
+                    newrow["HandleDate"] = row["HandleDate"].ToString();
+                    newrow["ProcessContent"] = row["ProcessContent"];
+                    newrow["ProcessModeName"] = Enum.GetName(typeof(PROCESSMODE), int.Parse(row["ProcessMode"].ToString()));
+                    resultDt.Rows.Add(newrow);
                 }
-                return tempTable;
+
+                return resultDt;
             }
             else
             {
@@ -192,11 +204,22 @@ namespace SMOWMS.Application.Services
                                  HandleMan = user.USER_NAME
                              };
                 DataTable tempTable = LINQToDataTable.ToDataTable(result);
+                DataTable resultDt = tempTable.Clone();
+                resultDt.Columns["HandleDate"].DataType = typeof(string);
                 foreach (DataRow row in tempTable.Rows)
                 {
-                    row["ProcessModeName"] = Enum.GetName(typeof(PROCESSMODE), int.Parse(row["ProcessMode"].ToString()));
+                    DataRow newrow = resultDt.NewRow();
+                    newrow["PrId"] = row["PrId"];
+                    newrow["AssId"] = row["AssId"];
+                    newrow["SN"] = row["SN"];
+                    newrow["HandleMan"] = row["HandleMan"];
+                    newrow["HandleDate"] = row["HandleDate"].ToString();
+                    newrow["ProcessContent"] = row["ProcessContent"];
+                    newrow["ProcessModeName"] = Enum.GetName(typeof(PROCESSMODE), int.Parse(row["ProcessMode"].ToString()));
+                    resultDt.Rows.Add(newrow);
                 }
-                return tempTable;
+                tempTable.Columns["HandleDate"].DataType = typeof(string);
+                return resultDt;
             }
         }
 
@@ -228,12 +251,12 @@ namespace SMOWMS.Application.Services
             throw new System.NotImplementedException();
         }
 
-
         /// <summary>
-        /// 根据SN或者名称查询资产
+        /// 根据SN或者名称和类别、仓库查询资产
         /// </summary>
         /// <param name="SNOrName">SN或者名称</param>
-        /// <param name="Type">一级资产编号</param>
+        /// <param name="Type">一级类别编号</param>
+        /// <param name="WareID">仓库编号</param>
         /// <returns></returns>
         public DataTable QueryAssets(string SNOrName, string Type)
         {
@@ -255,22 +278,67 @@ namespace SMOWMS.Application.Services
 
             var list = _AssetsRepository.QueryAssets(SNOrName, Types).Where(a => a.ISINWAREHOUSE == 1).AsNoTracking();
             var result = from assetse in list
-                from location in SMOWMSDbContext.WHStorageLocations
-                from storageType in SMOWMSDbContext.WHStorageTypes
-                from wareHouse in SMOWMSDbContext.WareHouses
-                join type in SMOWMSDbContext.AssetsTypes on assetse.TYPEID equals type.TYPEID
-                where wareHouse.WAREID == assetse.WAREID && storageType.WAREID == assetse.WAREID && storageType.STID == assetse.STID && location.WAREID == assetse.WAREID && location.STID == assetse.STID && location.SLID == assetse.SLID
-                select new
+                         from location in SMOWMSDbContext.WHStorageLocations
+                         from storageType in SMOWMSDbContext.WHStorageTypes
+                         from wareHouse in SMOWMSDbContext.WareHouses
+                         join type in SMOWMSDbContext.AssetsTypes on assetse.TYPEID equals type.TYPEID
+                         where wareHouse.WAREID == assetse.WAREID && storageType.WAREID == assetse.WAREID && storageType.STID == assetse.STID && location.WAREID == assetse.WAREID && location.STID == assetse.STID && location.SLID == assetse.SLID
+                         select new
+                         {
+                             ASSID = assetse.ASSID,
+                             Image = assetse.IMAGE,
+                             SLName = wareHouse.NAME + "/" + storageType.NAME + "/" + location.NAME,
+                             Name = assetse.NAME,
+                             Price = assetse.PRICE,
+                             SN = assetse.SN,
+                             TypeName = type.NAME,
+                             Specification = assetse.SPECIFICATION
+                         };
+            return LINQToDataTable.ToDataTable(result);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="SNOrName"></param>
+        /// <param name="Type"></param>
+        /// <param name="WareID"></param>
+        /// <returns></returns>
+        public DataTable QueryAssets(string SNOrName, string Type, string WareID)
+        {
+            List<String> Types = new List<string>();
+            if (String.IsNullOrEmpty(Type) == false)
+            {
+                Types.Add(Type);
+                List<AssetsType> listType = _assetsTypeRepository.GetByParentTypeID(Type).AsNoTracking().ToList();
+                foreach (AssetsType Row in listType)
                 {
-                    ASSID = assetse.ASSID,
-                    Image = assetse.IMAGE,
-                    SLName = wareHouse.NAME + "/" + storageType.NAME + "/" + location.NAME,
-                    Name = assetse.NAME,
-                    Price = assetse.PRICE,
-                    SN = assetse.SN,
-                    TypeName = type.NAME,
-                    Specification = assetse.SPECIFICATION
-                };
+                    List<AssetsType> LastlistType = _assetsTypeRepository.GetByParentTypeID(Row.TYPEID).AsNoTracking().ToList();
+                    foreach (AssetsType LastRow in LastlistType)
+                    {
+                        Types.Add(LastRow.TYPEID);
+                    }
+                    Types.Add(Row.TYPEID);
+                }
+            }
+
+            var list = _AssetsRepository.QueryAssets(SNOrName, Types, WareID).Where(a => a.ISINWAREHOUSE == 1).AsNoTracking();
+            var result = from assetse in list
+                         from location in SMOWMSDbContext.WHStorageLocations
+                         from storageType in SMOWMSDbContext.WHStorageTypes
+                         from wareHouse in SMOWMSDbContext.WareHouses
+                         join type in SMOWMSDbContext.AssetsTypes on assetse.TYPEID equals type.TYPEID
+                         where wareHouse.WAREID == assetse.WAREID && storageType.WAREID == assetse.WAREID && storageType.STID == assetse.STID && location.WAREID == assetse.WAREID && location.STID == assetse.STID && location.SLID == assetse.SLID
+                         select new
+                         {
+                             ASSID = assetse.ASSID,
+                             Image = assetse.IMAGE,
+                             SLName = wareHouse.NAME + "/" + storageType.NAME + "/" + location.NAME,
+                             Name = assetse.NAME,
+                             Price = assetse.PRICE,
+                             SN = assetse.SN,
+                             TypeName = type.NAME,
+                             Specification = assetse.SPECIFICATION
+                         };
             return LINQToDataTable.ToDataTable(result);
         }
 
@@ -335,7 +403,7 @@ namespace SMOWMS.Application.Services
         /// <returns></returns>
         public DataTable GetAllTemplate()
         {
-            var all= _assTemplateRepository.GetAll().AsNoTracking();
+            var all = _assTemplateRepository.GetAll().AsNoTracking();
             return LINQToDataTable.ToDataTable(all);
         }
 
@@ -356,16 +424,16 @@ namespace SMOWMS.Application.Services
         public DataTable GetAllAssTemps()
         {
             var result = from assTemplate in SMOWMSDbContext.AssTemplates
-                select new ATChooseOutputDto()
-                {
-                    TEMPLATEID = assTemplate.TEMPLATEID,
-                    IMAGE = assTemplate.IMAGE,
-                    IsChecked = false,
-                    NAME = assTemplate.NAME,
-                    PRICE = 0,
-                    QUANT = 0
-//                    TPRICE = assTemplate.PRICE.Value
-                };
+                         select new ATChooseOutputDto()
+                         {
+                             TEMPLATEID = assTemplate.TEMPLATEID,
+                             IMAGE = assTemplate.IMAGE,
+                             IsChecked = false,
+                             NAME = assTemplate.NAME,
+                             PRICE = 0,
+                             QUANT = 0
+                             //                    TPRICE = assTemplate.PRICE.Value
+                         };
             return LINQToDataTable.ToDataTable(result);
         }
 
@@ -382,16 +450,16 @@ namespace SMOWMS.Application.Services
                 result = result.Where(a => a.TEMPLATEID.Contains(TIdorName) || a.NAME.Contains(TIdorName));
             }
             var table = from assTemplate in result
-                select new ATChooseOutputDto()
-                {
-                    TEMPLATEID = assTemplate.TEMPLATEID,
-                    IMAGE = assTemplate.IMAGE,
-                    IsChecked = false,
-                    NAME = assTemplate.NAME,
-                    PRICE = 0,
-                    QUANT = 0
-//                    TPRICE = assTemplate.PRICE.Value
-                };
+                        select new ATChooseOutputDto()
+                        {
+                            TEMPLATEID = assTemplate.TEMPLATEID,
+                            IMAGE = assTemplate.IMAGE,
+                            IsChecked = false,
+                            NAME = assTemplate.NAME,
+                            PRICE = 0,
+                            QUANT = 0
+                            //                    TPRICE = assTemplate.PRICE.Value
+                        };
             return LINQToDataTable.ToDataTable(table);
         }
 
@@ -413,7 +481,7 @@ namespace SMOWMS.Application.Services
         /// <returns></returns>
         public bool SOSNIsExists(string SN, List<string> TemplateIds)
         {
-            var result = _AssetsRepository.GetAll().Where(a=>TemplateIds.Contains(a.TEMPLATEID)&&a.ISINWAREHOUSE==1);
+            var result = _AssetsRepository.GetAll().Where(a => TemplateIds.Contains(a.TEMPLATEID) && a.ISINWAREHOUSE == 1);
             if (!string.IsNullOrEmpty(SN))
             {
                 return result.Any(a => a.SN == SN);
@@ -728,11 +796,11 @@ namespace SMOWMS.Application.Services
             {
                 //如果在采购单或者销售单行项中使用过,则不能删除
                 var count1 = from assPurchaseOrderRow in SMOWMSDbContext.AssPurchaseOrderRows
-                    where assPurchaseOrderRow.TEMPLATEID == templateId
-                    select assPurchaseOrderRow.POID;
+                             where assPurchaseOrderRow.TEMPLATEID == templateId
+                             select assPurchaseOrderRow.POID;
                 var count2 = from assSalesOrderRow in SMOWMSDbContext.AssSalesOrderRows
-                    where assSalesOrderRow.TEMPLATEID == templateId
-                    select assSalesOrderRow.SOID;
+                             where assSalesOrderRow.TEMPLATEID == templateId
+                             select assSalesOrderRow.SOID;
                 if (count1.Count() + count2.Count() > 0)
                 {
                     sb.Append("在采购单或者销售单行项中已使用过,故不能删除!");
@@ -761,7 +829,7 @@ namespace SMOWMS.Application.Services
                     }
                 }
 
-                
+
             }
         }
 

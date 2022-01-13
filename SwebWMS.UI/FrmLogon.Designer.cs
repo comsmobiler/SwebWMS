@@ -168,6 +168,7 @@ namespace SwebWMS.UI
             this.txtPassWord.SecurityMode = true;
             this.txtPassWord.Size = new System.Drawing.Size(100, 32);
             this.txtPassWord.WaterMarkText = "密码";
+            this.txtPassWord.SubmitEditing += new System.EventHandler(this.loginBtn_Click);
             // 
             // loginBtn
             // 
@@ -340,6 +341,7 @@ namespace SwebWMS.UI
             this.panel1});
             this.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
             this.JustifyAlign = Swebui.Controls.LayoutJustifyAlign.Center;
+            this.Overflow = Swebui.Controls.LayoutOverflow.Hidden;
 
         }
         #endregion

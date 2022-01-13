@@ -23,46 +23,95 @@ namespace SwebWMS.UI.MasterData
         public string SelectAssId;  //当前选择的资产
         private string Type;        //资产大类
         private string UserId;
-        internal String wareId;    //所选仓库编号
+        internal string wareId = "";    //所选仓库编号
         #endregion
-        private void AddBtn_Click(object sender, EventArgs e)
-        {
-            this.Parent.Controls.Add(new FrmAssetsCreate() { Flex = 1 });
-            this.Parent.Controls.RemoveAt(0);
-        }
-
+        /// <summary>
+        /// 编辑按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EditBtn_Click(object sender, EventArgs e)
         {
-
+            gridView1.GetSelectedRows((obj, args) =>
+            {
+                if (args.SelectedRows.Count > 0)
+                {
+                    FrmAssetsEdit assetsEdit = new FrmAssetsEdit();
+                    assetsEdit.Flex = 1;
+                    assetsEdit.AssId = args.SelectedRows[0]["ASSID"].ToString();
+                    this.Parent.Controls.Add(assetsEdit);
+                    this.Parent.Controls.RemoveAt(0);
+                }
+                else
+                {
+                    Toast("未选择行！");
+                }
+            });
         }
-
+        /// <summary>
+        /// 查看按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ViewBtn_Click(object sender, EventArgs e)
         {
+            gridView1.GetSelectedRows((obj, args) =>
+            {
+                if (args.SelectedRows.Count > 0)
+                {
+                    FrmAssetDetial assetsEdit = new FrmAssetDetial ();
+                    assetsEdit.Flex = 1;
+                    assetsEdit.AssId = args.SelectedRows[0]["ASSID"].ToString();
+                    this.Parent.Controls.Add(assetsEdit);
+                    this.Parent.Controls.RemoveAt(0);
+                }
+                else
+                {
+                    Toast("未选择行！");
+                }
+            });
 
         }
-
+        /// <summary>
+        /// 刷新按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
+            wareId = Type = txtNote.Text = "";
+            tpSearch.DefaultValue = tpWare.DefaultValue = new string[] { };
+            DataTable table = _autofacConfig.SettingService.GetAllAss("");
 
+            gridView1.Reload(table);
         }
-
+        /// <summary>
+        /// 页面初始化
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmAssets_Load(object sender, EventArgs e)
         {
             try
             {
-                UserId = Client.Session["UserID"].ToString();
-                Bind();
-                ///
-                tpSearch.Nodes.Add(new  TreeSelectNode("all", "全部"));
+                ///绑定仓库
+                tpWare.Nodes.Add(new TreeSelectNode("", "全部"));
+                List<WareHouse> wareHouseList = _autofacConfig.wareHouseService.GetAllWareHouse();
+                foreach (WareHouse Row in wareHouseList)
+                {
+                    tpWare.Nodes.Add(new TreeSelectNode(Row.WAREID, Row.NAME));
+                }
+                ///绑定类型
+                tpSearch.Nodes.Add(new TreeSelectNode("", "全部"));
                 List<AssetsType> types = _autofacConfig.assTypeService.GetAllFirstLevel();
                 foreach (AssetsType Row in types)
                 {
-                    tpSearch.Nodes.Add(new  TreeSelectNode (Row.TYPEID, Row.NAME));
+                    tpSearch.Nodes.Add(new TreeSelectNode(Row.TYPEID, Row.NAME));
                 }
-                if (Type != null)   //如果已有选中项，则显示选中效果
-                {
-                    tpSearch.DefaultValue = new string[] { Type};
-                }
+
+                UserId = Client.Session["UserID"].ToString();
+                Bind();
+
             }
             catch (Exception ex)
             {
@@ -77,19 +126,6 @@ namespace SwebWMS.UI.MasterData
             try
             {
                 DataTable table = _autofacConfig.SettingService.GetAllAss(wareId);
-               
-                table.Columns.Add("IsChecked");
-                foreach (DataRow Row in table.Rows)
-                {
-                    if (Row["AssId"].ToString() == SelectAssId)
-                    {
-                        Row["IsChecked"] = true;
-                    }
-                    else
-                    {
-                        Row["IsChecked"] = false;
-                    }
-                }
                 if (table.Rows.Count > 0)
                 {
                     gridView1.DataSource = table;
@@ -101,39 +137,15 @@ namespace SwebWMS.UI.MasterData
                 Toast(ex.Message);
             }
         }
-
-    
+        /// <summary>
+        ///搜索数据
+        /// </summary>
         private void SearchData()
         {
             try
             {
-                DataTable table = _autofacConfig.SettingService.QueryAssets(txtNote.Text, Type);
-              
-                table.Columns.Add("IsChecked");
-                foreach (DataRow Row in table.Rows)
-                {
-                    if (Row["AssId"].ToString() == SelectAssId)
-                    {
-                        Row["IsChecked"] = true;
-                    }
-                    else
-                    {
-                        Row["IsChecked"] = false;
-                    }
-                }
-                if (table.Rows.Count > 0)
-                {
-                    gridPanel.Visible = true;
-                    lblinfo.Visible = false;
-                    gridView1.DataSource = table;
-                    gridView1.DataBind();
-
-                }
-                else
-                {
-                    gridPanel.Visible = false;
-                    lblinfo.Visible = true;
-                }
+                DataTable table = _autofacConfig.SettingService.QueryAssets(txtNote.Text, Type, wareId);
+                gridView1.Reload(table);
             }
 
             catch (Exception ex)
@@ -141,16 +153,44 @@ namespace SwebWMS.UI.MasterData
                 Toast(ex.Message);
             }
         }
-
+        /// <summary>
+        /// 按照名称或者SN查找
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtNote_SubmitEditing(object sender, EventArgs e)
         {
             SearchData();
         }
-
+        /// <summary>
+        /// 按类别查找
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void tpSearch_Press(object sender, TreeSelectPressEventArgs args)
         {
             Type = args.TreeID;
             SearchData();
+        }
+        /// <summary>
+        /// 按仓库查找
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void tpWare_Press(object sender, TreeSelectPressEventArgs args)
+        {
+            wareId = args.TreeID;
+            DataTable table = _autofacConfig.SettingService.GetAllAss(wareId);
+            gridView1.Reload(table);
+        }
+        /// <summary>
+        /// 打印按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void printBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
