@@ -19,12 +19,21 @@ namespace SwebWMS.UI.ConsumablesManager
         #region "definition"
         AutofacConfig autofacConfig = new AutofacConfig();     //调用配置类
         #endregion
+        /// <summary>
+        /// 新增按钮点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddBtn_Click(object sender, EventArgs e)
         {
             this.Parent.Controls.Add(new FrmConPurchaseOrderCreate() { Flex = 1 });
             this.Parent.Controls.RemoveAt(0);
         }
-
+        /// <summary>
+        /// 编辑按钮点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EditBtn_Click(object sender, EventArgs e)
         {
             gridView1.GetSelectedRows((obj, args) =>
@@ -50,7 +59,11 @@ namespace SwebWMS.UI.ConsumablesManager
                 }
             });
         }
-
+        /// <summary>
+        /// 查看按钮点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ViewBtn_Click(object sender, EventArgs e)
         {
             gridView1.GetSelectedRows((obj, args) =>
@@ -69,13 +82,21 @@ namespace SwebWMS.UI.ConsumablesManager
                 }
             });
         }
-
+        /// <summary>
+        /// 刷新按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
             this.Parent.Controls.Add(new FrmConPurchaseOrderList() { Flex = 1 });
             this.Parent.Controls.RemoveAt(0);
         }
-
+        /// <summary>
+        /// 页面初始化
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmConPurchaseOrderList_Load(object sender, EventArgs e)
         {
             try

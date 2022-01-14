@@ -352,6 +352,26 @@ namespace SMOWMS.Application.Services
             }
             return OrderTable;
         }
+        /// <summary>
+        /// 得到所有未完成的耗材采购单
+        /// </summary>
+        /// <returns></returns>
+        public List<ConPurchaseOrderOutputDto> GetIncompleteOrders()
+        {
+            var FirstOrders = _ConPurchaseOrderReposity.GetAll();
+            var result = from Order in FirstOrders
+                         join User in _SMOWMSDbContext.coreUsers on Order.PURCHASER equals User.USER_ID
+                         where Order.STATUS !=2
+                         orderby Order.CREATEDATE descending
+                         select new ConPurchaseOrderOutputDto()
+                         {
+                             POID = Order.POID,
+                             NAME = Order.NAME,
+                         };
+      
+     
+            return result.ToList();
+        }
         #endregion
         #region 操作
         /// <summary>

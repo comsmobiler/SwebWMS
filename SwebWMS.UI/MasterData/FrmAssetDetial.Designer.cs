@@ -206,7 +206,6 @@ namespace SwebWMS.UI.MasterData
             this.panel.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel.Flex = 1;
             this.panel.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
-            this.panel.JustifyAlign = Swebui.Controls.LayoutJustifyAlign.Center;
             this.panel.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(0, 55);

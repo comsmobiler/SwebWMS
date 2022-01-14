@@ -305,7 +305,7 @@ namespace SwebWMS.UI.AssetsManager
             this.panel7.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
             this.panel7.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 0F);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(0, 33);
+            this.panel7.Size = new System.Drawing.Size(0, 35);
             // 
             // label8
             // 

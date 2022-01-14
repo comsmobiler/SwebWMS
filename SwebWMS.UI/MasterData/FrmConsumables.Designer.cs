@@ -29,7 +29,7 @@ namespace SwebWMS.UI.MasterData
             this.AddBtn = new Swebui.Controls.Button();
             this.EditBtn = new Swebui.Controls.Button();
             this.ViewBtn = new Swebui.Controls.Button();
-            this.button1 = new Swebui.Controls.Button();
+            this.printBtn = new Swebui.Controls.Button();
             this.RefreshBtn = new Swebui.Controls.Button();
             this.gridView1 = new Swebui.Controls.GridView();
             // 
@@ -62,7 +62,7 @@ namespace SwebWMS.UI.MasterData
             this.AddBtn,
             this.EditBtn,
             this.ViewBtn,
-            this.button1,
+            this.printBtn,
             this.RefreshBtn});
             this.panel2.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel2.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
@@ -116,20 +116,20 @@ namespace SwebWMS.UI.MasterData
             this.ViewBtn.Text = "查看";
             this.ViewBtn.Click += new System.EventHandler(this.ViewBtn_Click);
             // 
-            // button1
+            // printBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Border = new Swebui.Controls.Border(1F);
-            this.button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.IconName = "fa fa-bookmark";
-            this.button1.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
-            this.button1.Name = "button1";
-            this.button1.NumberOfLines = 0;
-            this.button1.Padding = new Swebui.Controls.Padding(10F, 0F, 10F, 0F);
-            this.button1.Size = new System.Drawing.Size(0, 26);
-            this.button1.Text = "查看";
-            this.button1.Click += new System.EventHandler(this.ViewBtn_Click);
+            this.printBtn.BackColor = System.Drawing.Color.White;
+            this.printBtn.Border = new Swebui.Controls.Border(1F);
+            this.printBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.printBtn.ForeColor = System.Drawing.Color.DimGray;
+            this.printBtn.IconName = "fa fa-print";
+            this.printBtn.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
+            this.printBtn.Name = "printBtn";
+            this.printBtn.NumberOfLines = 0;
+            this.printBtn.Padding = new Swebui.Controls.Padding(10F, 0F, 10F, 0F);
+            this.printBtn.Size = new System.Drawing.Size(0, 26);
+            this.printBtn.Text = "打印";
+            this.printBtn.Click += new System.EventHandler(this.ViewBtn_Click);
             // 
             // RefreshBtn
             // 
@@ -187,7 +187,7 @@ namespace SwebWMS.UI.MasterData
         private Button AddBtn;
         private Button EditBtn;
         private Button ViewBtn;
-        private Button button1;
+        private Button printBtn;
         private Button RefreshBtn;
         private GridView gridView1;
     }

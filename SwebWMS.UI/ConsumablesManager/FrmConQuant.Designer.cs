@@ -1,9 +1,9 @@
 ﻿using Swebui.Controls;
 using System;
 
-namespace SwebWMS.UI.MasterData
+namespace SwebWMS.UI.ConsumablesManager
 {
-    partial class FrmPrShow : Swebui.Controls.SwebUserControl
+    partial class FrmConQuant : Swebui.Controls.SwebUserControl
     {
         #region "SwebUserControl generated code "
 
@@ -23,9 +23,6 @@ namespace SwebWMS.UI.MasterData
             Swebui.Controls.GridViewColumn gridViewColumn2 = new Swebui.Controls.GridViewColumn();
             Swebui.Controls.GridViewColumn gridViewColumn3 = new Swebui.Controls.GridViewColumn();
             Swebui.Controls.GridViewColumn gridViewColumn4 = new Swebui.Controls.GridViewColumn();
-            Swebui.Controls.GridViewColumn gridViewColumn5 = new Swebui.Controls.GridViewColumn();
-            Swebui.Controls.GridViewColumn gridViewColumn6 = new Swebui.Controls.GridViewColumn();
-            Swebui.Controls.GridViewColumn gridViewColumn7 = new Swebui.Controls.GridViewColumn();
             this.panel1 = new Swebui.Controls.Panel();
             this.labTitle = new Swebui.Controls.Label();
             this.txtAssId1 = new Swebui.Controls.Label();
@@ -51,7 +48,7 @@ namespace SwebWMS.UI.MasterData
             this.labTitle.FontSize = 24F;
             this.labTitle.Name = "labTitle";
             this.labTitle.Size = new System.Drawing.Size(0, 26);
-            this.labTitle.Text = "资产处理记录";
+            this.labTitle.Text = "库存分布";
             this.labTitle.VerticalAlignment = Swebui.Controls.VerticalAlignment.Bottom;
             // 
             // txtAssId1
@@ -93,28 +90,19 @@ namespace SwebWMS.UI.MasterData
             // gridView1
             // 
             this.gridView1.AllowPaging = true;
-            gridViewColumn1.DisplayMember = "PrId";
-            gridViewColumn1.HeaderText = "处理记录ID";
-            gridViewColumn2.DisplayMember = "AssId";
-            gridViewColumn2.HeaderText = "资产ID";
-            gridViewColumn3.DisplayMember = "SN";
-            gridViewColumn3.HeaderText = "SN";
-            gridViewColumn4.DisplayMember = "HandleMan";
-            gridViewColumn4.HeaderText = "处理人";
-            gridViewColumn5.DisplayMember = "HandleDate";
-            gridViewColumn5.HeaderText = "处理时间";
-            gridViewColumn6.DisplayMember = "ProcessModeName";
-            gridViewColumn6.HeaderText = "处理方式";
-            gridViewColumn7.DisplayMember = "ProcessContent";
-            gridViewColumn7.HeaderText = "处理内容";
+            gridViewColumn1.DisplayMember = "SLNAME";
+            gridViewColumn1.HeaderText = "库存位置";
+            gridViewColumn2.DisplayMember = "CID";
+            gridViewColumn2.HeaderText = "耗材ID";
+            gridViewColumn3.DisplayMember = "NAME";
+            gridViewColumn3.HeaderText = "耗材名称";
+            gridViewColumn4.DisplayMember = "QUANTITY";
+            gridViewColumn4.HeaderText = "耗材数量";
             this.gridView1.Columns.AddRange(new Swebui.Controls.GridViewColumn[] {
             gridViewColumn1,
             gridViewColumn2,
             gridViewColumn3,
-            gridViewColumn4,
-            gridViewColumn5,
-            gridViewColumn6,
-            gridViewColumn7});
+            gridViewColumn4});
             this.gridView1.DataSource = null;
             this.gridView1.Flex = 1;
             this.gridView1.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 10F);
@@ -122,23 +110,23 @@ namespace SwebWMS.UI.MasterData
             this.gridView1.RowWidth = 0;
             this.gridView1.Size = new System.Drawing.Size(0, 30);
             // 
-            // FrmPrShow
+            // FrmConQuant
             // 
             this.BackColor = System.Drawing.Color.White;
             this.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.panel1,
             this.panel2,
             this.gridView1});
-            this.Load += new System.EventHandler(this.FrmPrShow_Load);
+            this.Load += new System.EventHandler(this.FrmConQuant_Load);
 
         }
         #endregion
 
         private Panel panel1;
-        private Panel panel2;
-        private GridView gridView1;
         private Label labTitle;
         private Label txtAssId1;
+        private Panel panel2;
         private Button BackBtn;
+        private GridView gridView1;
     }
 }

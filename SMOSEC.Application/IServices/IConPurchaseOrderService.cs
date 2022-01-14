@@ -23,6 +23,11 @@ namespace SMOWMS.Application.IServices
         /// <returns></returns>
         DataTable GetOrders();
         /// <summary>
+        /// 得到所有未完成的耗材采购单
+        /// </summary>
+        /// <returns></returns>
+        List<ConPurchaseOrderOutputDto> GetIncompleteOrders();
+        /// <summary>
         /// 根据采购单号获取采购单对象
         /// </summary>
         /// <param name="POID"></param>

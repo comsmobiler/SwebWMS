@@ -22,6 +22,11 @@ namespace SMOWMS.Application.IServices
         /// <returns></returns>
         DataTable GetOrders();
         /// <summary>
+        /// 得到所有所有未完成的耗材销售单
+        /// </summary>
+        /// <returns></returns>
+        List<ConSalesOrderOutputDto> GetIncompleteOrders();
+        /// <summary>
         /// 获取对应耗材单号下所有行项信息
         /// </summary>
         /// <param name="SOID"></param>

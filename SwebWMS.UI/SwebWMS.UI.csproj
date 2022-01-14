@@ -228,6 +228,12 @@
     </Compile>
     <Compile Include="AutofacConfig.cs" />
     <Compile Include="AutomapperConfig.cs" />
+    <Compile Include="ConsumablesManager\FrmConPORInSto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConPORInSto.Designer.cs">
+      <DependentUpon>FrmConPORInSto.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsumablesManager\FrmConPurchaseOrderCreate.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -246,6 +252,12 @@
     <Compile Include="ConsumablesManager\FrmConPurchaseOrderList.Designer.cs">
       <DependentUpon>FrmConPurchaseOrderList.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsumablesManager\FrmConQuant.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConQuant.Designer.cs">
+      <DependentUpon>FrmConQuant.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsumablesManager\FrmConSaleOrderCreate.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -263,6 +275,12 @@
     </Compile>
     <Compile Include="ConsumablesManager\FrmConSaleOrderList.Designer.cs">
       <DependentUpon>FrmConSaleOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConSOROutbound.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\FrmConSOROutbound.Designer.cs">
+      <DependentUpon>FrmConSOROutbound.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogon.cs">
       <SubType>Component</SubType>
@@ -299,6 +317,18 @@
     </Compile>
     <Compile Include="Layout\AssetsTypeCreateDialog.Designer.cs">
       <DependentUpon>AssetsTypeCreateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ConSOROutboundLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\ConSOROutboundLayout.Designer.cs">
+      <DependentUpon>ConSOROutboundLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ConPORInStoLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\ConPORInStoLayout.Designer.cs">
+      <DependentUpon>ConPORInStoLayout.cs</DependentUpon>
     </Compile>
     <Compile Include="Layout\ConSOAndPOChooseLayout.cs">
       <SubType>Component</SubType>
@@ -419,6 +449,24 @@
     </Compile>
     <Compile Include="MasterData\FrmConsumables.Designer.cs">
       <DependentUpon>FrmConsumables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmConsumablesCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmConsumablesCreate.Designer.cs">
+      <DependentUpon>FrmConsumablesCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmConsumablesDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmConsumablesDetail.Designer.cs">
+      <DependentUpon>FrmConsumablesDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\FrmConsumablesDetailEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\FrmConsumablesDetailEdit.Designer.cs">
+      <DependentUpon>FrmConsumablesDetailEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="MasterData\FrmCustomer.cs">
       <SubType>Component</SubType>
@@ -558,6 +606,9 @@
     <EmbeddedResource Include="AssetsManager\FrmAssTransferDetail.resx">
       <DependentUpon>FrmAssTransferDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\FrmConPORInSto.resx">
+      <DependentUpon>FrmConPORInSto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsumablesManager\FrmConPurchaseOrderCreate.resx">
       <DependentUpon>FrmConPurchaseOrderCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -567,6 +618,9 @@
     <EmbeddedResource Include="ConsumablesManager\FrmConPurchaseOrderList.resx">
       <DependentUpon>FrmConPurchaseOrderList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\FrmConQuant.resx">
+      <DependentUpon>FrmConQuant.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsumablesManager\FrmConSaleOrderCreate.resx">
       <DependentUpon>FrmConSaleOrderCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -575,6 +629,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsumablesManager\FrmConSaleOrderList.resx">
       <DependentUpon>FrmConSaleOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\FrmConSOROutbound.resx">
+      <DependentUpon>FrmConSOROutbound.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogon.resx">
       <DependentUpon>FrmLogon.cs</DependentUpon>
@@ -593,6 +650,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\AssetsTypeCreateDialog.resx">
       <DependentUpon>AssetsTypeCreateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\ConSOROutboundLayout.resx">
+      <DependentUpon>ConSOROutboundLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\ConPORInStoLayout.resx">
+      <DependentUpon>ConPORInStoLayout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\ConSOAndPOChooseLayout.resx">
       <DependentUpon>ConSOAndPOChooseLayout.cs</DependentUpon>
@@ -653,6 +716,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MasterData\FrmConsumables.resx">
       <DependentUpon>FrmConsumables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmConsumablesCreate.resx">
+      <DependentUpon>FrmConsumablesCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmConsumablesDetail.resx">
+      <DependentUpon>FrmConsumablesDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmConsumablesDetailEdit.resx">
+      <DependentUpon>FrmConsumablesDetailEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MasterData\FrmCustomer.resx">
       <DependentUpon>FrmCustomer.cs</DependentUpon>

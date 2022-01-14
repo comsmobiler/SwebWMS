@@ -80,7 +80,7 @@ namespace SwebWMS.UI
             menuItem23.Items.AddRange(new MenuItem[] { menuItem25, menuItem26, menuItem27, menuItem28, menuItem29, menuItem24 });
             MenuItem menuItem5 = new MenuItem("Setting", "设置");
 
-            menuView1.Items.AddRange(new MenuItem[] { menuItem, menuItem2, menuItem11,menuItem6, menuItem16, menuItem23, menuItem5 });
+            menuView1.Items.AddRange(new MenuItem[] { menuItem, menuItem2, menuItem34, menuItem11,menuItem6, menuItem16, menuItem23, menuItem5 });
 
             //  menuView1.DefaultSelectedItem(menuView1.Items[0]);
             MenuValueChanged(menuView1.Items[0]);
@@ -126,8 +126,12 @@ namespace SwebWMS.UI
                     AddTabPage(menuItem, frmConsumables);
                     break;
                 case "ConIn":
+                    FrmConPORInSto frmConPORInSto = new FrmConPORInSto();
+                    AddTabPage(menuItem, frmConPORInSto);
                     break;
                 case "ConOut":
+                    FrmConSOROutbound frmConSOROutbound = new FrmConSOROutbound();
+                    AddTabPage(menuItem, frmConSOROutbound);
                     break;
                 case "ConTransfer":
                     break;

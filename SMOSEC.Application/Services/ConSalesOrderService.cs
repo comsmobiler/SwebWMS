@@ -139,6 +139,24 @@ namespace SMOWMS.Application.Services
             return OrderTable;
         }
         /// <summary>
+        /// 得到所有所有未完成的耗材销售单
+        /// </summary>
+        /// <returns></returns>
+        public List<ConSalesOrderOutputDto> GetIncompleteOrders()
+        {
+            var FirstOrders = _ConSalesOrderReposity.GetAll().AsNoTracking();
+            var result = from Order in FirstOrders
+                         join User in _SMOWMSDbContext.coreUsers on Order.SALESPERSON equals User.USER_ID
+                         where Order.STATUS !=2
+                         orderby Order.CREATEDATE descending
+                         select new ConSalesOrderOutputDto()
+                         {
+                             SOID = Order.SOID,
+                             NAME = Order.NAME,
+                         };
+            return result.ToList() ;
+        }
+        /// <summary>
         /// 获取对应耗材单号下所有行项信息
         /// </summary>
         /// <param name="SOID"></param>

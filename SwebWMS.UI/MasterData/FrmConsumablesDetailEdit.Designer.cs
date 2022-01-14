@@ -3,7 +3,7 @@ using System;
 
 namespace SwebWMS.UI.MasterData
 {
-    partial class FrmAssTemplateCreate : Swebui.Controls.SwebUserControl
+    partial class FrmConsumablesDetailEdit : Swebui.Controls.SwebUserControl
     {
         #region "SwebUserControl generated code "
 
@@ -19,12 +19,13 @@ namespace SwebWMS.UI.MasterData
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            this.panel2 = new Swebui.Controls.Panel();
-            this.BackBtn = new Swebui.Controls.Button();
-            this.SaveBtn = new Swebui.Controls.Button();
             this.panel1 = new Swebui.Controls.Panel();
             this.labTitle = new Swebui.Controls.Label();
             this.txtAssID = new Swebui.Controls.Label();
+            this.panel2 = new Swebui.Controls.Panel();
+            this.BackBtn = new Swebui.Controls.Button();
+            this.SaveBtn = new Swebui.Controls.Button();
+            this.DeleteBtn = new Swebui.Controls.Button();
             this.panel3 = new Swebui.Controls.Panel();
             this.label1 = new Swebui.Controls.Label();
             this.label2 = new Swebui.Controls.Label();
@@ -40,17 +41,45 @@ namespace SwebWMS.UI.MasterData
             this.label5 = new Swebui.Controls.Label();
             this.label6 = new Swebui.Controls.Label();
             this.panel6 = new Swebui.Controls.Panel();
-            this.txtPrice = new Swebui.Controls.TextBox();
-            this.btnType = new Swebui.Controls.TreeSelect();
             this.txtSpe = new Swebui.Controls.TextBox();
+            this.txtSPQ = new Swebui.Controls.TextBox();
+            this.txtCeiling = new Swebui.Controls.TextBox();
             this.panel7 = new Swebui.Controls.Panel();
             this.label7 = new Swebui.Controls.Label();
             this.label8 = new Swebui.Controls.Label();
             this.label9 = new Swebui.Controls.Label();
             this.panel8 = new Swebui.Controls.Panel();
-            this.txtVendor = new Swebui.Controls.TextBox();
+            this.txtFloor = new Swebui.Controls.TextBox();
             this.txtNote = new Swebui.Controls.TextBox();
             this.label = new Swebui.Controls.Label();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.AddRange(new Swebui.Controls.SwebControl[] {
+            this.labTitle,
+            this.txtAssID});
+            this.panel1.Direction = Swebui.Controls.LayoutDirection.Row;
+            this.panel1.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
+            this.panel1.Name = "panel1";
+            this.panel1.Overflow = Swebui.Controls.LayoutOverflow.Hidden;
+            this.panel1.Padding = new Swebui.Controls.Padding(10F, 0F, 0F, 0F);
+            this.panel1.Size = new System.Drawing.Size(0, 46);
+            // 
+            // labTitle
+            // 
+            this.labTitle.FontSize = 24F;
+            this.labTitle.Name = "labTitle";
+            this.labTitle.Size = new System.Drawing.Size(0, 26);
+            this.labTitle.Text = "编辑耗材";
+            this.labTitle.VerticalAlignment = Swebui.Controls.VerticalAlignment.Bottom;
+            // 
+            // txtAssID
+            // 
+            this.txtAssID.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
+            this.txtAssID.Name = "txtAssID";
+            this.txtAssID.Size = new System.Drawing.Size(0, 26);
+            this.txtAssID.VerticalAlignment = Swebui.Controls.VerticalAlignment.Bottom;
             // 
             // panel2
             // 
@@ -59,7 +88,8 @@ namespace SwebWMS.UI.MasterData
             this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.BackBtn,
-            this.SaveBtn});
+            this.SaveBtn,
+            this.DeleteBtn});
             this.panel2.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel2.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
             this.panel2.Margin = new Swebui.Controls.Margin(0F, 0F, 0F, 15F);
@@ -97,34 +127,20 @@ namespace SwebWMS.UI.MasterData
             this.SaveBtn.Text = "保存";
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
-            // panel1
+            // DeleteBtn
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.AddRange(new Swebui.Controls.SwebControl[] {
-            this.labTitle,
-            this.txtAssID});
-            this.panel1.Direction = Swebui.Controls.LayoutDirection.Row;
-            this.panel1.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
-            this.panel1.Name = "panel1";
-            this.panel1.Overflow = Swebui.Controls.LayoutOverflow.Hidden;
-            this.panel1.Padding = new Swebui.Controls.Padding(10F, 0F, 0F, 0F);
-            this.panel1.Size = new System.Drawing.Size(0, 46);
-            // 
-            // labTitle
-            // 
-            this.labTitle.FontSize = 24F;
-            this.labTitle.Name = "labTitle";
-            this.labTitle.Size = new System.Drawing.Size(0, 26);
-            this.labTitle.Text = "新增资产模板";
-            this.labTitle.VerticalAlignment = Swebui.Controls.VerticalAlignment.Bottom;
-            // 
-            // txtAssID
-            // 
-            this.txtAssID.FontSize = 20F;
-            this.txtAssID.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
-            this.txtAssID.Name = "txtAssID";
-            this.txtAssID.Size = new System.Drawing.Size(0, 26);
-            this.txtAssID.VerticalAlignment = Swebui.Controls.VerticalAlignment.Bottom;
+            this.DeleteBtn.BackColor = System.Drawing.Color.White;
+            this.DeleteBtn.Border = new Swebui.Controls.Border(1F);
+            this.DeleteBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.DeleteBtn.ForeColor = System.Drawing.Color.DimGray;
+            this.DeleteBtn.IconName = "fa fa-trash-o";
+            this.DeleteBtn.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.NumberOfLines = 0;
+            this.DeleteBtn.Padding = new Swebui.Controls.Padding(10F, 0F, 10F, 0F);
+            this.DeleteBtn.Size = new System.Drawing.Size(0, 26);
+            this.DeleteBtn.Text = "删除";
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // panel3
             // 
@@ -250,7 +266,7 @@ namespace SwebWMS.UI.MasterData
             this.label4.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 30);
-            this.label4.Text = "单价";
+            this.label4.Text = "规格型号";
             this.label4.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // label5
@@ -260,7 +276,7 @@ namespace SwebWMS.UI.MasterData
             this.label5.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 30);
-            this.label5.Text = "类别";
+            this.label5.Text = "标准包装数量";
             this.label5.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // label6
@@ -270,44 +286,19 @@ namespace SwebWMS.UI.MasterData
             this.label6.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 30);
-            this.label6.Text = "规格型号";
+            this.label6.Text = "安全库存上限";
             this.label6.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // panel6
             // 
             this.panel6.Controls.AddRange(new Swebui.Controls.SwebControl[] {
-            this.txtPrice,
-            this.btnType,
-            this.txtSpe});
+            this.txtSpe,
+            this.txtSPQ,
+            this.txtCeiling});
             this.panel6.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel6.Margin = new Swebui.Controls.Margin(0F, 0F, 0F, 10F);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(0, 35);
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.BackColor = System.Drawing.Color.Transparent;
-            this.txtPrice.Border = new Swebui.Controls.Border(1F);
-            this.txtPrice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.txtPrice.Flex = 1;
-            this.txtPrice.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(100, 35);
-            this.txtPrice.WaterMarkText = "(选填)";
-            // 
-            // btnType
-            // 
-            this.btnType.Border = new Swebui.Controls.Border(1F);
-            this.btnType.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btnType.DefaultValue = new string[0];
-            this.btnType.DropDownHeight = 280;
-            this.btnType.Flex = 1;
-            this.btnType.ListBackgroundColor = System.Drawing.Color.White;
-            this.btnType.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
-            this.btnType.Name = "btnType";
-            this.btnType.Placeholder = "(必填)";
-            this.btnType.Size = new System.Drawing.Size(100, 35);
-            this.btnType.Press += new Swebui.Controls.TreeSelect.TreeSelectOnPressEventHandler(this.btnType_Press);
             // 
             // txtSpe
             // 
@@ -315,10 +306,33 @@ namespace SwebWMS.UI.MasterData
             this.txtSpe.Border = new Swebui.Controls.Border(1F);
             this.txtSpe.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtSpe.Flex = 1;
-            this.txtSpe.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
+            this.txtSpe.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.txtSpe.Name = "txtSpe";
             this.txtSpe.Size = new System.Drawing.Size(100, 35);
             this.txtSpe.WaterMarkText = "(选填)";
+            // 
+            // txtSPQ
+            // 
+            this.txtSPQ.Border = new Swebui.Controls.Border(1F);
+            this.txtSPQ.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtSPQ.Flex = 1;
+            this.txtSPQ.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
+            this.txtSPQ.Name = "txtSPQ";
+            this.txtSPQ.Size = new System.Drawing.Size(100, 35);
+            this.txtSPQ.ValueType = Swebui.Controls.TextBoxValueType.Number;
+            this.txtSPQ.WaterMarkText = "(选填)";
+            // 
+            // txtCeiling
+            // 
+            this.txtCeiling.BackColor = System.Drawing.Color.Transparent;
+            this.txtCeiling.Border = new Swebui.Controls.Border(1F);
+            this.txtCeiling.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtCeiling.Flex = 1;
+            this.txtCeiling.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
+            this.txtCeiling.Name = "txtCeiling";
+            this.txtCeiling.Size = new System.Drawing.Size(100, 35);
+            this.txtCeiling.ValueType = Swebui.Controls.TextBoxValueType.Number;
+            this.txtCeiling.WaterMarkText = "(选填)";
             // 
             // panel7
             // 
@@ -328,7 +342,7 @@ namespace SwebWMS.UI.MasterData
             this.label9});
             this.panel7.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(0, 30);
+            this.panel7.Size = new System.Drawing.Size(800, 30);
             // 
             // label7
             // 
@@ -337,7 +351,7 @@ namespace SwebWMS.UI.MasterData
             this.label7.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 30);
-            this.label7.Text = "供应商";
+            this.label7.Text = "安全库存下限";
             this.label7.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // label8
@@ -362,7 +376,7 @@ namespace SwebWMS.UI.MasterData
             // panel8
             // 
             this.panel8.Controls.AddRange(new Swebui.Controls.SwebControl[] {
-            this.txtVendor,
+            this.txtFloor,
             this.txtNote,
             this.label});
             this.panel8.Direction = Swebui.Controls.LayoutDirection.Row;
@@ -370,16 +384,17 @@ namespace SwebWMS.UI.MasterData
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(0, 35);
             // 
-            // txtVendor
+            // txtFloor
             // 
-            this.txtVendor.BackColor = System.Drawing.Color.Transparent;
-            this.txtVendor.Border = new Swebui.Controls.Border(1F);
-            this.txtVendor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.txtVendor.Flex = 1;
-            this.txtVendor.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
-            this.txtVendor.Name = "txtVendor";
-            this.txtVendor.Size = new System.Drawing.Size(100, 35);
-            this.txtVendor.WaterMarkText = "(选填)";
+            this.txtFloor.BackColor = System.Drawing.Color.Transparent;
+            this.txtFloor.Border = new Swebui.Controls.Border(1F);
+            this.txtFloor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtFloor.Flex = 1;
+            this.txtFloor.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
+            this.txtFloor.Name = "txtFloor";
+            this.txtFloor.Size = new System.Drawing.Size(100, 35);
+            this.txtFloor.ValueType = Swebui.Controls.TextBoxValueType.Number;
+            this.txtFloor.WaterMarkText = "(选填)";
             // 
             // txtNote
             // 
@@ -399,7 +414,7 @@ namespace SwebWMS.UI.MasterData
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(100, 35);
             // 
-            // FrmAssTemplateCreate
+            // FrmConsumablesDetailEdit
             // 
             this.BackColor = System.Drawing.Color.White;
             this.Controls.AddRange(new Swebui.Controls.SwebControl[] {
@@ -411,17 +426,17 @@ namespace SwebWMS.UI.MasterData
             this.panel6,
             this.panel7,
             this.panel8});
-            this.Load += new System.EventHandler(this.FrmAssTemplateCreate_Load);
+            this.Load += new System.EventHandler(this.FrmConsumablesDetailEdit_Load);
 
         }
         #endregion
 
+        private Panel panel1;
+        private Label labTitle;
         private Panel panel2;
         private Button BackBtn;
         private Button SaveBtn;
-        private Panel panel1;
-        private Label labTitle;
-        private Label txtAssID;
+        private Button DeleteBtn;
         private Panel panel3;
         private Label label1;
         private Label label2;
@@ -429,24 +444,25 @@ namespace SwebWMS.UI.MasterData
         private Panel panel4;
         private TextBox txtName;
         private Panel panel;
+        private Image ImgPicture;
+        private Button button1;
         private TextBox txtUnit;
         private Panel panel5;
         private Label label4;
         private Label label5;
         private Label label6;
         private Panel panel6;
-        private TextBox txtPrice;
-        private TreeSelect btnType;
         private TextBox txtSpe;
+        private TextBox txtSPQ;
+        private TextBox txtCeiling;
+        private Label txtAssID;
         private Panel panel7;
         private Label label7;
         private Label label8;
         private Label label9;
         private Panel panel8;
-        private TextBox txtVendor;
+        private TextBox txtFloor;
         private TextBox txtNote;
         private Label label;
-        private Image ImgPicture;
-        private Button button1;
     }
 }
