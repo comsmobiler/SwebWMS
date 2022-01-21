@@ -24,7 +24,6 @@ namespace SwebWMS.UI.AssetsManager
             this.lblTID = new Swebui.Controls.Label();
             this.panel2 = new Swebui.Controls.Panel();
             this.BackBtn = new Swebui.Controls.Button();
-            this.SaveBtn = new Swebui.Controls.Button();
             this.panel3 = new Swebui.Controls.Panel();
             this.label2 = new Swebui.Controls.Label();
             this.label3 = new Swebui.Controls.Label();
@@ -88,8 +87,7 @@ namespace SwebWMS.UI.AssetsManager
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
             this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
-            this.BackBtn,
-            this.SaveBtn});
+            this.BackBtn});
             this.panel2.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel2.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
             this.panel2.Margin = new Swebui.Controls.Margin(0F, 0F, 0F, 15F);
@@ -111,21 +109,6 @@ namespace SwebWMS.UI.AssetsManager
             this.BackBtn.Size = new System.Drawing.Size(0, 26);
             this.BackBtn.Text = "返回";
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
-            // 
-            // SaveBtn
-            // 
-            this.SaveBtn.BackColor = System.Drawing.Color.White;
-            this.SaveBtn.Border = new Swebui.Controls.Border(1F);
-            this.SaveBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
-            this.SaveBtn.ForeColor = System.Drawing.Color.DimGray;
-            this.SaveBtn.IconName = "fa fa-upload";
-            this.SaveBtn.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.NumberOfLines = 0;
-            this.SaveBtn.Padding = new Swebui.Controls.Padding(10F, 0F, 10F, 0F);
-            this.SaveBtn.Size = new System.Drawing.Size(0, 26);
-            this.SaveBtn.Text = "上传结果";
-            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // panel3
             // 
@@ -369,7 +352,7 @@ namespace SwebWMS.UI.AssetsManager
             this.label10.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 30);
-            this.label10.Text = "已入库数量";
+            this.label10.Text = "已退库数量";
             this.label10.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // label11
@@ -413,7 +396,6 @@ namespace SwebWMS.UI.AssetsManager
         private Label label1;
         private Panel panel2;
         private Button BackBtn;
-        private Button SaveBtn;
         private Panel panel3;
         private Label label2;
         private Label label3;

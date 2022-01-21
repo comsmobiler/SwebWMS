@@ -35,16 +35,6 @@ namespace SwebWMS.UI.AssetsManager
             this.Parent.Controls.Add(new FrmAssetsSalesOrderList() { Flex = 1 });
             this.Parent.Controls.RemoveAt(0);
         }
-        /// <summary>
-        /// 上传结果按钮
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void SaveBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmAssetsSalesOrderDetail_Load(object sender, EventArgs e)
         {
             try

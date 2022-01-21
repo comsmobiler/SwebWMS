@@ -38,12 +38,11 @@ namespace SwebWMS.UI.Layout
             this.panel2.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel2.Margin = new Swebui.Controls.Margin(0F, 0F, 0F, 5F);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(0, 20);
+            this.panel2.Size = new System.Drawing.Size(124, 20);
             // 
             // label1
             // 
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.HorizontalAlignment = Swebui.Controls.HorizontalAlignment.Right;
             this.label1.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
             this.label1.Name = "label1";
             this.label1.NumberOfLines = 1;
@@ -54,7 +53,6 @@ namespace SwebWMS.UI.Layout
             // whlID
             // 
             this.whlID.Flex = 1;
-            this.whlID.HorizontalAlignment = Swebui.Controls.HorizontalAlignment.Center;
             this.whlID.Name = "whlID";
             this.whlID.NumberOfLines = 1;
             this.whlID.Size = new System.Drawing.Size(0, 20);
@@ -68,12 +66,11 @@ namespace SwebWMS.UI.Layout
             this.panel3.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel3.Margin = new Swebui.Controls.Margin(0F, 0F, 0F, 5F);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(0, 20);
+            this.panel3.Size = new System.Drawing.Size(124, 20);
             // 
             // label3
             // 
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.HorizontalAlignment = Swebui.Controls.HorizontalAlignment.Right;
             this.label3.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
             this.label3.Name = "label3";
             this.label3.NumberOfLines = 1;
@@ -84,7 +81,6 @@ namespace SwebWMS.UI.Layout
             // WHLName
             // 
             this.WHLName.Flex = 1;
-            this.WHLName.HorizontalAlignment = Swebui.Controls.HorizontalAlignment.Center;
             this.WHLName.Name = "WHLName";
             this.WHLName.NumberOfLines = 1;
             this.WHLName.Size = new System.Drawing.Size(0, 20);
@@ -98,12 +94,11 @@ namespace SwebWMS.UI.Layout
             this.panel4.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel4.Margin = new Swebui.Controls.Margin(0F, 0F, 0F, 5F);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(0, 20);
+            this.panel4.Size = new System.Drawing.Size(124, 20);
             // 
             // label2
             // 
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.HorizontalAlignment = Swebui.Controls.HorizontalAlignment.Right;
             this.label2.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
             this.label2.Name = "label2";
             this.label2.NumberOfLines = 1;

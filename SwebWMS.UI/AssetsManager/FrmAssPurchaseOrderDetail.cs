@@ -76,12 +76,6 @@ namespace SwebWMS.UI.AssetsManager
             this.Parent.Controls.Add(new FrmAssPurchaseOrderList() { Flex = 1 });
             this.Parent.Controls.RemoveAt(0);
         }
-
-        private void SaveBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
+       
     }
 }

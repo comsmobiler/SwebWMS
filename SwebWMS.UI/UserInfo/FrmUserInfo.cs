@@ -1,10 +1,13 @@
 ﻿using SMOWMS.CommLib;
 using SMOWMS.Domain.Entity;
+using SMOWMS.DTOs.Enum;
 using Swebui.Controls;
+using SwebWMS.UI.Layout;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace SwebWMS.UI.UserInfo
 {
@@ -36,6 +39,7 @@ namespace SwebWMS.UI.UserInfo
             cancelBtn.Visible = true;
             btnSex.Disabled = false;
             dpkBirthday.Enable = true;
+            txtPhone.ReadOnly = false;
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
@@ -44,14 +48,30 @@ namespace SwebWMS.UI.UserInfo
             {
                 UserData.USER_NAME = btnName1.Text.Trim();
                 UserData.USER_SEX = Sex;
-                UserData.USER_EMAIL = btnEmail.Text.Trim();
+
                 UserData.USER_BIRTHDAY = dpkBirthday.Value;
                 UserData.USER_ADDRESS = txtAddress.Text.Trim();
+                if (string.IsNullOrEmpty(btnEmail.Text.Trim()) == false)
+                {
+                    Regex RegEmail = new Regex("^[\\w-]+@[\\w-]+\\.(com|net|org|edu|mil|tv|biz|info)$");
+                    if (RegEmail.Match(btnEmail.Text.Trim()).Success)
+                        UserData.USER_EMAIL = btnEmail.Text.Trim();
+                    else
+                        throw new Exception("请填写正确的邮箱");
+                }
+                if (string.IsNullOrEmpty(txtPhone.Text.Trim()) == false)
+                {
+                    Regex Regphone = new Regex("^\\+?[1-9][0-9]*$");
+                    if (Regphone.Match(txtPhone.Text.Trim()).Success)
+                        UserData.USER_PHONE = txtPhone.Text.Trim();
+                    else
+                        throw new Exception("请填写正确的电话号码");
+                }
                 ReturnInfo resultInfo = autofacConfig.coreUserService.UpdateUser(UserData);
                 if (resultInfo.IsSuccess)
                     cancelBtn_Click(null, null);
                 else
-                    Toast(resultInfo.ErrorInfo);
+                    throw new Exception(resultInfo.ErrorInfo);
             }
             catch (Exception ex)
             {
@@ -64,15 +84,53 @@ namespace SwebWMS.UI.UserInfo
             this.Parent.Controls.Add(new FrmUserInfo() { Flex = 1 });
             this.Parent.Controls.RemoveAt(0);
         }
-
+        /// <summary>
+        ///更换头像
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                this.Client.FileUpload((obj,args)=>
+                {
+                    if (args.isError == false)
+                    {
+                        string[] suffixs = args.ResourceID.Split('.');
+                        args.SaveFile(UserID +"."+ suffixs[1], Swebui.SwebResourceManager.DefaultImagePath);
+                        userImg.ResourceID =userImg1.ResourceID=UserID+"."+suffixs[1];
+                        coreUser UserInfo = new coreUser();
+                        UserInfo.USER_ID = UserID;
+                        UserInfo.USER_IMAGEID = userImg.ResourceID;
+                        ReturnInfo RInfo = autofacConfig.coreUserService.UpdateUser(UserInfo, EuserInfo.修改头像);
+                        if (RInfo.IsSuccess)
+                        {
+                            Toast("修改头像成功!");
+                        }
+                        else
+                        {
+                            throw new Exception(RInfo.ErrorInfo);
+                        }
+                    }
+                    else
+                        throw new Exception(args.error);
+                });
+            }
+            catch (Exception ex)
+            {
+                Toast(ex.Message);
+            }
         }
 
         private void psdChange_Click(object sender, EventArgs e)
         {
-
+            if (Client.Session["UserId"].ToString() == "13123456789" || Client.Session["UserId"].ToString() == "12345678917")
+            {
+                Toast("测试用户没有此权限");
+            }
+            else
+                ShowDialog(new EditPsdDialog());
         }
 
         private void FrmUserInfo_Load(object sender, EventArgs e)
@@ -124,6 +182,8 @@ namespace SwebWMS.UI.UserInfo
                     else
                         isDemo = false;
                 }
+                txtPhone.Text = UserData.USER_PHONE;
+                btnEmail.Text = UserData.USER_EMAIL;
             }
             catch (Exception ex)
             {

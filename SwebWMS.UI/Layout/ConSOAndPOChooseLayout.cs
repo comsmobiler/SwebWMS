@@ -28,7 +28,7 @@ namespace SwebWMS.UI.Layout
             set
             {
                 templateid.Text = value;
-                // treeSelect1.DefaultValues = new string[] { value };
+              treeSelect1.DefaultValue = new string[] { value };
             }
             get { return templateid.Text; }
         }

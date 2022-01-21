@@ -66,6 +66,7 @@ namespace SwebWMS.UI.AssetsManager
             // 
             // lblIID
             // 
+            this.lblIID.FontSize = 20F;
             this.lblIID.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
             this.lblIID.Name = "lblIID";
             this.lblIID.Size = new System.Drawing.Size(0, 26);
@@ -200,6 +201,7 @@ namespace SwebWMS.UI.AssetsManager
             this.btnManager.DefaultValue = new string[0];
             this.btnManager.DropDownHeight = 280;
             this.btnManager.Flex = 1;
+            this.btnManager.ListBackgroundColor = System.Drawing.Color.White;
             this.btnManager.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.btnManager.Name = "btnManager";
             this.btnManager.Size = new System.Drawing.Size(100, 35);
@@ -212,6 +214,7 @@ namespace SwebWMS.UI.AssetsManager
             this.btnType.DefaultValue = new string[0];
             this.btnType.DropDownHeight = 280;
             this.btnType.Flex = 1;
+            this.btnType.ListBackgroundColor = System.Drawing.Color.White;
             this.btnType.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.btnType.Name = "btnType";
             this.btnType.Size = new System.Drawing.Size(100, 35);
@@ -275,6 +278,7 @@ namespace SwebWMS.UI.AssetsManager
             this.btnWareHouse.DefaultValue = new string[0];
             this.btnWareHouse.DropDownHeight = 280;
             this.btnWareHouse.Flex = 1;
+            this.btnWareHouse.ListBackgroundColor = System.Drawing.Color.White;
             this.btnWareHouse.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.btnWareHouse.Name = "btnWareHouse";
             this.btnWareHouse.Size = new System.Drawing.Size(100, 35);
@@ -287,6 +291,7 @@ namespace SwebWMS.UI.AssetsManager
             this.btnST.DefaultValue = new string[0];
             this.btnST.DropDownHeight = 280;
             this.btnST.Flex = 1;
+            this.btnST.ListBackgroundColor = System.Drawing.Color.White;
             this.btnST.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.btnST.Name = "btnST";
             this.btnST.Size = new System.Drawing.Size(100, 35);
@@ -299,6 +304,7 @@ namespace SwebWMS.UI.AssetsManager
             this.btnSL.DefaultValue = new string[0];
             this.btnSL.DropDownHeight = 280;
             this.btnSL.Flex = 1;
+            this.btnSL.ListBackgroundColor = System.Drawing.Color.White;
             this.btnSL.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.btnSL.Name = "btnSL";
             this.btnSL.Size = new System.Drawing.Size(100, 35);

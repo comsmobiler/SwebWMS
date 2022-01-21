@@ -23,6 +23,7 @@ namespace SwebWMS.UI.MasterData
             Swebui.Controls.GridViewColumn gridViewColumn2 = new Swebui.Controls.GridViewColumn();
             Swebui.Controls.GridViewColumn gridViewColumn3 = new Swebui.Controls.GridViewColumn();
             Swebui.Controls.GridViewColumn gridViewColumn4 = new Swebui.Controls.GridViewColumn();
+            Swebui.Controls.GridViewColumn gridViewColumn5 = new Swebui.Controls.GridViewColumn();
             this.panel1 = new Swebui.Controls.Panel();
             this.label1 = new Swebui.Controls.Label();
             this.panel2 = new Swebui.Controls.Panel();
@@ -270,15 +271,18 @@ namespace SwebWMS.UI.MasterData
             gridViewColumn1.HeaderText = "资产编号";
             gridViewColumn2.DisplayMember = "Name";
             gridViewColumn2.HeaderText = "资产名称";
-            gridViewColumn3.DisplayMember = "Price";
-            gridViewColumn3.HeaderText = "金额";
-            gridViewColumn4.DisplayMember = "SLName";
-            gridViewColumn4.HeaderText = "库位";
+            gridViewColumn3.DisplayMember = "SN";
+            gridViewColumn3.HeaderText = "SN";
+            gridViewColumn4.DisplayMember = "Price";
+            gridViewColumn4.HeaderText = "金额";
+            gridViewColumn5.DisplayMember = "SLName";
+            gridViewColumn5.HeaderText = "库位";
             this.gridView1.Columns.AddRange(new Swebui.Controls.GridViewColumn[] {
             gridViewColumn1,
             gridViewColumn2,
             gridViewColumn3,
-            gridViewColumn4});
+            gridViewColumn4,
+            gridViewColumn5});
             this.gridView1.DataSource = null;
             this.gridView1.Flex = 1;
             this.gridView1.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 10F);

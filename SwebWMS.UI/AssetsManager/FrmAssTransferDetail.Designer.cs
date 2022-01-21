@@ -43,7 +43,6 @@ namespace SwebWMS.UI.AssetsManager
             this.lblNote = new Swebui.Controls.Label();
             this.textBox3 = new Swebui.Controls.Label();
             this.panel7 = new Swebui.Controls.Panel();
-            this.label8 = new Swebui.Controls.Label();
             this.label10 = new Swebui.Controls.Label();
             this.label11 = new Swebui.Controls.Label();
             this.label9 = new Swebui.Controls.Label();
@@ -291,7 +290,6 @@ namespace SwebWMS.UI.AssetsManager
             this.panel7.Border = new Swebui.Controls.Border(1F);
             this.panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.panel7.Controls.AddRange(new Swebui.Controls.SwebControl[] {
-            this.label8,
             this.label10,
             this.label11,
             this.label9,
@@ -301,15 +299,6 @@ namespace SwebWMS.UI.AssetsManager
             this.panel7.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 0F);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(0, 33);
-            // 
-            // label8
-            // 
-            this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 30);
-            this.label8.Text = "操作";
-            this.label8.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // label10
             // 
@@ -397,7 +386,6 @@ namespace SwebWMS.UI.AssetsManager
         private Label lblNote;
         private Label textBox3;
         private Panel panel7;
-        private Label label8;
         private Label label10;
         private Label label11;
         private Label label9;

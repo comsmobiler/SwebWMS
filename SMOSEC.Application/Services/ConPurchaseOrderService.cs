@@ -189,7 +189,7 @@ namespace SMOWMS.Application.Services
         public List<object> GetVendorAnalyzeEchart(DateTime startDate, DateTime endDate)
         {
             List<ConPurchaseOrderRow> orderRows = _ConPurchaseOrderRowReposity.GetAll()
-                .Where(x => (x.STATUS == 1 || x.STATUS == 2) && x.CREATEDATE >= startDate && x.CREATEDATE <= endDate).ToList();
+     .Where(x => (x.STATUS == 1 || x.STATUS == 2) && x.CREATEDATE >= startDate && x.CREATEDATE <= endDate).ToList();
             var Data = from orderRow in orderRows
                        join con in _SMOWMSDbContext.Consumableses on orderRow.CID equals con.CID
                        join order in _SMOWMSDbContext.ConPurchaseOrders on orderRow.POID equals order.POID
@@ -202,26 +202,39 @@ namespace SMOWMS.Application.Services
                            VENDORNAME = vendor.NAME,
                            QUANTSTORED = orderRow.QUANTSTORED
                        };
-            List<string> vendors = new List<string>();
-            List<BarChartDto> barChartDtos = new List<BarChartDto>();
+            List<string> consNames = new List<string>();
+            Dictionary<string, Dictionary<string, decimal>> result = new Dictionary<string, Dictionary<string, decimal>>();
             foreach (ConPurchaseOrderRowInputDto row in Data)
             {
-                BarChartDto dto = new BarChartDto();
-                dto.Series = row.VENDORNAME;
-                dto.XValue = row.NAME;
-                dto.YValue = row.QUANTSTORED;
-                barChartDtos.Add(dto);
+                if (consNames.Contains(row.NAME) == false)
+                    consNames.Add(row.NAME);
+                if (result.Keys.Contains(row.VENDORNAME))
+                {
+                    if (result[row.VENDORNAME].Keys.Contains(row.NAME))
+                    {
+                        result[row.VENDORNAME][row.NAME] = result[row.VENDORNAME][row.NAME] + row.QUANTSTORED;
+                    }
+                    else
+                    {
+                        result[row.VENDORNAME].Add(row.NAME, row.QUANTSTORED);
+                    }
+                }
+                else
+                {
+                    Dictionary<string, decimal> rowQuant = new Dictionary<string, decimal>();
+                    rowQuant.Add(row.NAME, row.QUANTSTORED);
+                    result.Add(row.VENDORNAME, rowQuant);
+                }
+            }
+            if (result.Count > 0)
+            {
+                List<object> resultList = new List<object>();
+                resultList.Add(consNames);
+                resultList.Add(result);
+                return resultList;
 
             }
-            List<object> result = new List<object>();
-            if (barChartDtos.Count > 0)
-            {
-                result.Add(vendors);
-                result.Add(barChartDtos);
-                return result;
-            }
-            else
-                return null;
+            else { return null; }
 
         }
         /// <summary>
@@ -361,15 +374,15 @@ namespace SMOWMS.Application.Services
             var FirstOrders = _ConPurchaseOrderReposity.GetAll();
             var result = from Order in FirstOrders
                          join User in _SMOWMSDbContext.coreUsers on Order.PURCHASER equals User.USER_ID
-                         where Order.STATUS !=2
+                         where Order.STATUS != 2
                          orderby Order.CREATEDATE descending
                          select new ConPurchaseOrderOutputDto()
                          {
                              POID = Order.POID,
                              NAME = Order.NAME,
                          };
-      
-     
+
+
             return result.ToList();
         }
         #endregion

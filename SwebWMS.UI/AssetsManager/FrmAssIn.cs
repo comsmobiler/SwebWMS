@@ -252,12 +252,9 @@ namespace SwebWMS.UI.AssetsManager
         {
             try
             {
-                if (string.IsNullOrEmpty(txtSN.Text))
+                if (string.IsNullOrEmpty(txtSN.Text.Trim()))
                     throw new Exception("请输入SN号");
-                string[] sns = txtSN.Text.Split(',');
-                for (int i = 0; i < sns.Length; i++)
-                {
-                    string barCode =sns[i];
+                    string barCode = txtSN.Text.Trim();
                     if (snPanel.Controls.Count == 0)
                     {
                         bool isExists = _autofacConfig.SettingService.SNIsExists(barCode);
@@ -298,9 +295,6 @@ namespace SwebWMS.UI.AssetsManager
                             }
                         }
                     }
-
-                }
-
             }
             catch (Exception ex)
             {

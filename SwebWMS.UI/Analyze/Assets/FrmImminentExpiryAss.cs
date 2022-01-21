@@ -83,5 +83,15 @@ namespace SwebWMS.UI.Analyze
                 Toast(ex.Message);
             }
         }
+        /// <summary>
+        /// 刷新按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Add(new FrmImminentExpiryAss() { Flex = 1 });
+            this.Parent.Controls.RemoveAt(0);
+        }
     }
 }

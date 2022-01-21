@@ -81,8 +81,15 @@ namespace SwebWMS.UI.Analyze
                 btnWare.Tag = args.TreeID;
             Bind();
         }
-
-
-
+        /// <summary>
+        /// 刷新按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Add(new FrmQuantAnalyze() { Flex=1});
+            this.Parent.Controls.RemoveAt(0);
+        }
     }
 }

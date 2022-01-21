@@ -87,6 +87,7 @@ namespace SwebWMS.UI
             this.useBtn.SelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(106)))), ((int)(((byte)(108)))));
             this.useBtn.Size = new System.Drawing.Size(0, 60);
             this.useBtn.Text = "admin";
+            this.useBtn.Click += new System.EventHandler(this.useBtn_Click);
             // 
             // panel2
             // 

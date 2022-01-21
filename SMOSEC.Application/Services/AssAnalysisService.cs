@@ -1168,9 +1168,17 @@ namespace SMOWMS.Application.Services
                                    (assTemplate.TYPEID == type.Level2 && type.Level3 == "") ||
                                    assTemplate.TYPEID == type.Level3) && type.Level1 == type1.TYPEID
                             select wareHouse.NAME).Distinct();
-            var asstypelist = (from assetse in asset
-                               join type1 in SMOWMSDbContext.AssetsTypes on assetse.TYPEID equals type1.TYPEID
-                               select type1.NAME).Distinct();
+            var typelists = from assetse in asset
+                            from assTemplate in SMOWMSDbContext.AssTemplates
+                            from type in typelist
+                            from type1 in SMOWMSDbContext.AssetsTypes
+                            join wareHouse in SMOWMSDbContext.WareHouses on assetse.WAREID equals wareHouse.WAREID
+                            where assetse.TEMPLATEID == assTemplate.TEMPLATEID &&
+                                  ((assTemplate.TYPEID == type.Level1 && type.Level2 == "") ||
+                                   (assTemplate.TYPEID == type.Level2 && type.Level3 == "") ||
+                                   assTemplate.TYPEID == type.Level3) && type.Level1 == type1.TYPEID
+                            select type1.NAME;
+            var asstypelist = typelists.Distinct();
             List<object> resultList = new List<object>();
             if (quantlist != null && quantlist.Count > 0)
             {

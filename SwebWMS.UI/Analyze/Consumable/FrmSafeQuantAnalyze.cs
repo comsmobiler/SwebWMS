@@ -31,7 +31,11 @@ namespace SwebWMS.UI.Analyze
             }
            
         }
-
+        /// <summary>
+        /// 刷新按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
             this.Parent.Controls.Add(new FrmSafeQuantAnalyze() { Flex=1 });

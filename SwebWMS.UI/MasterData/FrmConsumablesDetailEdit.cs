@@ -178,7 +178,7 @@ namespace SwebWMS.UI.MasterData
                     {
                         string[] suffixs = args.ResourceID.Split(',');
                         string[] names = ImgPicture.ResourceID.Split(',');
-                        string name = names[0] + suffixs[1];
+                        string name = names[0] + "."+suffixs[1];
                         args.SaveFile(name, Swebui.SwebResourceManager.DefaultImagePath);
                         ImgPicture.ResourceID = name;
                         Toast("上传成功！");

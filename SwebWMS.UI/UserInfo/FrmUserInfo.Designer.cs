@@ -59,7 +59,7 @@ namespace SwebWMS.UI.UserInfo
             this.label3 = new Swebui.Controls.Label();
             this.panel12 = new Swebui.Controls.Panel();
             this.txtAddress = new Swebui.Controls.TextBox();
-            this.label6 = new Swebui.Controls.Label();
+            this.txtPhone = new Swebui.Controls.TextBox();
             // 
             // panel1
             // 
@@ -319,22 +319,22 @@ namespace SwebWMS.UI.UserInfo
             // 
             this.lab.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.lab.Flex = 1;
-            this.lab.ForeColor = System.Drawing.Color.Silver;
+            this.lab.ForeColor = System.Drawing.Color.DimGray;
             this.lab.Margin = new Swebui.Controls.Margin(20F, 0F, 10F, 0F);
             this.lab.Name = "lab";
             this.lab.Size = new System.Drawing.Size(0, 30);
-            this.lab.Text = "昵称";
+            this.lab.Text = "性别";
             this.lab.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // label7
             // 
             this.label7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.label7.Flex = 1;
-            this.label7.ForeColor = System.Drawing.Color.Silver;
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
             this.label7.Margin = new Swebui.Controls.Margin(10F, 0F, 20F, 0F);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 30);
-            this.label7.Text = "性别";
+            this.label7.Text = "昵称";
             this.label7.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // panel7
@@ -389,7 +389,7 @@ namespace SwebWMS.UI.UserInfo
             // 
             this.label9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.label9.Flex = 1;
-            this.label9.ForeColor = System.Drawing.Color.Silver;
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
             this.label9.Margin = new Swebui.Controls.Margin(20F, 0F, 10F, 0F);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 30);
@@ -400,7 +400,7 @@ namespace SwebWMS.UI.UserInfo
             // 
             this.label8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.label8.Flex = 1;
-            this.label8.ForeColor = System.Drawing.Color.Silver;
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
             this.label8.Margin = new Swebui.Controls.Margin(10F, 0F, 20F, 0F);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 30);
@@ -453,7 +453,7 @@ namespace SwebWMS.UI.UserInfo
             // 
             this.label1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.label1.Flex = 1;
-            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Margin = new Swebui.Controls.Margin(20F, 0F, 10F, 0F);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 30);
@@ -463,15 +463,18 @@ namespace SwebWMS.UI.UserInfo
             // label3
             // 
             this.label3.Flex = 1;
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Margin = new Swebui.Controls.Margin(10F, 0F, 20F, 0F);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 30);
+            this.label3.Text = "电话";
+            this.label3.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // panel12
             // 
             this.panel12.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.txtAddress,
-            this.label6});
+            this.txtPhone});
             this.panel12.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(0, 35);
@@ -487,12 +490,15 @@ namespace SwebWMS.UI.UserInfo
             this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(0, 35);
             // 
-            // label6
+            // txtPhone
             // 
-            this.label6.Flex = 1;
-            this.label6.Margin = new Swebui.Controls.Margin(10F, 0F, 20F, 0F);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 0);
+            this.txtPhone.Border = new Swebui.Controls.Border(1F);
+            this.txtPhone.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtPhone.Flex = 1;
+            this.txtPhone.Margin = new Swebui.Controls.Margin(10F, 0F, 20F, 0F);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.ReadOnly = true;
+            this.txtPhone.Size = new System.Drawing.Size(100, 0);
             // 
             // FrmUserInfo
             // 
@@ -534,7 +540,7 @@ namespace SwebWMS.UI.UserInfo
         private Label label3;
         private Panel panel12;
         private TextBox txtAddress;
-        private Label label6;
+        private TextBox txtPhone;
         private Panel panel13;
         private Label label5;
         private Label label10;

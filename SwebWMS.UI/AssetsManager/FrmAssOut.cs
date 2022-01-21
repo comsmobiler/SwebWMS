@@ -121,6 +121,11 @@ namespace SwebWMS.UI.AssetsManager
                     bool isExists = _autofacConfig.SettingService.SOSNIsExists(barCode, TemplateIds);
                     if (isExists)
                     {
+                        foreach(SNRowLayout layout in snPanel.Controls)
+                        {
+                            if (layout.SN == barCode)
+                                throw new Exception("该序列号已添加");
+                        }
                         Assets assets = _autofacConfig.SettingService.GetBySN(barCode);
                         snPanel.Controls.Add(new SNRowLayout() { Image = assets.IMAGE, SN = barCode });
                     }

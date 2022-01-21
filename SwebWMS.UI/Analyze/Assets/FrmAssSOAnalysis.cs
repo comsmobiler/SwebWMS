@@ -155,5 +155,16 @@ namespace SwebWMS.UI.Analyze
             string FirstDay = datetime.AddDays(daydiff).ToString("yyyy-MM-dd");
             return Convert.ToDateTime(FirstDay);
         }
+        /// <summary>
+        /// 刷新按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Add(new FrmAssSOAnalysis() { Flex = 1 });
+            this.Parent.Controls.RemoveAt(0);
+
+        }
     }
 }

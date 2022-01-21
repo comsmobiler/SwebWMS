@@ -38,6 +38,8 @@ namespace SwebWMS.UI.Analyze
             this.panel5 = new Swebui.Controls.Panel();
             this.label5 = new Swebui.Controls.Label();
             this.gridView1 = new Swebui.Controls.GridView();
+            this.panel6 = new Swebui.Controls.Panel();
+            this.RefreshBtn = new Swebui.Controls.Button();
             // 
             // panel1
             // 
@@ -62,8 +64,6 @@ namespace SwebWMS.UI.Analyze
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.label2,
             this.dpStart,
@@ -215,11 +215,38 @@ namespace SwebWMS.UI.Analyze
             this.gridView1.RowWidth = 0;
             this.gridView1.Size = new System.Drawing.Size(0, 30);
             // 
+            // panel6
+            // 
+            this.panel6.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
+            this.panel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel6.Controls.AddRange(new Swebui.Controls.SwebControl[] {
+            this.RefreshBtn});
+            this.panel6.Direction = Swebui.Controls.LayoutDirection.Row;
+            this.panel6.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(0, 46);
+            // 
+            // RefreshBtn
+            // 
+            this.RefreshBtn.BackColor = System.Drawing.Color.White;
+            this.RefreshBtn.Border = new Swebui.Controls.Border(1F);
+            this.RefreshBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.RefreshBtn.ForeColor = System.Drawing.Color.DimGray;
+            this.RefreshBtn.IconName = "fa fa-refresh";
+            this.RefreshBtn.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 0F);
+            this.RefreshBtn.Name = "RefreshBtn";
+            this.RefreshBtn.NumberOfLines = 0;
+            this.RefreshBtn.Padding = new Swebui.Controls.Padding(10F, 0F, 10F, 0F);
+            this.RefreshBtn.Size = new System.Drawing.Size(0, 26);
+            this.RefreshBtn.Text = "刷新";
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
+            // 
             // FrmAssCusAnalysis
             // 
             this.BackColor = System.Drawing.Color.White;
             this.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.panel1,
+            this.panel6,
             this.panel2,
             this.panel3});
             this.Load += new System.EventHandler(this.FrmAssCusAnalysis_Load);
@@ -243,5 +270,7 @@ namespace SwebWMS.UI.Analyze
         private Panel panel5;
         private Label label5;
         private GridView gridView1;
+        private Panel panel6;
+        private Button RefreshBtn;
     }
 }

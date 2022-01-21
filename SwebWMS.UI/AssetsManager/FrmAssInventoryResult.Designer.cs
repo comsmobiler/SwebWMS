@@ -92,6 +92,7 @@ namespace SwebWMS.UI.AssetsManager
             // 
             // lblIID
             // 
+            this.lblIID.FontSize = 20F;
             this.lblIID.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
             this.lblIID.Name = "lblIID";
             this.lblIID.Size = new System.Drawing.Size(0, 26);

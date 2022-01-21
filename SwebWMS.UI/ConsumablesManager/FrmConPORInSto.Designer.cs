@@ -58,7 +58,7 @@ namespace SwebWMS.UI.ConsumablesManager
             this.label1.FontSize = 24F;
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 26);
-            this.label1.Text = "耗材调入";
+            this.label1.Text = "耗材入库";
             // 
             // panel2
             // 

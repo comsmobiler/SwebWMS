@@ -58,7 +58,7 @@ namespace SwebWMS.UI.AssetsManager
             this.label1.FontSize = 24F;
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 26);
-            this.label1.Text = "资产调出";
+            this.label1.Text = "资产出库";
             // 
             // panel2
             // 
@@ -87,7 +87,7 @@ namespace SwebWMS.UI.AssetsManager
             this.saveBtn.NumberOfLines = 0;
             this.saveBtn.Padding = new Swebui.Controls.Padding(10F, 0F, 10F, 0F);
             this.saveBtn.Size = new System.Drawing.Size(0, 26);
-            this.saveBtn.Text = "入库";
+            this.saveBtn.Text = "出库";
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // RefreshBtn
@@ -142,7 +142,6 @@ namespace SwebWMS.UI.AssetsManager
             this.label4.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 30);
-            this.label4.Text = "需入库数";
             this.label4.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // panel4
@@ -163,6 +162,7 @@ namespace SwebWMS.UI.AssetsManager
             this.txtSOID.DefaultValue = new string[0];
             this.txtSOID.DropDownHeight = 280;
             this.txtSOID.Flex = 1;
+            this.txtSOID.ListBackgroundColor = System.Drawing.Color.White;
             this.txtSOID.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.txtSOID.Name = "txtSOID";
             this.txtSOID.Size = new System.Drawing.Size(100, 35);

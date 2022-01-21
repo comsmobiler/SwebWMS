@@ -76,6 +76,7 @@ namespace SwebWMS.UI.MasterData
             // 
             // txtAssID
             // 
+            this.txtAssID.FontSize = 20F;
             this.txtAssID.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
             this.txtAssID.Name = "txtAssID";
             this.txtAssID.Size = new System.Drawing.Size(0, 26);

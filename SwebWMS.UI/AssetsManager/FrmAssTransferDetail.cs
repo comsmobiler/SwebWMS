@@ -39,13 +39,6 @@ namespace SwebWMS.UI.AssetsManager
                 lblLocation.Text = whLoc.WARENAME + "/" + whLoc.STNAME + "/" + whLoc.SLNAME;
                 lblDatePicker.Text = TOData.TRANSFERDATE.ToString();
                 if (String.IsNullOrEmpty(TOData.NOTE) == false) lblNote.Text = TOData.NOTE;
-
-                //DataTable tableAssets = new DataTable();      //未开启SN的资产列表
-                //tableAssets.Columns.Add("ASSID");             //资产编号
-                //tableAssets.Columns.Add("NAME");              //资产名称
-                //tableAssets.Columns.Add("IMAGE");             //资产图片
-                //tableAssets.Columns.Add("SN");                //序列号
-                //tableAssets.Columns.Add("STATUS");            //行项状态
                 if (TOData.Rows != null && TOData.Rows.Count > 0)
                 {
                     foreach (AssTransferOrderRow Row in TOData.Rows)

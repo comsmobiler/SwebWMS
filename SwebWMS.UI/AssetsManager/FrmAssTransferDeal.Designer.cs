@@ -45,8 +45,8 @@ namespace SwebWMS.UI.AssetsManager
             this.checkAll = new Swebui.Controls.CheckBox();
             this.label10 = new Swebui.Controls.Label();
             this.label11 = new Swebui.Controls.Label();
-            this.label9 = new Swebui.Controls.Label();
             this.snPanel = new Swebui.Controls.Panel();
+            this.label9 = new Swebui.Controls.Label();
             // 
             // panel1
             // 
@@ -311,15 +311,6 @@ namespace SwebWMS.UI.AssetsManager
             this.label11.Text = "SN";
             this.label11.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
-            // label9
-            // 
-            this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 30);
-            this.label9.Text = "资产名称";
-            this.label9.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
-            // 
             // snPanel
             // 
             this.snPanel.Border = new Swebui.Controls.Border(1F, 0F, 1F, 1F);
@@ -328,6 +319,15 @@ namespace SwebWMS.UI.AssetsManager
             this.snPanel.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 10F);
             this.snPanel.Name = "snPanel";
             this.snPanel.Size = new System.Drawing.Size(0, 100);
+            // 
+            // label9
+            // 
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 30);
+            this.label9.Text = "资产名称";
+            this.label9.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // FrmAssTransferDeal
             // 
@@ -372,7 +372,7 @@ namespace SwebWMS.UI.AssetsManager
         private CheckBox checkAll;
         private Label label10;
         private Label label11;
-        private Label label9;
         private Panel snPanel;
+        private Label label9;
     }
 }

@@ -1,4 +1,5 @@
 ﻿
+using SMOWMS.Domain.Entity;
 using Swebui.Controls;
 using SwebWMS.UI.Analyze;
 using SwebWMS.UI.AssetsManager;
@@ -27,12 +28,13 @@ namespace SwebWMS.UI
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
+            #region 添加MenuView 子项
             MenuItem menuItem = new MenuItem("Home", "主页", "");
 
             MenuItem menuItem2 = new MenuItem("assets", "资产");
             MenuItem menuItem3 = new MenuItem("Assets", "资产管理");
             MenuItem menuItem4 = new MenuItem("AssTemplate", "资产模板");
-            MenuItem menuItem30 = new MenuItem("AssIn", "资产调入");
+            MenuItem menuItem30 = new MenuItem("AssIn", "资产入库");
             MenuItem menuItem31 = new MenuItem("AssOut", "资产出库");
             MenuItem menuItem32 = new MenuItem("AssTransfer","资产调拨");
             MenuItem menuItem33 = new MenuItem("AssInventory", "资产盘点");
@@ -84,7 +86,18 @@ namespace SwebWMS.UI
 
             //  menuView1.DefaultSelectedItem(menuView1.Items[0]);
             MenuValueChanged(menuView1.Items[0]);
+            #endregion
+
+           string UserID = Client.Session["UserID"].ToString();
+            AutofacConfig autofacConfig = new AutofacConfig();
+          coreUser  UserData = autofacConfig.coreUserService.GetUserByID(UserID);
+            useBtn.Text = UserData.USER_NAME;
         }
+        /// <summary>
+        /// menuview 点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void menuView1_MenuItemClick(object sender, MenuViewItemClickEventArgs e)
         {
             MenuValueChanged(e.Item);
@@ -134,8 +147,12 @@ namespace SwebWMS.UI
                     AddTabPage(menuItem, frmConSOROutbound);
                     break;
                 case "ConTransfer":
+                    FrmConTransfer frmConTransfer = new FrmConTransfer();
+                    AddTabPage(menuItem, frmConTransfer);
                     break;
                 case "ConInventory":
+                    FrmConInventory frmConInventory = new FrmConInventory();
+                    AddTabPage(menuItem, frmConInventory);
                     break;
 
                 case "Setting":
@@ -227,6 +244,11 @@ namespace SwebWMS.UI
 
             }
         }
+       /// <summary>
+       ///  tabpageview 中添加子项
+       /// </summary>
+       /// <param name="menuItem"></param>
+       /// <param name="menuControl"></param>
         private void AddTabPage(MenuItem menuItem, SwebControl menuControl)
         {
             TabPageControl existTagControl = (TabPageControl)this.tabPageView1.Controls.Find(menuItem.Id);
@@ -252,6 +274,14 @@ namespace SwebWMS.UI
             }
 
         }
-
+        /// <summary>
+        /// 用户名称按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void useBtn_Click(object sender, EventArgs e)
+        {
+            MenuValueChanged(new MenuItem("Setting", "设置"));
+        }
     }
 }

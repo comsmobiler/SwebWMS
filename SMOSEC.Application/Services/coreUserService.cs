@@ -297,6 +297,8 @@ namespace SMOWMS.Application.Services
                 coreUser.USER_BIRTHDAY = entity.USER_BIRTHDAY;
 
                 coreUser.USER_LOCATIONID = entity.USER_LOCATIONID;
+                coreUser.USER_PHONE = entity.USER_PHONE;
+                coreUser.USER_EMAIL = entity.USER_EMAIL;
                 _unitOfWork.RegisterDirty(coreUser);
                 bool result = _unitOfWork.Commit();
                 RInfo.IsSuccess = result;

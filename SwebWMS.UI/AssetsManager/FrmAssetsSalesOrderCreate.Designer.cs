@@ -78,6 +78,7 @@ namespace SwebWMS.UI.AssetsManager
             // 
             // txtPOID
             // 
+            this.txtPOID.FontSize = 20F;
             this.txtPOID.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
             this.txtPOID.Name = "txtPOID";
             this.txtPOID.Size = new System.Drawing.Size(0, 26);

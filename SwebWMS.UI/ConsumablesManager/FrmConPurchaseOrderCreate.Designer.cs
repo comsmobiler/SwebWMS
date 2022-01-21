@@ -77,6 +77,7 @@ namespace SwebWMS.UI.ConsumablesManager
             // 
             // txtPOID
             // 
+            this.txtPOID.FontSize = 20F;
             this.txtPOID.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
             this.txtPOID.Name = "txtPOID";
             this.txtPOID.Size = new System.Drawing.Size(0, 26);
@@ -222,6 +223,7 @@ namespace SwebWMS.UI.ConsumablesManager
             this.btnDealMan.DefaultValue = new string[0];
             this.btnDealMan.DropDownHeight = 280;
             this.btnDealMan.Flex = 1;
+            this.btnDealMan.ListBackgroundColor = System.Drawing.Color.White;
             this.btnDealMan.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.btnDealMan.Name = "btnDealMan";
             this.btnDealMan.Size = new System.Drawing.Size(100, 35);
@@ -279,6 +281,7 @@ namespace SwebWMS.UI.ConsumablesManager
             this.btnVendor.DefaultValue = new string[0];
             this.btnVendor.DropDownHeight = 280;
             this.btnVendor.Flex = 1;
+            this.btnVendor.ListBackgroundColor = System.Drawing.Color.White;
             this.btnVendor.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.btnVendor.Name = "btnVendor";
             this.btnVendor.Size = new System.Drawing.Size(100, 35);

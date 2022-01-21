@@ -2,6 +2,7 @@
 using SMOWMS.Domain.Entity;
 using SMOWMS.DTOs.Enum;
 using SMOWMS.DTOs.InputDTO;
+using SMOWMS.DTOs.OutputDTO;
 using Swebui.Controls;
 using SwebWMS.UI.Layout;
 using System;
@@ -74,6 +75,9 @@ namespace SwebWMS.UI.AssetsManager
                 else
                 {
                     string[] Datas = lblLocation.Text.ToString().Split('/');
+                    if (Datas.Length != 3) throw new Exception("库位条码错误");
+                    WHStorageLocationOutputDto whLoc = autofacConfig.wareHouseService.GetSLByID(Datas[0], Datas[1], Datas[2]);
+                    if (whLoc == null) throw new Exception("库位不存在，请检查!");
                     TransferData.WAREID = Datas[0];     //调入仓库
                     TransferData.STID = Datas[1];       //调入类型
                     TransferData.DESSLID = Datas[2];    //调入库位

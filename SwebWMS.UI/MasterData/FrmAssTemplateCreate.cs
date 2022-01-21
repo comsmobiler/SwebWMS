@@ -138,13 +138,13 @@ namespace SwebWMS.UI.MasterData
                         if (string.IsNullOrEmpty(ImgPicture.ResourceID))
                         {
                             string[] name = args.ResourceID.Split('.');
-                            imgName = UserId + DateTime.Now.ToString("yyyyMMddHHmmss") + name[1];
+                            imgName = UserId + DateTime.Now.ToString("yyyyMMddHHmmss") + "."+name[1];
                         }
                         else
                         {
                             string[] name = args.ResourceID.Split('.');
                             string[] firstName = ImgPicture.ResourceID.Split(',');
-                            imgName = firstName[0] + name[1];
+                            imgName = firstName[0] +"."+ name[1];
                         }
                         args.SaveFile(imgName, SwebResourceManager.DefaultImagePath);
                         ImgPicture.ResourceID = imgName;
@@ -198,6 +198,7 @@ namespace SwebWMS.UI.MasterData
                 #endregion
                 if (string.IsNullOrEmpty(TempId) == false)
                 {
+                    labTitle.Text = "编辑资产模板";
                     AssTemplate outputDto = _autofacConfig.SettingService.GetAtbyId(TempId);
                     if (outputDto != null)
                     {

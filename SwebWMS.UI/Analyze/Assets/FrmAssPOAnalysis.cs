@@ -33,7 +33,7 @@ namespace SwebWMS.UI.Analyze
             btnTime.Nodes.Add(new TreeSelectNode("Month", "本月"));
             btnTime.Nodes.Add(new TreeSelectNode("Week", "本周"));
             btnTime.Nodes.Add(new TreeSelectNode("Day", "本日"));
-         
+
             QueryAssAnalysisInputDto inputDto = new QueryAssAnalysisInputDto
             {
                 StarTime = startTime,
@@ -145,6 +145,16 @@ namespace SwebWMS.UI.Analyze
                 eCharts1.Option = "";
             }
 
+        }
+        /// <summary>
+        /// 刷新按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Add(new FrmAssPOAnalysis() { Flex = 1 });
+            this.Parent.Controls.RemoveAt(0);
         }
     }
 }

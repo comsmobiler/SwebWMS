@@ -51,6 +51,7 @@ namespace SwebWMS.UI.Layout
             this.button1.NumberOfLines = 0;
             this.button1.SelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(140)))), ((int)(((byte)(255)))));
             this.button1.Size = new System.Drawing.Size(0, 30);
+            this.button1.Click += new System.EventHandler(this.panel1_Press);
             // 
             // ImageButton
             // 

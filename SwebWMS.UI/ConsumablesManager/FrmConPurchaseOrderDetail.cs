@@ -33,15 +33,6 @@ namespace SwebWMS.UI.ConsumablesManager
             this.Parent.Controls.Add(new FrmConPurchaseOrderList() { Flex = 1 });
             this.Parent.Controls.RemoveAt(0);
         }
-        /// <summary>
-        /// 保存按钮事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void SaveBtn_Click(object sender, EventArgs e)
-        {
-
-        }
         private void FrmConPurchaseOrderDetail_Load(object sender, EventArgs e)
         {
             try

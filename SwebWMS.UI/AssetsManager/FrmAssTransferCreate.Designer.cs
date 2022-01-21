@@ -66,7 +66,7 @@ namespace SwebWMS.UI.AssetsManager
             this.labTitle.FontSize = 24F;
             this.labTitle.Name = "labTitle";
             this.labTitle.Size = new System.Drawing.Size(0, 26);
-            this.labTitle.Text = "新增资调拨单";
+            this.labTitle.Text = "新增资产调拨单";
             this.labTitle.VerticalAlignment = Swebui.Controls.VerticalAlignment.Bottom;
             // 
             // panel2
@@ -131,7 +131,7 @@ namespace SwebWMS.UI.AssetsManager
             this.label2.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 30);
-            this.label2.Text = "调入管理源";
+            this.label2.Text = "调入管理员";
             this.label2.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // label3
@@ -172,6 +172,7 @@ namespace SwebWMS.UI.AssetsManager
             this.btnDealInMan.DefaultValue = new string[0];
             this.btnDealInMan.DropDownHeight = 280;
             this.btnDealInMan.Flex = 1;
+            this.btnDealInMan.ListBackgroundColor = System.Drawing.Color.White;
             this.btnDealInMan.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.btnDealInMan.Name = "btnDealInMan";
             this.btnDealInMan.Size = new System.Drawing.Size(100, 35);
@@ -254,6 +255,7 @@ namespace SwebWMS.UI.AssetsManager
             this.btnDealMan.DefaultValue = new string[0];
             this.btnDealMan.DropDownHeight = 280;
             this.btnDealMan.Flex = 1;
+            this.btnDealMan.ListBackgroundColor = System.Drawing.Color.White;
             this.btnDealMan.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.btnDealMan.Name = "btnDealMan";
             this.btnDealMan.Size = new System.Drawing.Size(100, 35);

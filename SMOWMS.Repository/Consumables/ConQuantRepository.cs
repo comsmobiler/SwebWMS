@@ -54,6 +54,10 @@ namespace SMOWMS.Repository.Consumables
         /// <returns></returns>
         public decimal GetSumByCID(string CID)
         {
+            var conlist = _entities.Where(x => x.CID == CID);
+            if (conlist == null || conlist.Count() == 0)
+                return 0;
+            else
             return _entities.Where(x => x.CID == CID).Sum(x => x.QUANTITY);
         }
         /// <summary>
