@@ -55,7 +55,7 @@ namespace SwebWMS.UI.Analyze
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.label2,
             this.btnTime,
@@ -78,7 +78,7 @@ namespace SwebWMS.UI.Analyze
             // btnTime
             // 
             this.btnTime.Border = new Swebui.Controls.Border(1F);
-            this.btnTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.btnTime.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnTime.DefaultValue = new string[0];
             this.btnTime.DropDownHeight = 280;
             this.btnTime.ListBackgroundColor = System.Drawing.Color.White;

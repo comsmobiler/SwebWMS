@@ -41,6 +41,7 @@ namespace SwebWMS.UI.Layout
             this.image1.ResourceID = "";
             this.image1.Size = new System.Drawing.Size(45, 45);
             this.image1.SizeMode = Swebui.Controls.ImageSizeMode.Zoom;
+            this.image1.Zooming = true;
             // 
             // labName
             // 
@@ -59,7 +60,7 @@ namespace SwebWMS.UI.Layout
             // txtIn
             // 
             this.txtIn.Border = new Swebui.Controls.Border(1F);
-            this.txtIn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtIn.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtIn.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
             this.txtIn.Name = "txtIn";
             this.txtIn.Size = new System.Drawing.Size(120, 26);

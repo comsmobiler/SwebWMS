@@ -22,6 +22,7 @@ namespace SwebWMS.UI.AssetsManager
             this.panel1 = new Swebui.Controls.Panel();
             this.label1 = new Swebui.Controls.Label();
             this.panel2 = new Swebui.Controls.Panel();
+            this.BackBtn = new Swebui.Controls.Button();
             this.saveBtn = new Swebui.Controls.Button();
             this.RefreshBtn = new Swebui.Controls.Button();
             this.panel3 = new Swebui.Controls.Panel();
@@ -64,8 +65,9 @@ namespace SwebWMS.UI.AssetsManager
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
+            this.BackBtn,
             this.saveBtn,
             this.RefreshBtn});
             this.panel2.Direction = Swebui.Controls.LayoutDirection.Row;
@@ -75,19 +77,34 @@ namespace SwebWMS.UI.AssetsManager
             this.panel2.Padding = new Swebui.Controls.Padding(10F, 0F, 0F, 0F);
             this.panel2.Size = new System.Drawing.Size(0, 46);
             // 
+            // BackBtn
+            // 
+            this.BackBtn.BackColor = System.Drawing.Color.White;
+            this.BackBtn.Border = new Swebui.Controls.Border(1F);
+            this.BackBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.BackBtn.ForeColor = System.Drawing.Color.DimGray;
+            this.BackBtn.IconName = "fa fa-angle-left";
+            this.BackBtn.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.NumberOfLines = 0;
+            this.BackBtn.Padding = new Swebui.Controls.Padding(10F, 0F, 10F, 0F);
+            this.BackBtn.Size = new System.Drawing.Size(0, 26);
+            this.BackBtn.Text = "返回";
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
+            // 
             // saveBtn
             // 
             this.saveBtn.BackColor = System.Drawing.Color.White;
             this.saveBtn.Border = new Swebui.Controls.Border(1F);
             this.saveBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.saveBtn.ForeColor = System.Drawing.Color.DimGray;
-            this.saveBtn.IconName = "fa fa-download";
+            this.saveBtn.IconName = "fa fa-upload";
             this.saveBtn.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.NumberOfLines = 0;
             this.saveBtn.Padding = new Swebui.Controls.Padding(10F, 0F, 10F, 0F);
             this.saveBtn.Size = new System.Drawing.Size(0, 26);
-            this.saveBtn.Text = "出库";
+            this.saveBtn.Text = "退库";
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // RefreshBtn
@@ -166,7 +183,7 @@ namespace SwebWMS.UI.AssetsManager
             // panel9
             // 
             this.panel9.Border = new Swebui.Controls.Border(1F);
-            this.panel9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel9.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel9.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.txtSN,
             this.addBtn});
@@ -205,7 +222,7 @@ namespace SwebWMS.UI.AssetsManager
             // panel7
             // 
             this.panel7.Border = new Swebui.Controls.Border(1F);
-            this.panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel7.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel7.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.label8,
             this.label10,
@@ -246,7 +263,7 @@ namespace SwebWMS.UI.AssetsManager
             // snPanel
             // 
             this.snPanel.Border = new Swebui.Controls.Border(1F, 0F, 1F, 1F);
-            this.snPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.snPanel.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.snPanel.Flex = 1;
             this.snPanel.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 10F);
             this.snPanel.Name = "snPanel";
@@ -254,6 +271,7 @@ namespace SwebWMS.UI.AssetsManager
             // 
             // FrmAssReturn
             // 
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.panel1,
             this.panel2,
@@ -269,8 +287,6 @@ namespace SwebWMS.UI.AssetsManager
         private Panel panel1;
         private Label label1;
         private Panel panel2;
-        private Button saveBtn;
-        private Button RefreshBtn;
         private Panel panel3;
         private Label label2;
         private Label label3;
@@ -286,5 +302,8 @@ namespace SwebWMS.UI.AssetsManager
         private Label label10;
         private Label label11;
         private Panel snPanel;
+        private Button BackBtn;
+        private Button saveBtn;
+        private Button RefreshBtn;
     }
 }

@@ -87,7 +87,7 @@ namespace SwebWMS.UI.ConsumablesManager
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.BackBtn,
             this.SaveBtn,
@@ -200,7 +200,7 @@ namespace SwebWMS.UI.ConsumablesManager
             // 
             this.txtRealID.BackColor = System.Drawing.Color.Transparent;
             this.txtRealID.Border = new Swebui.Controls.Border(1F);
-            this.txtRealID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtRealID.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtRealID.Flex = 1;
             this.txtRealID.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.txtRealID.Name = "txtRealID";
@@ -210,7 +210,7 @@ namespace SwebWMS.UI.ConsumablesManager
             // 
             this.txtName.BackColor = System.Drawing.Color.Transparent;
             this.txtName.Border = new Swebui.Controls.Border(1F);
-            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtName.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtName.Flex = 1;
             this.txtName.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.txtName.Name = "txtName";
@@ -219,7 +219,7 @@ namespace SwebWMS.UI.ConsumablesManager
             // btnCustomer
             // 
             this.btnCustomer.Border = new Swebui.Controls.Border(1F);
-            this.btnCustomer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnCustomer.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnCustomer.DefaultValue = new string[0];
             this.btnCustomer.DropDownHeight = 280;
             this.btnCustomer.Flex = 1;
@@ -277,7 +277,7 @@ namespace SwebWMS.UI.ConsumablesManager
             // btnDealMan
             // 
             this.btnDealMan.Border = new Swebui.Controls.Border(1F);
-            this.btnDealMan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnDealMan.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnDealMan.DefaultValue = new string[0];
             this.btnDealMan.DropDownHeight = 280;
             this.btnDealMan.Flex = 1;
@@ -335,7 +335,7 @@ namespace SwebWMS.UI.ConsumablesManager
             // panel8
             // 
             this.panel8.Border = new Swebui.Controls.Border(1F);
-            this.panel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel8.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel8.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.label13,
             this.label14,
@@ -409,7 +409,7 @@ namespace SwebWMS.UI.ConsumablesManager
             // listPanel
             // 
             this.listPanel.Border = new Swebui.Controls.Border(1F, 0F, 1F, 1F);
-            this.listPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.listPanel.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.listPanel.Flex = 1;
             this.listPanel.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 0F);
             this.listPanel.Name = "listPanel";

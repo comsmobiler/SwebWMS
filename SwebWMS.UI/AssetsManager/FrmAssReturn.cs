@@ -2,6 +2,7 @@
 using SMOWMS.Domain.Entity;
 using SMOWMS.DTOs.InputDTO;
 using Swebui.Controls;
+using SwebWMS.UI.Layout;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -46,8 +47,6 @@ namespace SwebWMS.UI.AssetsManager
                 if (!string.IsNullOrEmpty(POID))
                 {
                     txtPOID.Text = POID;
-                    ImgBtnForPOID.Visible = false;
-                    //                    txtPOID.Size = new Size(200, 30);
                 }
 
             }
@@ -60,9 +59,14 @@ namespace SwebWMS.UI.AssetsManager
         {
             try
             {
-                if (snList.Count == 0)
+                if (snPanel.Controls.Count == 0)
                 {
                     throw new Exception("请添加要退货的序列号！");
+                }
+                snList.Clear();
+                foreach(SNRowLayout layout in snPanel.Controls)
+                {
+                    snList.Add(layout.SN);
                 }
                 ReturnInfo rInfo = new ReturnInfo();
                 AssReturnInputDto inputDto = new AssReturnInputDto
@@ -77,14 +81,17 @@ namespace SwebWMS.UI.AssetsManager
                 {
                     ShowResult = ShowResult.Yes;
                     Toast("退货成功！");
+                    txtSN.Text = "";
+                    snList.Clear();
+                    snPanel.Controls.Clear();
                     if (IsFromPO)
                     {
-                        Close();
+                        BackBtn_Click(null,null);
                     }
                 }
                 else
                 {
-                    Toast(rInfo.ErrorInfo);
+                    throw new Exception(rInfo.ErrorInfo);
                 }
             }
             catch (Exception ex)
@@ -96,19 +103,10 @@ namespace SwebWMS.UI.AssetsManager
 
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
-
+            txtSN.Text = "";
+            snList.Clear();
+            snPanel.Controls.Clear();
         }
-
-        private void txtSOID_Press(object sender, TreeSelectPressEventArgs args)
-        {
-            foreach (SNRowLayout layout in snPanel.Controls)
-            {
-                if (layout.SN == barCode)
-                    throw new Exception("该序列号已添加");
-            }
-
-        }
-
         private void addBtn_Click(object sender, EventArgs e)
         {
             try
@@ -121,11 +119,16 @@ namespace SwebWMS.UI.AssetsManager
                     {
                         Assets assets = _autofacConfig.SettingService.GetBySN(barCode);
                         AddSnToDataTable(barCode, assets.IMAGE);
+                        txtSN.Text = "";
                     }
                     else
                     {
                         throw new Exception("该序列号不在库中！");
                     }
+                }
+                else
+                {
+                    throw new Exception("该序列号已添加在列表！");
                 }
 
             }
@@ -145,18 +148,20 @@ namespace SwebWMS.UI.AssetsManager
                 DataRow row = SNTable.Rows.Find(SN);
                 if (row == null)
                 {
-                    DataRow newRow = SNTable.NewRow();
-                    newRow["SN"] = SN;
-                    newRow["IMAGE"] = Image;
-                    SNTable.Rows.Add(newRow);
-
-                    var newdt = SNTable.Clone();
-                    newdt.ImportRow(newRow);
-                    snList.Add(SN);
-                    lvSN.NewRow(newdt, "");
+                    foreach (SNRowLayout layout in snPanel.Controls)
+                    {
+                        if (layout.SN == SN)
+                            throw new Exception("已添加序列号为" + SN + "的资产！");
+                    }
+                    snPanel.Controls.Add(new SNRowLayout() { Image = Image, SN = SN });
                 }
             }
         }
 
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Add(new FrmAssPurchaseOrderDetail() { Flex=1,POID=POID });
+            this.Parent.Controls.RemoveAt(0);
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace SwebWMS.UI.ConsumablesManager
         private void FrmConPurchaseOrderDetail_Load(object sender, EventArgs e)
         {
             try
-            { 
+            {
                 ///表头信息
                 ConPurchaseOrderOutputDto Order = autofacConfig.ConPurchaseOrderService.GetByPOID(POID);
                 lblOrder.Text = POID;
@@ -44,11 +44,11 @@ namespace SwebWMS.UI.ConsumablesManager
                 lblName.Text = Order.NAME;
                 lblVendor.Text = Order.VENDORNAME;
                 lblDealMan.Text = Order.PURCHASERNAME;
-          //      lblStatus.Text = Order.STATUSNAME;
+                //      lblStatus.Text = Order.STATUSNAME;
                 //耗材行项信息
                 List<ConPurAndSaleCreateInputDto> OrderRows = autofacConfig.ConPurchaseOrderService.GetOrderRows(POID);
                 LoadRows(OrderRows);
-       
+            
             }
             catch (Exception ex)
             {
@@ -64,16 +64,39 @@ namespace SwebWMS.UI.ConsumablesManager
             {
                 foreach (ConPurAndSaleCreateInputDto dto in orderRows)
                 {
-                    listPanel.Controls.Add(new ConSOAndPODetailLayout() {
-                        NAME=dto.NAME,
-                        ID = dto.CID, 
-                        SaleNum = dto.QUANTPURCHASED.ToString(), 
-                        Price = dto.REALPRICE.ToString(), 
-                        Img = dto.IMAGE ,
-                        AlreadyInOROut=dto.QUANTSTORED.ToString() ,
-                        AlreadBack=dto.QUANTRETREATED.ToString(),
-                        Status=((PurchaseOrderStatus)dto.STATUS).ToString()});
+                    listPanel.Controls.Add(new ConSOAndPODetailLayout()
+                    {
+                        NAME = dto.NAME,
+                        ID = dto.CID,
+                        SaleNum = dto.QUANTPURCHASED.ToString(),
+                        Price = dto.REALPRICE.ToString(),
+                        Img = dto.IMAGE,
+                        AlreadyInOROut = dto.QUANTSTORED.ToString(),
+                        AlreadBack = dto.QUANTRETREATED.ToString()
+                    });
                 }
+            }
+        }
+        /// <summary>
+        /// 退库按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<ConPurchaseOrderReturnOutputDto> returnRows = autofacConfig.ConPurchaseOrderService.GetReturnRowsByPOID(POID);
+                if (returnRows.Count == 0)        ////如果无可退库耗材,无可入库耗材，则隐藏退库按钮
+                {
+                    throw new Exception("该消耗单下目前无可退库耗材!");
+                }
+                this.Parent.Controls.Add(new FrmConPORReturn() { Flex = 1, POID = POID });
+                this.Parent.Controls.RemoveAt(0);
+            }
+            catch(Exception ex)
+            {
+                Toast(ex.Message);
             }
         }
     }

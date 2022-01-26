@@ -85,5 +85,16 @@ namespace SwebWMS.UI.AssetsManager
             }
 
         }
+        /// <summary>
+        /// 退库按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Add(new FrmAssRetiring() { Flex = 1, SOID = lblTID.Text });
+            this.Parent.Controls.RemoveAt(0);
+
+        }
     }
 }

@@ -51,6 +51,7 @@ namespace SwebWMS.UI.AssetsManager
             this.label10 = new Swebui.Controls.Label();
             this.label11 = new Swebui.Controls.Label();
             this.listPanel = new Swebui.Controls.Panel();
+            this.button1 = new Swebui.Controls.Button();
             // 
             // panel1
             // 
@@ -85,9 +86,10 @@ namespace SwebWMS.UI.AssetsManager
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
-            this.BackBtn});
+            this.BackBtn,
+            this.button1});
             this.panel2.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel2.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
             this.panel2.Margin = new Swebui.Controls.Margin(0F, 0F, 0F, 15F);
@@ -276,7 +278,7 @@ namespace SwebWMS.UI.AssetsManager
             // panel8
             // 
             this.panel8.Border = new Swebui.Controls.Border(1F);
-            this.panel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel8.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel8.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.label13,
             this.label15,
@@ -368,11 +370,26 @@ namespace SwebWMS.UI.AssetsManager
             // listPanel
             // 
             this.listPanel.Border = new Swebui.Controls.Border(1F, 0F, 1F, 1F);
-            this.listPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.listPanel.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.listPanel.Flex = 1;
             this.listPanel.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 10F);
             this.listPanel.Name = "listPanel";
             this.listPanel.Size = new System.Drawing.Size(0, 100);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Border = new Swebui.Controls.Border(1F);
+            this.button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.button1.ForeColor = System.Drawing.Color.DimGray;
+            this.button1.IconName = "fa fa-upload";
+            this.button1.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
+            this.button1.Name = "button1";
+            this.button1.NumberOfLines = 0;
+            this.button1.Padding = new Swebui.Controls.Padding(10F, 0F, 10F, 0F);
+            this.button1.Size = new System.Drawing.Size(0, 26);
+            this.button1.Text = "退库";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmAssetsSalesOrderDetail
             // 
@@ -424,5 +441,6 @@ namespace SwebWMS.UI.AssetsManager
         private Label label10;
         private Label label11;
         private Label lblTID;
+        private Button button1;
     }
 }

@@ -66,14 +66,6 @@ namespace SwebWMS.UI.Layout
             set { AlBack.Text = value; }
             get { return AlBack.Text; }
         }
-        public string Status
-        {
-            set { status.Text = value; }
-            get
-            {
-                return status.Text;
-            }
-        }
-        public string ID { set; get; }
+          public string ID { set; get; }
     }
 }

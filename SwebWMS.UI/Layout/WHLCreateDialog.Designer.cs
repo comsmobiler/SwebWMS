@@ -57,7 +57,7 @@ namespace SwebWMS.UI.Layout
             // label1
             // 
             this.label1.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.label1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.label1.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.label1.Margin = new Swebui.Controls.Margin(0F, 0F, 0F, 10F);
             this.label1.Name = "label1";
@@ -215,7 +215,7 @@ namespace SwebWMS.UI.Layout
             // txtSLID
             // 
             this.txtSLID.Border = new Swebui.Controls.Border(1F);
-            this.txtSLID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtSLID.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtSLID.Flex = 1;
             this.txtSLID.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.txtSLID.Name = "txtSLID";
@@ -224,7 +224,7 @@ namespace SwebWMS.UI.Layout
             // txtSLName
             // 
             this.txtSLName.Border = new Swebui.Controls.Border(1F);
-            this.txtSLName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtSLName.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtSLName.Flex = 1;
             this.txtSLName.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.txtSLName.Name = "txtSLName";
@@ -271,7 +271,7 @@ namespace SwebWMS.UI.Layout
             // btnManager
             // 
             this.btnManager.Border = new Swebui.Controls.Border(1F);
-            this.btnManager.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.btnManager.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnManager.DefaultValue = new string[0];
             this.btnManager.DropDownHeight = 280;
             this.btnManager.Flex = 1;
@@ -283,7 +283,7 @@ namespace SwebWMS.UI.Layout
             // txtMAXVOLUME
             // 
             this.txtMAXVOLUME.Border = new Swebui.Controls.Border(1F);
-            this.txtMAXVOLUME.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtMAXVOLUME.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtMAXVOLUME.Flex = 1;
             this.txtMAXVOLUME.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.txtMAXVOLUME.Name = "txtMAXVOLUME";
@@ -328,7 +328,7 @@ namespace SwebWMS.UI.Layout
             // txtMAXCAPACITY
             // 
             this.txtMAXCAPACITY.Border = new Swebui.Controls.Border(1F);
-            this.txtMAXCAPACITY.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtMAXCAPACITY.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtMAXCAPACITY.Flex = 1;
             this.txtMAXCAPACITY.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.txtMAXCAPACITY.Name = "txtMAXCAPACITY";
@@ -343,7 +343,7 @@ namespace SwebWMS.UI.Layout
             // 
             // panel2
             // 
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.saveBtn,
             this.cancelBtn});

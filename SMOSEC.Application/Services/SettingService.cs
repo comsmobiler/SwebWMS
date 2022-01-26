@@ -500,6 +500,17 @@ namespace SMOWMS.Application.Services
                 .FirstOrDefault();
             return result;
         }
+        /// <summary>
+        /// 根据序列号得到资产
+        /// </summary>
+        /// <param name="SN">序列号</param>
+        /// <returns></returns>
+        public Assets GetSaledAssBySN(string SN)
+        {
+            var result = _AssetsRepository.GetAll().Where(a => a.ISINWAREHOUSE == 0 && a.SN == SN).AsNoTracking()
+                .FirstOrDefault();
+            return result;
+        }
 
         /// <summary>
         /// 根据模板编号或者名称查询资产模板

@@ -31,6 +31,7 @@ namespace SwebWMS.UI.Layout
             this.image1.ResourceID = "";
             this.image1.Size = new System.Drawing.Size(50, 50);
             this.image1.SizeMode = Swebui.Controls.ImageSizeMode.Zoom;
+            this.image1.Zooming = true;
             // 
             // label1
             // 

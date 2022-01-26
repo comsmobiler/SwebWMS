@@ -53,7 +53,7 @@ namespace SwebWMS.UI.Layout
             // label1
             // 
             this.label1.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.label1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.label1.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.label1.Margin = new Swebui.Controls.Margin(0F, 0F, 0F, 10F);
             this.label1.Name = "label1";
@@ -233,7 +233,7 @@ namespace SwebWMS.UI.Layout
             // txtID
             // 
             this.txtID.Border = new Swebui.Controls.Border(1F);
-            this.txtID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtID.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtID.Flex = 1;
             this.txtID.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.txtID.Name = "txtID";
@@ -242,7 +242,7 @@ namespace SwebWMS.UI.Layout
             // txtName
             // 
             this.txtName.Border = new Swebui.Controls.Border(1F);
-            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtName.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtName.Flex = 1;
             this.txtName.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.txtName.Name = "txtName";
@@ -288,7 +288,7 @@ namespace SwebWMS.UI.Layout
             // txtDate
             // 
             this.txtDate.Border = new Swebui.Controls.Border(1F);
-            this.txtDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtDate.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtDate.Flex = 1;
             this.txtDate.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.txtDate.Name = "txtDate";
@@ -305,7 +305,7 @@ namespace SwebWMS.UI.Layout
             // panel2
             // 
             this.panel2.Border = new Swebui.Controls.Border(0F, 1F, 0F, 0F);
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.saveBtn,
             this.cancelBtn});

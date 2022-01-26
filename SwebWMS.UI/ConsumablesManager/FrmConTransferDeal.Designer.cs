@@ -83,7 +83,7 @@ namespace SwebWMS.UI.ConsumablesManager
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.BackBtn,
             this.EditBtn});
@@ -273,7 +273,7 @@ namespace SwebWMS.UI.ConsumablesManager
             // panel7
             // 
             this.panel7.Border = new Swebui.Controls.Border(1F);
-            this.panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel7.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel7.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.checkAll,
             this.label10,
@@ -345,7 +345,7 @@ namespace SwebWMS.UI.ConsumablesManager
             // snPanel
             // 
             this.snPanel.Border = new Swebui.Controls.Border(1F, 0F, 1F, 1F);
-            this.snPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.snPanel.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.snPanel.Flex = 1;
             this.snPanel.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 10F);
             this.snPanel.Name = "snPanel";

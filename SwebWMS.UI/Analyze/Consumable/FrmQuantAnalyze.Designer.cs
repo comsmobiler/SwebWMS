@@ -52,7 +52,7 @@ namespace SwebWMS.UI.Analyze
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.label2,
             this.btnWare,
@@ -74,7 +74,7 @@ namespace SwebWMS.UI.Analyze
             // btnWare
             // 
             this.btnWare.Border = new Swebui.Controls.Border(1F);
-            this.btnWare.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.btnWare.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnWare.DefaultValue = new string[0];
             this.btnWare.ListBackgroundColor = System.Drawing.Color.White;
             this.btnWare.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);

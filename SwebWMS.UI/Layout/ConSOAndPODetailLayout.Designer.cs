@@ -25,12 +25,11 @@ namespace SwebWMS.UI.Layout
             this.numPrice = new Swebui.Controls.Label();
             this.AlOut = new Swebui.Controls.Label();
             this.AlBack = new Swebui.Controls.Label();
-            this.status = new Swebui.Controls.Label();
             // 
             // labName
             // 
             this.labName.Border = new Swebui.Controls.Border(1F);
-            this.labName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.labName.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.labName.Flex = 1;
             this.labName.HorizontalAlignment = Swebui.Controls.HorizontalAlignment.Center;
             this.labName.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
@@ -45,11 +44,12 @@ namespace SwebWMS.UI.Layout
             this.image1.ResourceID = "";
             this.image1.Size = new System.Drawing.Size(45, 45);
             this.image1.SizeMode = Swebui.Controls.ImageSizeMode.Zoom;
+            this.image1.Zooming = true;
             // 
             // numQuant
             // 
             this.numQuant.Border = new Swebui.Controls.Border(1F);
-            this.numQuant.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.numQuant.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.numQuant.Flex = 1;
             this.numQuant.HorizontalAlignment = Swebui.Controls.HorizontalAlignment.Center;
             this.numQuant.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
@@ -60,7 +60,7 @@ namespace SwebWMS.UI.Layout
             // numPrice
             // 
             this.numPrice.Border = new Swebui.Controls.Border(1F);
-            this.numPrice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.numPrice.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.numPrice.Flex = 1;
             this.numPrice.HorizontalAlignment = Swebui.Controls.HorizontalAlignment.Center;
             this.numPrice.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
@@ -71,7 +71,7 @@ namespace SwebWMS.UI.Layout
             // AlOut
             // 
             this.AlOut.Border = new Swebui.Controls.Border(1F);
-            this.AlOut.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.AlOut.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.AlOut.Flex = 1;
             this.AlOut.HorizontalAlignment = Swebui.Controls.HorizontalAlignment.Center;
             this.AlOut.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
@@ -82,23 +82,13 @@ namespace SwebWMS.UI.Layout
             // AlBack
             // 
             this.AlBack.Border = new Swebui.Controls.Border(1F);
-            this.AlBack.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.AlBack.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.AlBack.Flex = 1;
             this.AlBack.HorizontalAlignment = Swebui.Controls.HorizontalAlignment.Center;
             this.AlBack.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
             this.AlBack.Name = "AlBack";
             this.AlBack.Size = new System.Drawing.Size(88, 35);
             this.AlBack.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
-            // 
-            // status
-            // 
-            this.status.Border = new Swebui.Controls.Border(1F);
-            this.status.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.status.Flex = 1;
-            this.status.HorizontalAlignment = Swebui.Controls.HorizontalAlignment.Center;
-            this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(200, 35);
-            this.status.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // ConSOAndPODetailLayout
             // 
@@ -108,8 +98,7 @@ namespace SwebWMS.UI.Layout
             this.numQuant,
             this.numPrice,
             this.AlOut,
-            this.AlBack,
-            this.status});
+            this.AlBack});
             this.Direction = Swebui.Controls.LayoutDirection.Row;
             this.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
             this.Size = new System.Drawing.Size(0, 50);
@@ -123,6 +112,5 @@ namespace SwebWMS.UI.Layout
         private Label numPrice;
         private Label AlOut;
         private Label AlBack;
-        private Label status;
     }
 }

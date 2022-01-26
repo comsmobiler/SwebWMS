@@ -29,7 +29,7 @@ namespace SwebWMS.UI.Layout
             // treeSelect1
             // 
             this.treeSelect1.Border = new Swebui.Controls.Border(1F);
-            this.treeSelect1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.treeSelect1.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.treeSelect1.DefaultValue = new string[0];
             this.treeSelect1.DropDownHeight = 280;
             this.treeSelect1.Flex = 1;
@@ -54,12 +54,13 @@ namespace SwebWMS.UI.Layout
             this.image1.ResourceID = "";
             this.image1.Size = new System.Drawing.Size(45, 45);
             this.image1.SizeMode = Swebui.Controls.ImageSizeMode.Zoom;
+            this.image1.Zooming = true;
             // 
             // numQuant
             // 
             this.numQuant.BackColor = System.Drawing.Color.Transparent;
             this.numQuant.Border = new Swebui.Controls.Border(1F);
-            this.numQuant.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.numQuant.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.numQuant.Flex = 1;
             this.numQuant.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
             this.numQuant.Name = "numQuant";
@@ -69,7 +70,7 @@ namespace SwebWMS.UI.Layout
             // 
             this.numPrice.BackColor = System.Drawing.Color.Transparent;
             this.numPrice.Border = new Swebui.Controls.Border(1F);
-            this.numPrice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.numPrice.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.numPrice.Flex = 1;
             this.numPrice.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
             this.numPrice.Name = "numPrice";
@@ -92,7 +93,7 @@ namespace SwebWMS.UI.Layout
             // AssetSaleOrderLayout
             // 
             this.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.treeSelect1,
             this.templateid,

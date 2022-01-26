@@ -553,7 +553,7 @@ namespace SMOWMS.Application.Services
                 //更改Row中的数值
                 foreach (var templateId in assDictionary.Keys)
                 {
-                    var row = _assSoRowRepository.GetBySOIDandTemplateID(inputDto.SOID, templateId).FirstOrDefault();
+                     var row = _assSoRowRepository.GetBySOIDandTemplateID(inputDto.SOID, templateId).AsNoTracking().FirstOrDefault();
                     if (row != null)
                     {
                         row.QUANTOUT = row.QUANTOUT + assDictionary[templateId];

@@ -132,6 +132,12 @@ namespace SMOWMS.Application.IServices
         /// <param name="SN">序列号</param>
         /// <returns></returns>
         Assets GetBySN(string SN);
+        /// <summary>
+        /// 根据序列号得到已出库资产
+        /// </summary>
+        /// <param name="SN">序列号</param>
+        /// <returns></returns>
+        Assets GetSaledAssBySN(string SN);
 
         /// <summary>
         /// 根据模板编号或者名称查询资产模板

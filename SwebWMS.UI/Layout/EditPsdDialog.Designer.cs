@@ -38,7 +38,7 @@ namespace SwebWMS.UI.Layout
             // label1
             // 
             this.label1.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.label1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.label1.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.label1.Margin = new Swebui.Controls.Margin(0F, 0F, 0F, 10F);
             this.label1.Name = "label1";
@@ -78,7 +78,7 @@ namespace SwebWMS.UI.Layout
             // txtPwd
             // 
             this.txtPwd.Border = new Swebui.Controls.Border(1F);
-            this.txtPwd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtPwd.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtPwd.Flex = 1;
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.SecurityMode = true;
@@ -118,7 +118,7 @@ namespace SwebWMS.UI.Layout
             // txtPassWord1
             // 
             this.txtPassWord1.Border = new Swebui.Controls.Border(1F);
-            this.txtPassWord1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtPassWord1.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtPassWord1.Flex = 1;
             this.txtPassWord1.Name = "txtPassWord1";
             this.txtPassWord1.SecurityMode = true;
@@ -144,7 +144,7 @@ namespace SwebWMS.UI.Layout
             // txtPassWord2
             // 
             this.txtPassWord2.Border = new Swebui.Controls.Border(1F);
-            this.txtPassWord2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtPassWord2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtPassWord2.Flex = 1;
             this.txtPassWord2.Name = "txtPassWord2";
             this.txtPassWord2.SecurityMode = true;
@@ -153,7 +153,7 @@ namespace SwebWMS.UI.Layout
             // panel2
             // 
             this.panel2.Border = new Swebui.Controls.Border(0F, 1F, 0F, 0F);
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.saveBtn,
             this.cancelBtn});

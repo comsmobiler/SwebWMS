@@ -84,7 +84,7 @@ namespace SwebWMS.UI.MasterData
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.BackBtn,
             this.ViewBtn});
@@ -138,7 +138,7 @@ namespace SwebWMS.UI.MasterData
             // label1
             // 
             this.label1.Flex = 1;
-            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 30);
@@ -148,7 +148,7 @@ namespace SwebWMS.UI.MasterData
             // label2
             // 
             this.label2.Flex = 1;
-            this.label2.ForeColor = System.Drawing.Color.Silver;
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 30);
@@ -158,7 +158,7 @@ namespace SwebWMS.UI.MasterData
             // label3
             // 
             this.label3.Flex = 1;
-            this.label3.ForeColor = System.Drawing.Color.Silver;
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 30);
@@ -198,7 +198,7 @@ namespace SwebWMS.UI.MasterData
             // ImgPicture
             // 
             this.ImgPicture.Border = new Swebui.Controls.Border(1F);
-            this.ImgPicture.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.ImgPicture.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.ImgPicture.Name = "ImgPicture";
             this.ImgPicture.ResourceID = "";
             this.ImgPicture.Size = new System.Drawing.Size(45, 45);
@@ -225,7 +225,7 @@ namespace SwebWMS.UI.MasterData
             // label4
             // 
             this.label4.Flex = 1;
-            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 30);
@@ -235,7 +235,7 @@ namespace SwebWMS.UI.MasterData
             // label5
             // 
             this.label5.Flex = 1;
-            this.label5.ForeColor = System.Drawing.Color.Silver;
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
             this.label5.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 30);
@@ -245,7 +245,7 @@ namespace SwebWMS.UI.MasterData
             // label6
             // 
             this.label6.Flex = 1;
-            this.label6.ForeColor = System.Drawing.Color.Silver;
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
             this.label6.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 30);
@@ -300,7 +300,7 @@ namespace SwebWMS.UI.MasterData
             // label7
             // 
             this.label7.Flex = 1;
-            this.label7.ForeColor = System.Drawing.Color.Silver;
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
             this.label7.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 30);
@@ -310,7 +310,7 @@ namespace SwebWMS.UI.MasterData
             // label8
             // 
             this.label8.Flex = 1;
-            this.label8.ForeColor = System.Drawing.Color.Silver;
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
             this.label8.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 30);
@@ -320,7 +320,7 @@ namespace SwebWMS.UI.MasterData
             // label9
             // 
             this.label9.Flex = 1;
-            this.label9.ForeColor = System.Drawing.Color.Silver;
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
             this.label9.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 30);

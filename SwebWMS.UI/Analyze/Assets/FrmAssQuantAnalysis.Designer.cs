@@ -85,7 +85,7 @@ namespace SwebWMS.UI.Analyze
             // btnWare
             // 
             this.btnWare.Border = new Swebui.Controls.Border(1F);
-            this.btnWare.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.btnWare.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnWare.DefaultValue = new string[0];
             this.btnWare.DropDownHeight = 280;
             this.btnWare.ListBackgroundColor = System.Drawing.Color.White;
@@ -106,7 +106,7 @@ namespace SwebWMS.UI.Analyze
             // btnType
             // 
             this.btnType.Border = new Swebui.Controls.Border(1F);
-            this.btnType.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.btnType.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnType.DefaultValue = new string[0];
             this.btnType.DropDownHeight = 280;
             this.btnType.ListBackgroundColor = System.Drawing.Color.White;
@@ -152,7 +152,7 @@ namespace SwebWMS.UI.Analyze
             // panel5
             // 
             this.panel5.Border = new Swebui.Controls.Border(1F, 0F, 0F, 0F);
-            this.panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel5.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel5.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.label5,
             this.gridView1});
@@ -196,7 +196,7 @@ namespace SwebWMS.UI.Analyze
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel6.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel6.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.RefreshBtn});
             this.panel6.Direction = Swebui.Controls.LayoutDirection.Row;

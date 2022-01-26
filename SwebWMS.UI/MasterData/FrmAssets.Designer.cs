@@ -68,7 +68,7 @@ namespace SwebWMS.UI.MasterData
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.EditBtn,
             this.ViewBtn,
@@ -155,7 +155,7 @@ namespace SwebWMS.UI.MasterData
             // panel6
             // 
             this.panel6.Border = new Swebui.Controls.Border(1F);
-            this.panel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel6.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel6.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.label3,
             this.tpWare});
@@ -167,7 +167,7 @@ namespace SwebWMS.UI.MasterData
             // label3
             // 
             this.label3.Border = new Swebui.Controls.Border(0F, 0F, 1F, 0F);
-            this.label3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.label3.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 0F);
             this.label3.Name = "label3";
@@ -189,7 +189,7 @@ namespace SwebWMS.UI.MasterData
             // panel4
             // 
             this.panel4.Border = new Swebui.Controls.Border(1F);
-            this.panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel4.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel4.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.fontIcon1,
             this.txtNote,
@@ -211,7 +211,7 @@ namespace SwebWMS.UI.MasterData
             // txtNote
             // 
             this.txtNote.Border = new Swebui.Controls.Border(1F, 0F, 1F, 0F);
-            this.txtNote.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtNote.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtNote.Flex = 1;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(0, 35);
@@ -232,7 +232,7 @@ namespace SwebWMS.UI.MasterData
             // panel5
             // 
             this.panel5.Border = new Swebui.Controls.Border(1F);
-            this.panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel5.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel5.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.label2,
             this.tpSearch});
@@ -245,7 +245,7 @@ namespace SwebWMS.UI.MasterData
             // label2
             // 
             this.label2.Border = new Swebui.Controls.Border(0F, 0F, 1F, 0F);
-            this.label2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.label2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 0F);
             this.label2.Name = "label2";

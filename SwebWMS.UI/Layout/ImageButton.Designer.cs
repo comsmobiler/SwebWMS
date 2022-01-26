@@ -56,7 +56,7 @@ namespace SwebWMS.UI.Layout
             // ImageButton
             // 
             this.Border = new Swebui.Controls.Border(1F);
-            this.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.BorderRadius = 8;
             this.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.panel1});

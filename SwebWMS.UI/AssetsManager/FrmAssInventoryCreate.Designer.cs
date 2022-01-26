@@ -76,7 +76,7 @@ namespace SwebWMS.UI.AssetsManager
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.BackBtn,
             this.SaveBtn,
@@ -188,7 +188,7 @@ namespace SwebWMS.UI.AssetsManager
             // txtName
             // 
             this.txtName.Border = new Swebui.Controls.Border(1F);
-            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtName.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtName.Flex = 1;
             this.txtName.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.txtName.Name = "txtName";
@@ -197,7 +197,7 @@ namespace SwebWMS.UI.AssetsManager
             // btnManager
             // 
             this.btnManager.Border = new Swebui.Controls.Border(1F);
-            this.btnManager.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnManager.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnManager.DefaultValue = new string[0];
             this.btnManager.DropDownHeight = 280;
             this.btnManager.Flex = 1;
@@ -210,7 +210,7 @@ namespace SwebWMS.UI.AssetsManager
             // btnType
             // 
             this.btnType.Border = new Swebui.Controls.Border(1F);
-            this.btnType.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnType.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnType.DefaultValue = new string[0];
             this.btnType.DropDownHeight = 280;
             this.btnType.Flex = 1;
@@ -274,7 +274,7 @@ namespace SwebWMS.UI.AssetsManager
             // btnWareHouse
             // 
             this.btnWareHouse.Border = new Swebui.Controls.Border(1F);
-            this.btnWareHouse.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnWareHouse.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnWareHouse.DefaultValue = new string[0];
             this.btnWareHouse.DropDownHeight = 280;
             this.btnWareHouse.Flex = 1;
@@ -287,7 +287,7 @@ namespace SwebWMS.UI.AssetsManager
             // btnST
             // 
             this.btnST.Border = new Swebui.Controls.Border(1F);
-            this.btnST.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnST.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnST.DefaultValue = new string[0];
             this.btnST.DropDownHeight = 280;
             this.btnST.Flex = 1;
@@ -300,7 +300,7 @@ namespace SwebWMS.UI.AssetsManager
             // btnSL
             // 
             this.btnSL.Border = new Swebui.Controls.Border(1F);
-            this.btnSL.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.btnSL.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnSL.DefaultValue = new string[0];
             this.btnSL.DropDownHeight = 280;
             this.btnSL.Flex = 1;

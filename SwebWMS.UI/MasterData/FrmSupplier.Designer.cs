@@ -65,7 +65,7 @@ namespace SwebWMS.UI.MasterData
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.AddBtn,
             this.EditBtn,
@@ -150,7 +150,7 @@ namespace SwebWMS.UI.MasterData
             // panel4
             // 
             this.panel4.Border = new Swebui.Controls.Border(1F);
-            this.panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel4.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel4.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.fontIcon1,
             this.txtName,
@@ -170,7 +170,7 @@ namespace SwebWMS.UI.MasterData
             // txtName
             // 
             this.txtName.Border = new Swebui.Controls.Border(1F, 0F, 1F, 0F);
-            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtName.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtName.Flex = 1;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(0, 35);

@@ -73,7 +73,7 @@ namespace SwebWMS.UI.AssetsManager
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.BackBtn,
             this.SaveBtn});
@@ -168,7 +168,7 @@ namespace SwebWMS.UI.AssetsManager
             // btnDealInMan
             // 
             this.btnDealInMan.Border = new Swebui.Controls.Border(1F);
-            this.btnDealInMan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnDealInMan.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnDealInMan.DefaultValue = new string[0];
             this.btnDealInMan.DropDownHeight = 280;
             this.btnDealInMan.Flex = 1;
@@ -181,7 +181,7 @@ namespace SwebWMS.UI.AssetsManager
             // datepicker
             // 
             this.datepicker.Border = new Swebui.Controls.Border(1F);
-            this.datepicker.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.datepicker.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.datepicker.Flex = 1;
             this.datepicker.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.datepicker.Name = "datepicker";
@@ -191,7 +191,7 @@ namespace SwebWMS.UI.AssetsManager
             // lblLocation
             // 
             this.lblLocation.Border = new Swebui.Controls.Border(1F);
-            this.lblLocation.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.lblLocation.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.lblLocation.Flex = 1;
             this.lblLocation.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.lblLocation.Name = "lblLocation";
@@ -251,7 +251,7 @@ namespace SwebWMS.UI.AssetsManager
             // btnDealMan
             // 
             this.btnDealMan.Border = new Swebui.Controls.Border(1F);
-            this.btnDealMan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnDealMan.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnDealMan.DefaultValue = new string[0];
             this.btnDealMan.DropDownHeight = 280;
             this.btnDealMan.Flex = 1;
@@ -265,7 +265,7 @@ namespace SwebWMS.UI.AssetsManager
             // 
             this.txtNote.BackColor = System.Drawing.Color.Transparent;
             this.txtNote.Border = new Swebui.Controls.Border(1F);
-            this.txtNote.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtNote.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtNote.Flex = 1;
             this.txtNote.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.txtNote.Name = "txtNote";
@@ -274,7 +274,7 @@ namespace SwebWMS.UI.AssetsManager
             // label
             // 
             this.label.Border = new Swebui.Controls.Border(1F);
-            this.label.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.label.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.label.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.txtSN,
             this.addBtn});
@@ -306,7 +306,7 @@ namespace SwebWMS.UI.AssetsManager
             // panel7
             // 
             this.panel7.Border = new Swebui.Controls.Border(1F);
-            this.panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel7.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel7.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.label8,
             this.label10,
@@ -357,7 +357,7 @@ namespace SwebWMS.UI.AssetsManager
             // snPanel
             // 
             this.snPanel.Border = new Swebui.Controls.Border(1F, 0F, 1F, 1F);
-            this.snPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.snPanel.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.snPanel.Flex = 1;
             this.snPanel.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 10F);
             this.snPanel.Name = "snPanel";

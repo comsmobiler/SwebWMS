@@ -46,6 +46,7 @@ namespace SwebWMS.UI.AssetsManager
                         break;
                     case 0:
                         lblStatus.Text = "采购中";
+                        button1.Visible = false;// 该状态下不能退库
                         break;
                 }
                 var row = _autofacConfig.AssPurchaseOrderService.GetRows(POID);
@@ -76,6 +77,16 @@ namespace SwebWMS.UI.AssetsManager
             this.Parent.Controls.Add(new FrmAssPurchaseOrderList() { Flex = 1 });
             this.Parent.Controls.RemoveAt(0);
         }
-       
+
+        /// <summary>
+        /// 退库按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Add(new FrmAssReturn() { Flex = 1, POID = lblTID.Text });
+            this.Parent.Controls.RemoveAt(0);
+        }
     }
 }

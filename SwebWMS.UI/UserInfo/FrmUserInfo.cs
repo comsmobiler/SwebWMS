@@ -159,7 +159,7 @@ namespace SwebWMS.UI.UserInfo
                 }
                 else
                 {
-                    userImg1.ResourceID = UserData.USER_IMAGEID;
+                    userImg.ResourceID = userImg1.ResourceID = UserData.USER_IMAGEID;
                 }
                 if (UserData.USER_ADDRESS != null) txtAddress.Text = UserData.USER_ADDRESS;
                 //     lblID.Text = UserID;

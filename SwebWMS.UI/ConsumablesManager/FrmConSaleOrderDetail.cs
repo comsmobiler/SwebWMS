@@ -36,6 +36,8 @@ namespace SwebWMS.UI.ConsumablesManager
                 lblDealMan.Text = Order.SALESPERSONNAME;
                 List<ConPurAndSaleCreateInputDto> AlRows = autofacConfig.ConSalesOrderService.GetOrderRows(SOID);
                 LoadRows(AlRows);
+
+
             }
             catch (Exception ex)
             {
@@ -52,15 +54,16 @@ namespace SwebWMS.UI.ConsumablesManager
             {
                 foreach (ConPurAndSaleCreateInputDto dto in orderRows)
                 {
-                    listPanel.Controls.Add(new ConSOAndPODetailLayout() {
+                    listPanel.Controls.Add(new ConSOAndPODetailLayout()
+                    {
                         ID = dto.CID,
-                        NAME=dto.NAME,
-                        SaleNum= dto.QUANTSALED.ToString(),
-                        Price  = dto.REALPRICE.ToString(),
+                        NAME = dto.NAME,
+                        SaleNum = dto.QUANTSALED.ToString(),
+                        Price = dto.REALPRICE.ToString(),
                         Img = dto.IMAGE,
-                        AlreadyInOROut= dto.QUANTOUT.ToString(),
-                        AlreadBack=dto.QUANTRETREATED.ToString(), 
-                        Status = ((PurchaseOrderStatus)dto.STATUS).ToString() });
+                        AlreadyInOROut = dto.QUANTOUT.ToString(),
+                        AlreadBack = dto.QUANTRETREATED.ToString(),
+                    });
                 }
             }
         }
@@ -74,6 +77,22 @@ namespace SwebWMS.UI.ConsumablesManager
             this.Parent.Controls.Add(new FrmConSaleOrderList() { Flex = 1 });
             this.Parent.Controls.RemoveAt(0);
         }
-     
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<ConSalesOrderRowInputDto> retRows = autofacConfig.ConSalesOrderService.GetRetRowsBySOID(SOID);
+                if (retRows.Count == 0)
+                    throw new Exception("该消耗单下目前无可退库耗材!");
+                this.Parent.Controls.Add(new FrmConSORRetiring() { Flex = 1, SOID = SOID });
+                this.Parent.Controls.RemoveAt(0);
+            }
+            catch (Exception ex)
+            {
+                Toast(ex.Message);
+            }
+
+        }
     }
 }
