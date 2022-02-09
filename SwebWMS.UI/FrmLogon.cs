@@ -46,10 +46,24 @@ namespace SwebWMS.UI
                 Toast(ex.Message);
             }
         }
-
+        /// <summary>
+        /// 演示账号
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                String Role = autofacConfig.coreUserService.GetUserByID("13123456789").USER_ROLE;
+                Client.Session["UserID"] = "13123456789";
+                Client.Session["Role"] = Role;
+                this.Show(new MainForm());
+            }
+            catch(Exception ex)
+            {
+                Toast(ex.Message);
+            }
         }
         /// <summary>
         /// 跳转注册页
@@ -59,21 +73,6 @@ namespace SwebWMS.UI
         private void button3_Click(object sender, EventArgs e)
         {
             this.Form.Show(new FrmRegister());
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void verfiyLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

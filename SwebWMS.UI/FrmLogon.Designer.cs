@@ -35,17 +35,6 @@ namespace SwebWMS.UI
             this.panel6 = new Swebui.Controls.Panel();
             this.button2 = new Swebui.Controls.Button();
             this.button3 = new Swebui.Controls.Button();
-            this.fastLoginPanel = new Swebui.Controls.Panel();
-            this.panel7 = new Swebui.Controls.Panel();
-            this.fontIcon3 = new Swebui.Controls.FontIcon();
-            this.textBox1 = new Swebui.Controls.TextBox();
-            this.button5 = new Swebui.Controls.Button();
-            this.verifycode = new Swebui.Controls.Label();
-            this.panel8 = new Swebui.Controls.Panel();
-            this.fontIcon4 = new Swebui.Controls.FontIcon();
-            this.txtVcode1 = new Swebui.Controls.TextBox();
-            this.verfiyLogin = new Swebui.Controls.Button();
-            this.button4 = new Swebui.Controls.Button();
             // 
             // panel1
             // 
@@ -69,8 +58,7 @@ namespace SwebWMS.UI
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(126)))), ((int)(((byte)(50)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.image2,
-            this.psdPanel,
-            this.fastLoginPanel});
+            this.psdPanel});
             this.panel2.Name = "panel2";
             this.panel2.Overflow = Swebui.Controls.LayoutOverflow.Hidden;
             this.panel2.Scrollable = true;
@@ -198,7 +186,7 @@ namespace SwebWMS.UI
             this.button2.SelectBackgroundColor = System.Drawing.Color.Transparent;
             this.button2.SelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.button2.Size = new System.Drawing.Size(99, 0);
-            this.button2.Text = "验证码登录";
+            this.button2.Text = "演示账号";
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
@@ -211,127 +199,6 @@ namespace SwebWMS.UI
             this.button3.Size = new System.Drawing.Size(100, 0);
             this.button3.Text = "注册";
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // fastLoginPanel
-            // 
-            this.fastLoginPanel.Controls.AddRange(new Swebui.Controls.SwebControl[] {
-            this.panel7,
-            this.verifycode,
-            this.panel8,
-            this.verfiyLogin,
-            this.button4});
-            this.fastLoginPanel.Flex = 1;
-            this.fastLoginPanel.Name = "fastLoginPanel";
-            this.fastLoginPanel.Size = new System.Drawing.Size(0, 100);
-            this.fastLoginPanel.Visible = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(139)))), ((int)(((byte)(71)))));
-            this.panel7.Border = new Swebui.Controls.Border(1F);
-            this.panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.panel7.BorderRadius = 4;
-            this.panel7.Controls.AddRange(new Swebui.Controls.SwebControl[] {
-            this.fontIcon3,
-            this.textBox1,
-            this.button5});
-            this.panel7.Direction = Swebui.Controls.LayoutDirection.Row;
-            this.panel7.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
-            this.panel7.Margin = new Swebui.Controls.Margin(20F, 20F, 20F, 0F);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(0, 32);
-            // 
-            // fontIcon3
-            // 
-            this.fontIcon3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.fontIcon3.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
-            this.fontIcon3.Name = "fontIcon3";
-            this.fontIcon3.ResourceID = "phone";
-            this.fontIcon3.Size = new System.Drawing.Size(16, 16);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.Transparent;
-            this.textBox1.Border = new Swebui.Controls.Border(1F, 0F, 0F, 0F);
-            this.textBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.textBox1.Flex = 1;
-            this.textBox1.FontSize = 12F;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Padding = new Swebui.Controls.Padding(10F, 0F, 0F, 0F);
-            this.textBox1.Size = new System.Drawing.Size(100, 32);
-            this.textBox1.WaterMarkText = "电话";
-            // 
-            // button5
-            // 
-            this.button5.Name = "button5";
-            this.button5.NumberOfLines = 0;
-            this.button5.Padding = new Swebui.Controls.Padding(5F, 0F, 5F, 0F);
-            this.button5.Size = new System.Drawing.Size(0, 32);
-            this.button5.Text = "获取验证码";
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // verifycode
-            // 
-            this.verifycode.ForeColor = System.Drawing.Color.White;
-            this.verifycode.Margin = new Swebui.Controls.Margin(20F, 0F, 20F, 0F);
-            this.verifycode.Name = "verifycode";
-            this.verifycode.Size = new System.Drawing.Size(0, 20);
-            this.verifycode.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(139)))), ((int)(((byte)(71)))));
-            this.panel8.Border = new Swebui.Controls.Border(1F);
-            this.panel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.panel8.BorderRadius = 4;
-            this.panel8.Controls.AddRange(new Swebui.Controls.SwebControl[] {
-            this.fontIcon4,
-            this.txtVcode1});
-            this.panel8.Direction = Swebui.Controls.LayoutDirection.Row;
-            this.panel8.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
-            this.panel8.JustifyAlign = Swebui.Controls.LayoutJustifyAlign.Center;
-            this.panel8.Margin = new Swebui.Controls.Margin(20F, 0F, 20F, 0F);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(0, 32);
-            // 
-            // fontIcon4
-            // 
-            this.fontIcon4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.fontIcon4.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
-            this.fontIcon4.Name = "fontIcon4";
-            this.fontIcon4.ResourceID = "unlock-alt";
-            this.fontIcon4.Size = new System.Drawing.Size(16, 16);
-            // 
-            // txtVcode1
-            // 
-            this.txtVcode1.BackColor = System.Drawing.Color.Transparent;
-            this.txtVcode1.Border = new Swebui.Controls.Border(1F, 0F, 0F, 0F);
-            this.txtVcode1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.txtVcode1.Flex = 1;
-            this.txtVcode1.FontSize = 12F;
-            this.txtVcode1.Name = "txtVcode1";
-            this.txtVcode1.Padding = new Swebui.Controls.Padding(10F, 0F, 0F, 0F);
-            this.txtVcode1.Size = new System.Drawing.Size(100, 32);
-            this.txtVcode1.WaterMarkText = "验证码";
-            // 
-            // verfiyLogin
-            // 
-            this.verfiyLogin.Margin = new Swebui.Controls.Margin(20F, 30F, 20F, 0F);
-            this.verfiyLogin.Name = "verfiyLogin";
-            this.verfiyLogin.NumberOfLines = 0;
-            this.verfiyLogin.Size = new System.Drawing.Size(0, 35);
-            this.verfiyLogin.Text = "登录";
-            this.verfiyLogin.Click += new System.EventHandler(this.verfiyLogin_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Margin = new Swebui.Controls.Margin(20F, 30F, 20F, 0F);
-            this.button4.Name = "button4";
-            this.button4.NumberOfLines = 0;
-            this.button4.Size = new System.Drawing.Size(0, 35);
-            this.button4.Text = "<<返回";
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // FrmLogon
             // 
@@ -361,16 +228,5 @@ namespace SwebWMS.UI
         private Swebui.Controls.Panel panel6;
         private Swebui.Controls.Button button2;
         private Swebui.Controls.Button button3;
-        private Swebui.Controls.Panel fastLoginPanel;
-        private Swebui.Controls.Panel panel7;
-        private Swebui.Controls.FontIcon fontIcon3;
-        private Swebui.Controls.TextBox textBox1;
-        private Swebui.Controls.Button button5;
-        private Swebui.Controls.Label verifycode;
-        private Swebui.Controls.Panel panel8;
-        private Swebui.Controls.FontIcon fontIcon4;
-        private Swebui.Controls.TextBox txtVcode1;
-        private Swebui.Controls.Button verfiyLogin;
-        private Swebui.Controls.Button button4;
     }
 }
