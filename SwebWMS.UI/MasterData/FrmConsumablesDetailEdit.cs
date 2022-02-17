@@ -176,8 +176,8 @@ namespace SwebWMS.UI.MasterData
                 {
                     if (string.IsNullOrEmpty(ImgPicture.ResourceID) == false)
                     {
-                        string[] suffixs = args.ResourceID.Split(',');
-                        string[] names = ImgPicture.ResourceID.Split(',');
+                        string[] suffixs = args.ResourceID.Split('.');
+                        string[] names = ImgPicture.ResourceID.Split('.');
                         string name = names[0] + "."+suffixs[1];
                         args.SaveFile(name, Swebui.SwebResourceManager.DefaultImagePath);
                         ImgPicture.ResourceID = name;
@@ -189,7 +189,7 @@ namespace SwebWMS.UI.MasterData
                         string name = Client.Session["UserId"].ToString() + DateTime.Now.ToString("yyyyMMddHHmmss") + "." + suffixs[1];
                         args.SaveFile(name, Swebui.SwebResourceManager.DefaultImagePath);
                         ImgPicture.ResourceID = name;
-
+                        Toast("上传成功！");
                     }
                 }catch(Exception ex)
                 {

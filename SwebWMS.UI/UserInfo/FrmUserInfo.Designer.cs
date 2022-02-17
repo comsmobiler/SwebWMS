@@ -75,9 +75,10 @@ namespace SwebWMS.UI.UserInfo
             // userImg1
             // 
             this.userImg1.Name = "userImg1";
-            this.userImg1.ResourceID = "logon.png";
+            this.userImg1.ResourceID = "";
             this.userImg1.Size = new System.Drawing.Size(0, 210);
             this.userImg1.SizeMode = Swebui.Controls.ImageSizeMode.Zoom;
+            this.userImg1.SourceHotReadload = true;
             // 
             // btnName1
             // 
@@ -275,9 +276,10 @@ namespace SwebWMS.UI.UserInfo
             this.userImg.BorderRadius = 80;
             this.userImg.Margin = new Swebui.Controls.Margin(0F, 5F, 0F, 5F);
             this.userImg.Name = "userImg";
-            this.userImg.ResourceID = "logon.png";
+            this.userImg.ResourceID = "";
             this.userImg.Size = new System.Drawing.Size(80, 80);
             this.userImg.SizeMode = Swebui.Controls.ImageSizeMode.Stretch;
+            this.userImg.SourceHotReadload = true;
             // 
             // button1
             // 
@@ -349,7 +351,7 @@ namespace SwebWMS.UI.UserInfo
             // btnSex
             // 
             this.btnSex.Border = new Swebui.Controls.Border(1F);
-            this.btnSex.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.btnSex.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnSex.DefaultValue = new string[0];
             this.btnSex.Disabled = true;
             this.btnSex.Flex = 1;
@@ -368,7 +370,7 @@ namespace SwebWMS.UI.UserInfo
             // btnName
             // 
             this.btnName.Border = new Swebui.Controls.Border(1F);
-            this.btnName.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.btnName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnName.Flex = 1;
             this.btnName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnName.Margin = new Swebui.Controls.Margin(10F, 0F, 20F, 0F);
@@ -419,10 +421,10 @@ namespace SwebWMS.UI.UserInfo
             // dpkBirthday
             // 
             this.dpkBirthday.Border = new Swebui.Controls.Border(1F);
-            this.dpkBirthday.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.dpkBirthday.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.dpkBirthday.Enable = false;
             this.dpkBirthday.Flex = 1;
-            this.dpkBirthday.ForeColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.dpkBirthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.dpkBirthday.Margin = new Swebui.Controls.Margin(20F, 0F, 10F, 0F);
             this.dpkBirthday.MaxDate = new System.DateTime(9997, 12, 31, 23, 59, 59, 999);
             this.dpkBirthday.Name = "dpkBirthday";
@@ -432,7 +434,7 @@ namespace SwebWMS.UI.UserInfo
             // btnEmail
             // 
             this.btnEmail.Border = new Swebui.Controls.Border(1F);
-            this.btnEmail.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.btnEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.btnEmail.Flex = 1;
             this.btnEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnEmail.Margin = new Swebui.Controls.Margin(10F, 0F, 20F, 0F);
@@ -482,7 +484,7 @@ namespace SwebWMS.UI.UserInfo
             // txtAddress
             // 
             this.txtAddress.Border = new Swebui.Controls.Border(1F);
-            this.txtAddress.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.txtAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtAddress.Flex = 1;
             this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.txtAddress.Margin = new Swebui.Controls.Margin(20F, 0F, 10F, 0F);
@@ -493,7 +495,7 @@ namespace SwebWMS.UI.UserInfo
             // txtPhone
             // 
             this.txtPhone.Border = new Swebui.Controls.Border(1F);
-            this.txtPhone.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.txtPhone.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.txtPhone.Flex = 1;
             this.txtPhone.Margin = new Swebui.Controls.Margin(10F, 0F, 20F, 0F);
             this.txtPhone.Name = "txtPhone";

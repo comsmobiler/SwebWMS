@@ -30,6 +30,7 @@ namespace SwebWMS.UI.ConsumablesManager
         {
             try
             {
+                lblCID.Text = CID;
                 DataTable dataTable = _autofacConfig.consumablesService.GetQuantsEx("", "", "", CID);
                 if (dataTable.Rows.Count > 0)
                 {

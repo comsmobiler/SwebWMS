@@ -102,6 +102,7 @@ namespace SwebWMS.UI
             // menuView1
             // 
             this.menuView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(137)))), ((int)(((byte)(248)))));
+            this.menuView1.Color = System.Drawing.Color.White;
             this.menuView1.DefaultIcon = "tasks";
             this.menuView1.Name = "menuView1";
             this.menuView1.Size = new System.Drawing.Size(200, 0);

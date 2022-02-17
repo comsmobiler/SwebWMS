@@ -25,7 +25,7 @@ namespace SwebWMS.UI.ConsumablesManager
             Swebui.Controls.GridViewColumn gridViewColumn4 = new Swebui.Controls.GridViewColumn();
             this.panel1 = new Swebui.Controls.Panel();
             this.labTitle = new Swebui.Controls.Label();
-            this.txtAssId1 = new Swebui.Controls.Label();
+            this.lblCID = new Swebui.Controls.Label();
             this.panel2 = new Swebui.Controls.Panel();
             this.BackBtn = new Swebui.Controls.Button();
             this.gridView1 = new Swebui.Controls.GridView();
@@ -35,7 +35,7 @@ namespace SwebWMS.UI.ConsumablesManager
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.labTitle,
-            this.txtAssId1});
+            this.lblCID});
             this.panel1.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel1.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
             this.panel1.Name = "panel1";
@@ -51,19 +51,19 @@ namespace SwebWMS.UI.ConsumablesManager
             this.labTitle.Text = "库存分布";
             this.labTitle.VerticalAlignment = Swebui.Controls.VerticalAlignment.Bottom;
             // 
-            // txtAssId1
+            // lblCID
             // 
-            this.txtAssId1.FontSize = 20F;
-            this.txtAssId1.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
-            this.txtAssId1.Name = "txtAssId1";
-            this.txtAssId1.Size = new System.Drawing.Size(0, 26);
-            this.txtAssId1.VerticalAlignment = Swebui.Controls.VerticalAlignment.Bottom;
+            this.lblCID.FontSize = 20F;
+            this.lblCID.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
+            this.lblCID.Name = "lblCID";
+            this.lblCID.Size = new System.Drawing.Size(0, 26);
+            this.lblCID.VerticalAlignment = Swebui.Controls.VerticalAlignment.Bottom;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.BackBtn});
             this.panel2.Direction = Swebui.Controls.LayoutDirection.Row;
@@ -108,6 +108,7 @@ namespace SwebWMS.UI.ConsumablesManager
             this.gridView1.Flex = 1;
             this.gridView1.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 10F);
             this.gridView1.Name = "gridView1";
+            this.gridView1.RowHeight = 0;
             this.gridView1.RowWidth = 0;
             this.gridView1.Size = new System.Drawing.Size(0, 30);
             // 
@@ -125,7 +126,7 @@ namespace SwebWMS.UI.ConsumablesManager
 
         private Panel panel1;
         private Label labTitle;
-        private Label txtAssId1;
+        private Label lblCID;
         private Panel panel2;
         private Button BackBtn;
         private GridView gridView1;

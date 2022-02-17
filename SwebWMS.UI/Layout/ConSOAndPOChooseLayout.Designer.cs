@@ -29,7 +29,7 @@ namespace SwebWMS.UI.Layout
             // treeSelect1
             // 
             this.treeSelect1.Border = new Swebui.Controls.Border(1F);
-            this.treeSelect1.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.treeSelect1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.treeSelect1.DefaultValue = new string[0];
             this.treeSelect1.DropDownHeight = 280;
             this.treeSelect1.Flex = 1;
@@ -60,21 +60,23 @@ namespace SwebWMS.UI.Layout
             // 
             this.numQuant.BackColor = System.Drawing.Color.Transparent;
             this.numQuant.Border = new Swebui.Controls.Border(1F);
-            this.numQuant.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.numQuant.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.numQuant.Flex = 1;
             this.numQuant.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
             this.numQuant.Name = "numQuant";
             this.numQuant.Size = new System.Drawing.Size(200, 35);
+            this.numQuant.ValueType = Swebui.Controls.TextBoxValueType.Number;
             // 
             // numPrice
             // 
             this.numPrice.BackColor = System.Drawing.Color.Transparent;
             this.numPrice.Border = new Swebui.Controls.Border(1F);
-            this.numPrice.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.numPrice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.numPrice.Flex = 1;
             this.numPrice.Margin = new Swebui.Controls.Margin(0F, 0F, 10F, 0F);
             this.numPrice.Name = "numPrice";
             this.numPrice.Size = new System.Drawing.Size(200, 35);
+            this.numPrice.ValueType = Swebui.Controls.TextBoxValueType.Number;
             // 
             // button1
             // 

@@ -169,8 +169,25 @@ namespace SwebWMS.UI.ConsumablesManager
         {
             try
             {  if (string.IsNullOrEmpty(lblLocation.Text)) throw new Exception("请输入调入库位!");
+                /*List<ConsumablesOrderRow> DataList = new List<ConsumablesOrderRow>()*/;
+                //foreach (ConTDLayout Row in snPanel.Controls)
+                //{
+                //    ConsumablesOrderRow Data = new ConsumablesOrderRow();
+                //    Data.IMAGE = Row.Image;
+                //    Data.CID = Row.CID;
+                //    Data.QTY = Convert.ToDecimal(Row.Num);
+                //    string[] datas = Row.LOCATIONID.ToString().Split('/');
+                //    Data.WAREID = datas[0];
+                //    Data.STID = datas[1];
+                //    Data.SLID = datas[2];
+                //    Data.STATUS = 0;
+
+                //    DataList.Add(Data);
+                //}
+
                 ConTransferConsChooseDialog dialog = new ConTransferConsChooseDialog();
                 dialog.LocInID = lblLocation.Text;
+                //dialog.RowData = DataList;
                 ShowDialog(dialog, (obj, args) =>
                 {
                     if (dialog.ShowResult == ShowResult.Yes)

@@ -45,7 +45,6 @@ namespace SwebWMS.UI.MasterData
                     txtName1.Text = outputDto.Name;
                     txtPrice1.Text = outputDto.Price.ToString();
                     txtSPE1.Text = outputDto.Specification;
-                    txtNote1.Text = outputDto.Note;
                     txtPlace1.Text = outputDto.Place;
                     txtSN.Text = outputDto.SN;
                     txtUnit1.Text = outputDto.Unit;

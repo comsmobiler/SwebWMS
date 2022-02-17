@@ -30,15 +30,12 @@ namespace SwebWMS.UI.MasterData
             this.label3 = new Swebui.Controls.Label();
             this.panel4 = new Swebui.Controls.Panel();
             this.lblName = new Swebui.Controls.Label();
-            this.panel = new Swebui.Controls.Panel();
-            this.ImgPicture = new Swebui.Controls.Image();
             this.lblUnit = new Swebui.Controls.Label();
             this.panel5 = new Swebui.Controls.Panel();
             this.label4 = new Swebui.Controls.Label();
             this.label5 = new Swebui.Controls.Label();
             this.label6 = new Swebui.Controls.Label();
             this.panel6 = new Swebui.Controls.Panel();
-            this.lblPrice = new Swebui.Controls.Label();
             this.lblType = new Swebui.Controls.Label();
             this.lblSpe = new Swebui.Controls.Label();
             this.panel7 = new Swebui.Controls.Panel();
@@ -46,9 +43,17 @@ namespace SwebWMS.UI.MasterData
             this.label8 = new Swebui.Controls.Label();
             this.label9 = new Swebui.Controls.Label();
             this.panel8 = new Swebui.Controls.Panel();
-            this.lblVendor = new Swebui.Controls.Label();
             this.lblNote = new Swebui.Controls.Label();
             this.label = new Swebui.Controls.Label();
+            this.panel9 = new Swebui.Controls.Panel();
+            this.label10 = new Swebui.Controls.Label();
+            this.label11 = new Swebui.Controls.Label();
+            this.label12 = new Swebui.Controls.Label();
+            this.panel = new Swebui.Controls.Panel();
+            this.ImgPicture = new Swebui.Controls.Image();
+            this.lblPrice = new Swebui.Controls.Label();
+            this.lblVendor = new Swebui.Controls.Label();
+            this.label13 = new Swebui.Controls.Label();
             // 
             // panel1
             // 
@@ -83,7 +88,7 @@ namespace SwebWMS.UI.MasterData
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.BackBtn});
             this.panel2.Direction = Swebui.Controls.LayoutDirection.Row;
@@ -135,7 +140,7 @@ namespace SwebWMS.UI.MasterData
             this.label2.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 30);
-            this.label2.Text = "图片";
+            this.label2.Text = "单位";
             this.label2.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // label3
@@ -145,19 +150,19 @@ namespace SwebWMS.UI.MasterData
             this.label3.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 30);
-            this.label3.Text = "单位";
+            this.label3.Text = "单价";
             this.label3.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // panel4
             // 
             this.panel4.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.lblName,
-            this.panel,
-            this.lblUnit});
+            this.lblUnit,
+            this.lblPrice});
             this.panel4.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel4.Margin = new Swebui.Controls.Margin(0F, 0F, 0F, 10F);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(0, 55);
+            this.panel4.Size = new System.Drawing.Size(0, 35);
             // 
             // lblName
             // 
@@ -167,30 +172,10 @@ namespace SwebWMS.UI.MasterData
             this.lblName.Size = new System.Drawing.Size(100, 55);
             this.lblName.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
-            // panel
-            // 
-            this.panel.Controls.AddRange(new Swebui.Controls.SwebControl[] {
-            this.ImgPicture});
-            this.panel.Direction = Swebui.Controls.LayoutDirection.Row;
-            this.panel.Flex = 1;
-            this.panel.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
-            this.panel.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(0, 55);
-            // 
-            // ImgPicture
-            // 
-            this.ImgPicture.Border = new Swebui.Controls.Border(1F);
-            this.ImgPicture.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
-            this.ImgPicture.Name = "ImgPicture";
-            this.ImgPicture.ResourceID = "";
-            this.ImgPicture.Size = new System.Drawing.Size(45, 45);
-            this.ImgPicture.SizeMode = Swebui.Controls.ImageSizeMode.Zoom;
-            // 
             // lblUnit
             // 
             this.lblUnit.Flex = 1;
-            this.lblUnit.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
+            this.lblUnit.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.lblUnit.Name = "lblUnit";
             this.lblUnit.Size = new System.Drawing.Size(100, 55);
             this.lblUnit.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
@@ -222,7 +207,7 @@ namespace SwebWMS.UI.MasterData
             this.label5.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 30);
-            this.label5.Text = "类别";
+            this.label5.Text = "规格型号";
             this.label5.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // label6
@@ -232,32 +217,24 @@ namespace SwebWMS.UI.MasterData
             this.label6.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 30);
-            this.label6.Text = "规格型号";
+            this.label6.Text = "供应商";
             this.label6.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // panel6
             // 
             this.panel6.Controls.AddRange(new Swebui.Controls.SwebControl[] {
-            this.lblPrice,
             this.lblType,
-            this.lblSpe});
+            this.lblSpe,
+            this.lblVendor});
             this.panel6.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel6.Margin = new Swebui.Controls.Margin(0F, 0F, 0F, 10F);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(0, 35);
             // 
-            // lblPrice
-            // 
-            this.lblPrice.Flex = 1;
-            this.lblPrice.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(100, 35);
-            this.lblPrice.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
-            // 
             // lblType
             // 
             this.lblType.Flex = 1;
-            this.lblType.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
+            this.lblType.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(100, 35);
             this.lblType.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
@@ -265,7 +242,7 @@ namespace SwebWMS.UI.MasterData
             // lblSpe
             // 
             this.lblSpe.Flex = 1;
-            this.lblSpe.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
+            this.lblSpe.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.lblSpe.Name = "lblSpe";
             this.lblSpe.Size = new System.Drawing.Size(100, 35);
             this.lblSpe.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
@@ -287,7 +264,7 @@ namespace SwebWMS.UI.MasterData
             this.label7.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 30);
-            this.label7.Text = "供应商";
+            this.label7.Text = "备注";
             this.label7.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // label8
@@ -297,7 +274,6 @@ namespace SwebWMS.UI.MasterData
             this.label8.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 30);
-            this.label8.Text = "备注";
             this.label8.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
             // 
             // label9
@@ -312,26 +288,18 @@ namespace SwebWMS.UI.MasterData
             // panel8
             // 
             this.panel8.Controls.AddRange(new Swebui.Controls.SwebControl[] {
-            this.lblVendor,
             this.lblNote,
-            this.label});
+            this.label,
+            this.label13});
             this.panel8.Direction = Swebui.Controls.LayoutDirection.Row;
             this.panel8.Margin = new Swebui.Controls.Margin(0F, 0F, 0F, 10F);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(0, 35);
             // 
-            // lblVendor
-            // 
-            this.lblVendor.Flex = 1;
-            this.lblVendor.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
-            this.lblVendor.Name = "lblVendor";
-            this.lblVendor.Size = new System.Drawing.Size(100, 35);
-            this.lblVendor.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
-            // 
             // lblNote
             // 
             this.lblNote.Flex = 1;
-            this.lblNote.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
+            this.lblNote.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
             this.lblNote.Name = "lblNote";
             this.lblNote.Size = new System.Drawing.Size(100, 35);
             this.lblNote.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
@@ -339,9 +307,91 @@ namespace SwebWMS.UI.MasterData
             // label
             // 
             this.label.Flex = 1;
-            this.label.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
+            this.label.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(100, 35);
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.AddRange(new Swebui.Controls.SwebControl[] {
+            this.label10,
+            this.label11,
+            this.label12});
+            this.panel9.Direction = Swebui.Controls.LayoutDirection.Row;
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(0, 30);
+            // 
+            // label10
+            // 
+            this.label10.Flex = 1;
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
+            this.label10.Margin = new Swebui.Controls.Margin(10F, 0F, 5F, 0F);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 30);
+            this.label10.Text = "图片";
+            this.label10.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.Flex = 1;
+            this.label11.ForeColor = System.Drawing.Color.DimGray;
+            this.label11.Margin = new Swebui.Controls.Margin(5F, 0F, 5F, 0F);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(100, 30);
+            this.label11.Text = " ";
+            this.label11.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
+            // 
+            // label12
+            // 
+            this.label12.Flex = 1;
+            this.label12.ForeColor = System.Drawing.Color.DimGray;
+            this.label12.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(100, 30);
+            this.label12.Text = " ";
+            this.label12.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
+            // 
+            // panel
+            // 
+            this.panel.Controls.AddRange(new Swebui.Controls.SwebControl[] {
+            this.ImgPicture});
+            this.panel.Direction = Swebui.Controls.LayoutDirection.Row;
+            this.panel.ItemAlign = Swebui.Controls.LayoutItemAlign.Center;
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(0, 100);
+            // 
+            // ImgPicture
+            // 
+            this.ImgPicture.Border = new Swebui.Controls.Border(1F);
+            this.ImgPicture.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.ImgPicture.Margin = new Swebui.Controls.Margin(10F, 0F, 0F, 0F);
+            this.ImgPicture.Name = "ImgPicture";
+            this.ImgPicture.ResourceID = "";
+            this.ImgPicture.Size = new System.Drawing.Size(90, 90);
+            this.ImgPicture.SizeMode = Swebui.Controls.ImageSizeMode.Zoom;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.Flex = 1;
+            this.lblPrice.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(100, 35);
+            this.lblPrice.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
+            // 
+            // lblVendor
+            // 
+            this.lblVendor.Flex = 1;
+            this.lblVendor.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
+            this.lblVendor.Name = "lblVendor";
+            this.lblVendor.Size = new System.Drawing.Size(100, 35);
+            this.lblVendor.VerticalAlignment = Swebui.Controls.VerticalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.Flex = 1;
+            this.label13.Margin = new Swebui.Controls.Margin(5F, 0F, 10F, 0F);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(100, 35);
             // 
             // FrmAssTemplateDetial
             // 
@@ -354,7 +404,9 @@ namespace SwebWMS.UI.MasterData
             this.panel5,
             this.panel6,
             this.panel7,
-            this.panel8});
+            this.panel8,
+            this.panel9,
+            this.panel});
             this.Load += new System.EventHandler(this.FrmAssTemplateDetial_Load);
 
         }
@@ -371,15 +423,12 @@ namespace SwebWMS.UI.MasterData
         private Label label3;
         private Panel panel4;
         private Label lblName;
-        private Panel panel;
-        private Image ImgPicture;
         private Label lblUnit;
         private Panel panel5;
         private Label label4;
         private Label label5;
         private Label label6;
         private Panel panel6;
-        private Label lblPrice;
         private Label lblType;
         private Label lblSpe;
         private Panel panel7;
@@ -387,8 +436,16 @@ namespace SwebWMS.UI.MasterData
         private Label label8;
         private Label label9;
         private Panel panel8;
-        private Label lblVendor;
         private Label lblNote;
         private Label label;
+        private Label lblPrice;
+        private Label lblVendor;
+        private Label label13;
+        private Panel panel9;
+        private Label label10;
+        private Label label11;
+        private Label label12;
+        private Panel panel;
+        private Image ImgPicture;
     }
 }

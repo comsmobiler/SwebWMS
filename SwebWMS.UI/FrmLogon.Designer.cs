@@ -49,13 +49,13 @@ namespace SwebWMS.UI
             // image1
             // 
             this.image1.Name = "image1";
-            this.image1.ResourceID = "login_from_left.png.png";
+            this.image1.ResourceID = "logn_left.jpg";
             this.image1.Size = new System.Drawing.Size(300, 0);
             this.image1.SizeMode = Swebui.Controls.ImageSizeMode.Stretch;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(126)))), ((int)(((byte)(50)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(83)))), ((int)(((byte)(151)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.image2,
             this.psdPanel});
@@ -87,7 +87,6 @@ namespace SwebWMS.UI
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(139)))), ((int)(((byte)(71)))));
             this.panel3.Border = new Swebui.Controls.Border(1F);
             this.panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
             this.panel3.BorderRadius = 4;
@@ -115,6 +114,7 @@ namespace SwebWMS.UI
             this.txtUserName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
             this.txtUserName.Flex = 1;
             this.txtUserName.FontSize = 12F;
+            this.txtUserName.ForeColor = System.Drawing.Color.White;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Padding = new Swebui.Controls.Padding(10F, 0F, 0F, 0F);
             this.txtUserName.Size = new System.Drawing.Size(100, 32);
@@ -122,7 +122,6 @@ namespace SwebWMS.UI
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(139)))), ((int)(((byte)(71)))));
             this.panel5.Border = new Swebui.Controls.Border(1F);
             this.panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
             this.panel5.BorderRadius = 4;
@@ -151,6 +150,7 @@ namespace SwebWMS.UI
             this.txtPassWord.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
             this.txtPassWord.Flex = 1;
             this.txtPassWord.FontSize = 12F;
+            this.txtPassWord.ForeColor = System.Drawing.Color.White;
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.Padding = new Swebui.Controls.Padding(10F, 0F, 0F, 0F);
             this.txtPassWord.SecurityMode = true;
@@ -202,7 +202,7 @@ namespace SwebWMS.UI
             // 
             // FrmLogon
             // 
-            this.BackgroundImage = "login_bg.jpg";
+            this.BackgroundImage = "bg.png";
             this.BackgroundImageSizeMode = Swebui.Controls.ImageSizeMode.Cover;
             this.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.panel1});

@@ -57,7 +57,7 @@ namespace SwebWMS.UI.MasterData
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Border = new Swebui.Controls.Border(0F, 0F, 0F, 1F);
-            this.panel2.BorderColor =System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
+            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
             this.panel2.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.AddBtn,
             this.EditBtn,
@@ -129,7 +129,7 @@ namespace SwebWMS.UI.MasterData
             this.printBtn.Padding = new Swebui.Controls.Padding(10F, 0F, 10F, 0F);
             this.printBtn.Size = new System.Drawing.Size(0, 26);
             this.printBtn.Text = "打印";
-            this.printBtn.Click += new System.EventHandler(this.ViewBtn_Click);
+            this.printBtn.Click += new System.EventHandler(this.printBtn_Click);
             // 
             // RefreshBtn
             // 
@@ -166,6 +166,7 @@ namespace SwebWMS.UI.MasterData
             this.gridView1.Flex = 1;
             this.gridView1.Margin = new Swebui.Controls.Margin(10F, 0F, 10F, 10F);
             this.gridView1.Name = "gridView1";
+            this.gridView1.RowHeight = 0;
             this.gridView1.RowWidth = 0;
             this.gridView1.Size = new System.Drawing.Size(0, 30);
             // 

@@ -318,7 +318,7 @@ namespace SwebWMS.UI
             // 
             // FrmRegister
             // 
-            this.BackgroundImage = "login_bg.jpg";
+            this.BackgroundImage = "bg.png";
             this.BackgroundImageSizeMode = Swebui.Controls.ImageSizeMode.Cover;
             this.Controls.AddRange(new Swebui.Controls.SwebControl[] {
             this.panel1});

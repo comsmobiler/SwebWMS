@@ -1,4 +1,6 @@
 ﻿using SMOWMS.Domain.Entity;
+using SMOWMS.DTOs.OutputDTO;
+using Swebui;
 using Swebui.Controls;
 using System;
 using System.Collections.Generic;
@@ -59,7 +61,7 @@ namespace SwebWMS.UI.MasterData
             {
                 if (args.SelectedRows.Count > 0)
                 {
-                    FrmAssetDetial assetsEdit = new FrmAssetDetial ();
+                    FrmAssetDetial assetsEdit = new FrmAssetDetial();
                     assetsEdit.Flex = 1;
                     assetsEdit.AssId = args.SelectedRows[0]["ASSID"].ToString();
                     this.Parent.Controls.Add(assetsEdit);
@@ -190,6 +192,52 @@ namespace SwebWMS.UI.MasterData
         /// <param name="e"></param>
         private void printBtn_Click(object sender, EventArgs e)
         {
+            gridView1.GetSelectedRows((obj, args) =>
+            {
+                if (args.SelectedRows.Count > 0)
+                {
+                    string AssId = args.SelectedRows[0]["ASSID"].ToString();
+                    try
+                    {
+                        Dictionary<string, string> Datas = new Dictionary<string, string>();
+                        AssetsOutputDto outputDto = _autofacConfig.SettingService.GetAssetsByID(AssId);
+                        if (outputDto != null)
+                        {
+                            Datas.Add("资产编号", outputDto.AssId);
+                            Datas.Add("SN", outputDto.SN);
+                            Datas.Add("类别", outputDto.TypeName);
+                            Datas.Add("过期时间", outputDto.ExpiryDate.ToString("yyyy-MM-dd"));
+                            Datas.Add("购入时间", outputDto.BuyDate.ToString("yyyy-MM-dd"));
+                            Datas.Add("名称", outputDto.Name);
+                            Datas.Add("单位", outputDto.Unit);
+                            Datas.Add("金额", outputDto.Price.ToString());
+                            Datas.Add("规格型号 ", outputDto.Specification);
+                            Datas.Add("地点", outputDto.Place);
+                            Datas.Add("库位", outputDto.SLName);
+                            Datas.Add("供应者", outputDto.Vendor);
+                            Datas.Add("模板ID", outputDto.ATID);
+                            Datas.Add("备注", outputDto.Note);
+                            if (outputDto.Image.Contains(".")==false)
+                                outputDto.Image += ".png";
+                            Datas.Add("图片", SwebResourceManager.DefaultImagePath+"\\"+outputDto.Image);
+                            Datas.Add("一维码", outputDto.AssId);
+                            Datas.Add("二维码", outputDto.AssId);
+                        }
+                        PdfHelper.CreatePdf(SwebResourceManager.DefaultDocumentPath + "\\" + Client.SessionID + "Asstest.pdf", Datas);
+
+                        string url = Swebui.SwebResourceManager.GetResourceURL(Client.SessionID, Client.SessionID + "Asstest.pdf", SwebResourceManager.DefaultDocumentPath);
+                        Client.Print(url, "pdf");
+                    }
+                    catch (Exception ex)
+                    {
+                        Toast(ex.Message);
+                    }
+                }
+                else
+                {
+                    Toast("未选择行！");
+                }
+            });
 
         }
     }
