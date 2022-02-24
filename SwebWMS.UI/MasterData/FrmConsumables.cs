@@ -147,8 +147,7 @@ namespace SwebWMS.UI.MasterData
                     }
                     catch (Exception ex)
                     {
-
-
+                        Toast(ex.Message);
                     }
                 }
                 else
