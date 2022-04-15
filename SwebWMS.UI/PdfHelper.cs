@@ -22,6 +22,8 @@ namespace SwebWMS.UI
         {
             try
             {
+                if (File.Exists(filePath))
+                    File.Delete(filePath);
                 using (FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.Write))
                 {
 

@@ -226,7 +226,7 @@ namespace SwebWMS.UI.MasterData
                         PdfHelper.CreatePdf(SwebResourceManager.DefaultDocumentPath + "\\" + Client.SessionID + "Asstest.pdf", Datas);
 
                         string url = Swebui.SwebResourceManager.GetResourceURL(Client.SessionID, Client.SessionID + "Asstest.pdf", SwebResourceManager.DefaultDocumentPath);
-                        Client.Print(url, "pdf");
+                        Client.Print(url,  PrintType.Pdf);
                     }
                     catch (Exception ex)
                     {
